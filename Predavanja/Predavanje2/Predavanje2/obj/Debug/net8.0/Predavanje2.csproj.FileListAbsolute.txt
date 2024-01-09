@@ -12,3 +12,4 @@
 /home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje2/Predavanje2/obj/Debug/net8.0/Predavanje2.pdb
 /home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje2/Predavanje2/obj/Debug/net8.0/Predavanje2.genruntimeconfig.cache
 /home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje2/Predavanje2/obj/Debug/net8.0/ref/Predavanje2.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje2/Predavanje2/obj/Debug/net8.0/Predavanje2.sourcelink.json
