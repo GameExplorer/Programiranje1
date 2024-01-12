@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\bin\Debug\net8.0\Predavanje1.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\bin\Debug\net8.0\Predavanje1.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\bin\Debug\net8.0\Predavanje1.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\bin\Debug\net8.0\Predavanje1.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\bin\Debug\net8.0\Predavanje1.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\refint\Predavanje1.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\Predavanje1.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Predavanja\Predavanje1\Predavanje1\obj\Debug\net8.0\ref\Predavanje1.dll
