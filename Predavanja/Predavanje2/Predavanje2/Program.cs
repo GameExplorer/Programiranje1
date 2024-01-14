@@ -26,6 +26,7 @@ namespace Predavanje2
             #region Random
 
             Random rnd = new Random(/*142*/); // inicilizacija s semenon (seed), Imamo več vrst generatorjev
+            //če nastavimo seme bomo vedno dobilo ista števila 
             
             
             Console.WriteLine(rnd.Next(10, 100));
@@ -92,7 +93,7 @@ namespace Predavanje2
 
             #endregion
 
-            #region 
+            #region Ocena
 
             //Student vnese oceno od 1 do 10
             //program izpiše odlično, če je ocena 10, program izpiše ocena če je med 6 in 9
@@ -127,6 +128,47 @@ namespace Predavanje2
                 _ => "Opravil",
             });*/
 
+            #endregion
+            
+            #region Prestopno leto
+
+            Console.Write("Vnesi leto: ");
+            int leto = Int32.Parse(Console.ReadLine());
+
+            if (leto % 4 == 0 && leto % 100 != 0 || leto % 400 == 0)
+            {
+                Console.WriteLine("Prestopno leto");
+            }
+            else
+            {
+                Console.WriteLine("Leto ni prestopno");
+            }
+
+            #endregion
+            
+            #region Največja števka
+
+            Random nak = new Random();
+            int stevilo = nak.Next(100, 1000);
+            int stIzpis = stevilo;
+
+            int maxStevka = stevilo % 10;
+
+            stevilo = stevilo / 10;
+
+            int desetka = stevilo % 10;
+
+            if (desetka > maxStevka) maxStevka = desetka;
+
+            stevilo = stevilo / 10; //stotice
+
+            if (stevilo > maxStevka)
+            {
+                maxStevka = stevilo;
+            }
+            
+            Console.WriteLine("Največja števka števila " + stIzpis + " je " + maxStevka);
+            
             #endregion
         }
     }
