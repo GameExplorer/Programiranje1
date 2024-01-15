@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿
 namespace Predavanje2
 {
     class Program
@@ -10,7 +9,7 @@ namespace Predavanje2
             // Uporabnik pozovemo naj vnese 3 mestno število, nato izračunamo enice, desetice in stotice in jih
             // posebi izračunaj
 
-            Console.Write("Vnesi tri-mestno število: ");
+            /*Console.Write("Vnesi tri-mestno število: ");
             int st = Int32.Parse(Console.ReadLine());
 
             int enice = st % 10;
@@ -19,13 +18,13 @@ namespace Predavanje2
             
             Console.WriteLine("Enice: " + enice);
             Console.WriteLine("Desetice: " + desetice);
-            Console.WriteLine("Stotice: " + stotice);
+            Console.WriteLine("Stotice: " + stotice);*/
             
             #endregion
 
             #region Random
 
-            Random rnd = new Random(/*142*/); // inicilizacija s semenon (seed), Imamo več vrst generatorjev
+            /*Random rnd = new Random(/*142#1#); // inicilizacija s semenon (seed), Imamo več vrst generatorjev
             //če nastavimo seme bomo vedno dobilo ista števila 
             
             
@@ -48,13 +47,13 @@ namespace Predavanje2
             {
                 Console.WriteLine("Več sreče prihodnjič");
                 Console.WriteLine("Pravilno število: " + nakStevilo);
-            }
+            }*/
 
             #endregion
             
             #region If Stavek
 
-            Console.WriteLine();
+            /*Console.WriteLine();
             // Prodajamo vstopnice
             // Če je uporabnik pod 18 je vstopnica je 5€, če je več kot 18 in manj kot 60 je 20€, sicer 10€
 
@@ -71,7 +70,7 @@ namespace Predavanje2
             {
                 Console.WriteLine("Vaša vstopnica stane 20€!");
                 //Environment.Exit(0); //uporaba okoljske spremenljivke
-            }
+            }*/
             
             /*
              * if(starost < 18) { ... } pod 18 ... 5€
@@ -79,7 +78,7 @@ namespace Predavanje2
              * else { ... } ostali ... 20€
              */
 
-            Console.WriteLine("Vaša vstopnica stane 10€!");
+            /*Console.WriteLine("Vaša vstopnica stane 10€!");
 
             //Vejitve pri navadnih programih so dobrodošle
             
@@ -89,7 +88,7 @@ namespace Predavanje2
                 < 18 => "5 EUR",
                 >= 60 => "10 EUR",
                 _ => "20 EUR"
-            });
+            });*/
 
             #endregion
 
@@ -99,7 +98,7 @@ namespace Predavanje2
             //program izpiše odlično, če je ocena 10, program izpiše ocena če je med 6 in 9
             //program izpiše ni opravil če je manjša od 6
             
-            Console.Write("Vnesi oceno: ");
+            /*Console.Write("Vnesi oceno: ");
             int ocena = Int32.Parse(Console.ReadLine());
 
             if (ocena >= 6 && ocena <= 9)
@@ -119,7 +118,7 @@ namespace Predavanje2
             else
             {
                 Console.WriteLine("Napačen vnos");
-            }
+            }*/
             
             /*Console.WriteLine(ocena switch
             {
@@ -132,7 +131,7 @@ namespace Predavanje2
             
             #region Prestopno leto
 
-            Console.Write("Vnesi leto: ");
+            /*Console.Write("Vnesi leto: ");
             int leto = Int32.Parse(Console.ReadLine());
 
             if (leto % 4 == 0 && leto % 100 != 0 || leto % 400 == 0)
@@ -143,12 +142,13 @@ namespace Predavanje2
             {
                 Console.WriteLine("Leto ni prestopno");
             }
+            */
 
             #endregion
             
             #region Največja števka
 
-            Random nak = new Random();
+            /*Random nak = new Random();
             int stevilo = nak.Next(100, 1000);
             int stIzpis = stevilo;
 
@@ -167,8 +167,121 @@ namespace Predavanje2
                 maxStevka = stevilo;
             }
             
-            Console.WriteLine("Največja števka števila " + stIzpis + " je " + maxStevka);
+            Console.WriteLine("Največja števka števila " + stIzpis + " je " + maxStevka);*/
             
+            #endregion
+            
+            #region While
+
+            /*int stevec = 0;
+            int dva = 0;
+            int sest = 0;
+
+            Random kocka = new Random();
+
+            while (stevec < 6_000_000)
+            {
+                int steviloNaKocki = kocka.Next(1, 7);
+
+                if (steviloNaKocki == 2) dva++;
+                if (steviloNaKocki == 6) sest++;
+
+                stevec++;
+            }
+
+            Console.WriteLine("Dvojka je padla " + dva);
+            Console.WriteLine("Šestka je padla " + sest);
+
+            if (sest > dva)
+            {
+                Console.WriteLine("Šestka je padla za " + (sest - dva) + " več");
+            }
+            else
+            {
+                Console.WriteLine("Dvojka je padla za " + (dva - sest) + " več");
+            }
+
+            double x = 4.2;
+
+            while (x > 1) // 4.2 > 1 T ... 2.1 > 1 T ... 1.05 > 1 T ... 0.525 > 1 F ... x3 se izvede
+            {
+                x = x / 2;
+            }
+
+            // UGANIMO NAKLJUČNO ŠTEVILO
+            Random nakStevilo = new Random();
+            int izbranoStevilo = nakStevilo.Next(1, 100);
+            
+            Console.Write("Vnesi število: ");
+            int vnesenoStevilo = Int32.Parse(Console.ReadLine());
+
+            int neuspeh = 0;
+
+            while (vnesenoStevilo != izbranoStevilo)
+            {
+                neuspeh++;
+                if (vnesenoStevilo > izbranoStevilo)
+                {
+                    Console.WriteLine("Vneseno število je preveliko!");
+                }else 
+                { 
+                    Console.WriteLine("Vneseno število je premajhno!");
+                }
+                Console.Write("Nisi vnesel pravilnega števila! Poskusi ponovno: ");
+                vnesenoStevilo = Int32.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Uspelo ti je uganiti v " + neuspeh + " poskusih");*/
+
+            #endregion
+
+            #region Do-While
+
+            /*Random naklj = new Random();
+            int a = naklj.Next(1, 11);
+            int b;
+            do
+            {
+                b = naklj.Next(1, 11);
+            } while (b == a); //zanka se ponavlja toliko časa dokler je stranica b enaka a
+            
+            
+            float st, sestevek=0;
+            int n = 0;    //števec vnesenih števil
+            do
+            {  //ponavljaj, dokler je vpisano število različno od 0
+                Console.Write("Vnesi število oz. 0 za konec/ ...");
+    
+                st = Convert.ToInt32(Console.ReadLine());
+                if (st != 0)//če je vneseno število različno od 0
+                {
+                    n++;
+                    sestevek = sestevek + st;
+                }
+            } while (st != 0);
+            Console.WriteLine("\nSeštevek števil je "+sestevek);
+            if (n != 0) //povprečje računamo le, če bilo vneseno vsaj eno število
+            {
+                float povp = sestevek / n;
+                Console.WriteLine("\nNjihova povprecna vrednost pa je " + povp);
+            }
+            */
+
+
+            #endregion
+
+            #region For Zanka
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 10; j >= i; j--)
+                {
+                    Console.Write(i);
+                }
+
+                Console.WriteLine();
+            }
+
             #endregion
         }
     }
