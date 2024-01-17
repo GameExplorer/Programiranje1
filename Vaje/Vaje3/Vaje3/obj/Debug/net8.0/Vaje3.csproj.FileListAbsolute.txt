@@ -1,0 +1,15 @@
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/bin/Debug/net8.0/Vaje3
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/bin/Debug/net8.0/Vaje3.deps.json
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/bin/Debug/net8.0/Vaje3.runtimeconfig.json
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/bin/Debug/net8.0/Vaje3.dll
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/bin/Debug/net8.0/Vaje3.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.GeneratedMSBuildEditorConfig.editorconfig
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.AssemblyInfoInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.AssemblyInfo.cs
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.csproj.CoreCompileInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.sourcelink.json
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.dll
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/refint/Vaje3.dll
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/Vaje3.genruntimeconfig.cache
+/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje3/Vaje3/obj/Debug/net8.0/ref/Vaje3.dll
