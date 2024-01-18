@@ -18,7 +18,7 @@ namespace Predavanje2
             
             Console.WriteLine("Enice: " + enice);
             Console.WriteLine("Desetice: " + desetice);
-            Console.WriteLine("Stotice: " + stotice);*/
+            Console.WriteLine("Stotice: " + stotice);
             
             #endregion
 

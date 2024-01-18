@@ -1,5 +1,6 @@
 ﻿// Izjavljam, da sem nalogo opravil samostojno in dam sen njen avtor.
 // Zavedam se, da v primeru, če izjava prvega stavka ni resnična, kršim disciplinska pravila
+
 namespace Vaje3
 {
     class Program
@@ -41,7 +42,7 @@ namespace Vaje3
             
             #region Vaje 6 - Oblikovanje s for zanko
             
-            oblikovanjeIzpisa();
+            //oblikovanjeIzpisa();
             
             #endregion
         }
@@ -151,9 +152,9 @@ namespace Vaje3
             for (double x = 0; x <= Math.PI; x += Math.PI / 10)
             {
                 y = Math.Tan(x);
-                Console.WriteLine($"tan({y}) = {x}");
                 if (y > 10) break;
-            }
+                Console.WriteLine($"tan({y}) = {x}");
+            }   
 
             //Alternativa 
             /*double x = 0;
@@ -166,14 +167,17 @@ namespace Vaje3
             }*/
         }
 
+        //todo revisit
         public static void oblikovanjeIzpisa()
         {
-            for (int i = 0; i < 10; i++)
+            //rezultat
+            int rezultat = 1;
+            int trikotnik = 0; //pol trikotnik začetek
+            for(int i = 1; i <= 9; i++) //(x+1)
             {
-                for (int j = 0; j < 10; j++)
-                {
-                    Console.WriteLine(i+j + " * " + 9 + " + " + i + " = " + (i * 9 + (i + 1)));
-                }
+                Console.WriteLine($"{trikotnik} * 9 + {i} = {rezultat}");
+                trikotnik = (trikotnik * 10) + i; //0 .. 1 .. 12 ...
+                rezultat = (trikotnik * 9) + (i+1); //0 * 9 + 1 = 1... 1 * 9 + 2 = 11 ...
             }
         }
     }

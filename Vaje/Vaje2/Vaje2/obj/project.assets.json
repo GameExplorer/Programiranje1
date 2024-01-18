@@ -8,23 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Dom\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/melioads/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje2\\Vaje2\\Vaje2.csproj",
+      "projectUniqueName": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje2/Vaje2/Vaje2.csproj",
       "projectName": "Vaje2",
-      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje2\\Vaje2\\Vaje2.csproj",
-      "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje2\\Vaje2\\obj\\",
+      "projectPath": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje2/Vaje2/Vaje2.csproj",
+      "packagesPath": "/home/melioads/.nuget/packages/",
+      "outputPath": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje2/Vaje2/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/melioads/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -63,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

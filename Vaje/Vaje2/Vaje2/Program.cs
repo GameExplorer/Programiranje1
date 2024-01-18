@@ -10,7 +10,7 @@ namespace Vaje2
         static void Main(String[] args)
         {
 
-            #region Vaja 1
+            /*#region Vaja 1
             Console.Write("Vnesite število a: ");
             int a = Int32.Parse(Console.ReadLine());
             Console.Write("Vnesite število b: ");
@@ -126,7 +126,7 @@ namespace Vaje2
                 Console.WriteLine("Trikotnik ni enakokraki");
             }
 
-            #endregion
+            #endregion*/
             
             #region Vaja 5
 
@@ -149,10 +149,13 @@ namespace Vaje2
 
             int obrnjenoStevilo = Convert.ToInt32(tmp);
 
-            int transformiranoStevilo = (staroStevilo - obrnjenoStevilo);
-            
-            Console.WriteLine("Novo dobljeno število " + transformiranoStevilo + " je deljivo z 9");
+            int transformiranoStevilo = Math.Abs(staroStevilo - obrnjenoStevilo);
 
+            if (transformiranoStevilo % 9 == 0)
+            {
+                Console.WriteLine("Novo dobljeno število " + transformiranoStevilo + " je deljivo z 9");
+            }
+            
             #endregion
             
             #region Vaje 7
@@ -187,9 +190,10 @@ namespace Vaje2
             //koren, ki ima za osnovo manjše število, za korenski eksponent pa večje število
             int manjseStevilo = Math.Min(stevilo1, stevilo2);
             int vecjeStevilo = Math.Max(stevilo1, stevilo2);
-            double koren = (Math.Sqrt(manjseStevilo) * vecjeStevilo);
+            double koren = Math.Pow(manjseStevilo * vecjeStevilo, -1);
             Console.WriteLine("Koren manjšega števila z osnovo " + manjseStevilo + " in korenskim eksponentom " + vecjeStevilo + " je " + koren);
             #endregion
+            
         }
     }
 }
