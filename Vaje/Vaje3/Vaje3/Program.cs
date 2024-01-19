@@ -36,13 +36,13 @@ namespace Vaje3
             
             #region Vaje 5 - Tabeliranje funkcije
             
-            tabeliranjeFunckije();
+            //tabeliranjeFunckije();
             
             #endregion
             
             #region Vaje 6 - Oblikovanje s for zanko
             
-            //oblikovanjeIzpisa();
+            oblikovanjeIzpisa();
             
             #endregion
         }
@@ -50,12 +50,12 @@ namespace Vaje3
         public static void generator()
         {
             int stevec = 0; //šteje poskuse
-            Random rnd = new Random();
-            int generiranoStevilo = rnd.Next(-100, 101); //zgornja meja ni naključna
+            Random rnd = new Random(); 
+            int generiranoStevilo = rnd.Next(-100, 101); //ustvarimo naključna števila
             int nakSt = generiranoStevilo; //prva spremenljvka je začasna da lahko vstopim v zanko
             //Obstaja možnost, da bo 0 prvo število zato bi lahko nastavil na -100, tako    
             //bi vedno se zanka izvedla vsaj enkrat ampak se mi zdi, da je tole bolje
-            while (nakSt != 0)
+            while (nakSt != 0) //dokler ni 0 izvedi se
             {
                 nakSt = rnd.Next(-100, 101);
                 //Console.WriteLine(nakSt);
@@ -67,13 +67,14 @@ namespace Vaje3
         public static void naravniProdukt()
         {
             Console.Write("Vnesi naravno število: ");
-            int naravnoStevilo = Int32.Parse(Console.ReadLine());
-            int naravnoSteviloIzpis = naravnoStevilo; //naravnoStevilo se v zanki spremeni, zato naredim tmp spremenljivko za izpis
+            int naravnoStevilo = Int32.Parse(Console.ReadLine()); //preberemo število od uporabnika
+            int naravnoSteviloIzpis = naravnoStevilo; //naravnoStevilo se v zanki spremeni, zato naredim začasno spremenljivko za izpis
 
             int produkt = 1;
+            
             do
             {
-                int stevka = naravnoStevilo % 10;
+                int stevka = naravnoStevilo % 10; // 1024 ... 102 ostane 4 .. potem 4 preverjamo v if stavku
                 if (stevka != 0) //če števka ni 0 zmnoži števke, če je jo preskoči in deli naprej
                 {
                     produkt *= stevka;
@@ -87,23 +88,22 @@ namespace Vaje3
         }
         public static void izpisPrvihNaravnihStevil()
         {
-            int n = 0; //števec
+            int n = 0; //števec, ki šteje naravna števila
 
             Console.WriteLine("Prvih 50 naravnih števil, ki so deljiva s 3 in niso soda: ");
             
             for (int i = 0; n <= 50; i++)
             {
-                int naravnoSt = i; //naravna števila, ki ustrezajo pogoju
-                if (naravnoSt % 3 == 0 && naravnoSt % 2 != 0) //pregledamo ali ustrezajo pogoju
+                if (i % 3 == 0 && i % 2 != 0) //pregledamo ali število ustreza pogoju
                 {
-                    Console.WriteLine(naravnoSt);
-                    n++;
+                    Console.WriteLine(i);
+                    n++; //povečamo števec
                 }
             }
         }
         public static void medDvemaSteviloma()
         {
-            Console.WriteLine("Vnesi dve števili!");
+            Console.WriteLine("Vnesi dve števili!"); //zahtevamo vnos od uporabnika
             
             Console.Write("Število a: ");
             int st1 = Int32.Parse(Console.ReadLine());
@@ -111,10 +111,10 @@ namespace Vaje3
             Console.Write("Število b: ");
             int st2 = Int32.Parse(Console.ReadLine());
 
-            if (st1 < st2)
+            if (st1 < st2) //če je prvo število večje od drugega
             {
                 Console.Write("Ob vnosu števil " + st1 + " in " + st2 + " je zaporedje ");
-                while (st1 <= st2)
+                while (st1 <= st2) //dokler je prvo manjše od drugega izvajaj zanko
                 {
                     Console.Write(st1);
 
@@ -122,14 +122,14 @@ namespace Vaje3
                     {
                         Console.Write(", ");
                     }
-                    st1++;
+                    st1++; //povečujemo prvo število
                 }
             }
 
-            else
+            else //prvo število je večje od drugega
             {
                 Console.Write("Ob vnosu števil " + st1 + " in " + st2 + " je zaporedje ");
-                while (st2 <= st1)
+                while (st2 <= st1) //zanka v obratni smeri
                 {
                     Console.Write(st2);
                     if (st2 < st1)
@@ -140,20 +140,16 @@ namespace Vaje3
                 }
             }
         }
-
-        /**
-         * Tabelirajte funkcijo y = tan(x) na intervalu od 0 do π s korakom π/10.
-         * Če vrednost y vmes preseže 10, prekinite izvajanje zanke.
-         */
+        
         public static void tabeliranjeFunckije()
         {
             double y; //y vrednost
 
-            for (double x = 0; x <= Math.PI; x += Math.PI / 10)
+            for (double x = 0; x <= Math.PI; x += Math.PI / 10) //od 0 do Pi
             {
-                y = Math.Tan(x);
-                if (y > 10) break;
-                Console.WriteLine($"tan({y}) = {x}");
+                y = Math.Tan(x); //tabeliranje funkcije
+                if (y > 10) break; //če preseže 10 konča izvajanje
+                Console.WriteLine($"tan({y}) = {x}"); //izpis
             }   
 
             //Alternativa 
@@ -166,18 +162,18 @@ namespace Vaje3
                 x += Math.PI / 10
             }*/
         }
-
-        //todo revisit
+        
         public static void oblikovanjeIzpisa()
         {
-            //rezultat
-            int rezultat = 1;
+            int rezultat = 1; //rezultat mora biti 1 ker je prvi rezultat 1
             int trikotnik = 0; //pol trikotnik začetek
+            
             for(int i = 1; i <= 9; i++) //(x+1)
             {
+                //prvi rezultat je že zapisan v prvi vrstici...
                 Console.WriteLine($"{trikotnik} * 9 + {i} = {rezultat}");
-                trikotnik = (trikotnik * 10) + i; //0 .. 1 .. 12 ...
-                rezultat = (trikotnik * 9) + (i+1); //0 * 9 + 1 = 1... 1 * 9 + 2 = 11 ...
+                trikotnik = (trikotnik * 10) + i; //0 * 10 + 1 = 1 ...  1 * 10 + 2 = 12 ...
+                rezultat = (trikotnik * 9) + (i+1); //1 * 9 + 2 = 11... 12 * 9 + 3 = 111 ...
             }
         }
     }
