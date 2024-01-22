@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje4/Predavanje4/Predavanje4.csproj": {}
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje4\\Predavanje4\\Predavanje4.csproj": {}
   },
   "projects": {
-    "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje4/Predavanje4/Predavanje4.csproj": {
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje4\\Predavanje4\\Predavanje4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje4/Predavanje4/Predavanje4.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje4\\Predavanje4\\Predavanje4.csproj",
         "projectName": "Predavanje4",
-        "projectPath": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje4/Predavanje4/Predavanje4.csproj",
-        "packagesPath": "/home/melioads/.nuget/packages/",
-        "outputPath": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje4/Predavanje4/obj/",
+        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje4\\Predavanje4\\Predavanje4.csproj",
+        "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje4\\Predavanje4\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/melioads/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

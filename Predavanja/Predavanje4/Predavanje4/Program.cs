@@ -5,6 +5,13 @@ namespace Predavanje4
     {
         public static void Main(String[] args)
         {
+            
+            /* ----------------------------------------------------------------------------------------------- */
+            
+            // DVODIMENZIONALNE TABELE 
+            
+            /* ----------------------------------------------------------------------------------------------- */
+            
             //DVODIMENZIONALNA TABELA PRIMER (tabela celih števil 10 vrstic in 10 stolpcev
 
             int[,] tabelaCelihStevil = new int[10, 10]; // ustvarimo tabelo
@@ -57,7 +64,7 @@ namespace Predavanje4
             Random nak = new Random();
 
             int[,] tab = new int[10, 10];
-            int vsota = 0;
+            double vsota = 0;
             double povprecje;
 
             for (int vrstica = 0; vrstica < tab.GetLength(0); vrstica++)
@@ -68,6 +75,9 @@ namespace Predavanje4
                     vsota += tab[vrstica, stolpec];
                 }
             }
+            
+            povprecje = vsota / tab.Length;
+            Console.WriteLine("Vsota števil = {0} \nPovprečje števil = {1}", vsota, povprecje);
 
             /* ENODIMENZIONALNA TABELA */
             double vsota1 = 0;
@@ -81,16 +91,6 @@ namespace Predavanje4
 
             povp1 = vsota1 / tab3.Length;
             Console.WriteLine("Vsota enodimenzionalne tabele je {0} \nPovprecje je {1}", vsota1, povp1);
-
-            povprecje = vsota / 100.0;
-            Console.WriteLine("Vsota števil = {0} \nPovprečje števil = {1}", vsota, povprecje);
-            
-            // IMELI TABELO NIZOV, KI PREDSTAVLJAJO BESEDE
-            // IZRAČUNALI BOMO NAJDALJŠO BESEDO (niz)
-
-            string[] beseda = new string[]{"Danes", "je", "roboticizemis", "mrzlo", "in", "ponedeljek"};
-            
-            NajdaljsaBeseda(beseda);
             
             //ZNAKI V TABELI
 
@@ -110,23 +110,63 @@ namespace Predavanje4
             Console.WriteLine(String.Join(" ", tab2.Cast<char>()));
             
             
+            /* ----------------------------------------------------------------------------------------------- */
+            
+            // METODE 
+            
+            /* ----------------------------------------------------------------------------------------------- */
+            
+            // IMELI TABELO NIZOV, KI PREDSTAVLJAJO BESEDE
+            // IZRAČUNALI BOMO NAJDALJŠO BESEDO (niz)
+
+            string[] beseda = new string[]{"Danes", "je", "roboticizemis", "mrzlo", "in", "ponedeljek"};
+            string najdaljsaBeseda = NajdaljsaBeseda(beseda);
+            Console.WriteLine("Najdaljša beseda je {0}", najdaljsaBeseda);
+
+            // Sestejemo dve števili
             Console.WriteLine(Sestevek(11,242));    
             
-            //izpis od (1,10).. izpiše števila od prve do zadnje
+            //izpis od (1,10).. izpiše števila od 1 do 10
             IzpisOdDo(1,10);
             
             //metoda prejme niz in ga x-krat ponovi
             Console.WriteLine(Ponavljanje("Ponedeljek", 6));
             
+            //Napiši metodo inicialke, ki sprejme dva niza znakov in vrne niz sestavljen iz inicialk.
+            string izpis = Inicialke("France", "Prešesern");
+            Console.WriteLine("Inicialke Franceta Prešerna " + izpis);
             
-            //OBJEKT
+            //Napiši metodo, ki ne sprejme nobenih parametrov, izračuna in vrne pa vsoto vseh 
+            //dvomestnih števil, ki so deljiva s 5
+            int rezultat = VsotaDvomestnihDeljivih();
+            Console.WriteLine("Vsota dvomestnih števil, ki so deljiva s 5 je {0}", rezultat);
+            
+            //Napiši metodo, ki dobi dva parametra, poljuben STAVEK in poljuben ZNAK. Metoda naj ugotovi in vrne
+            //kolikokrat se v stavku pojavi izbrani znak
+            int rez = Kolikokrat("Scuderia Ferrari", 'r');
+            Console.WriteLine("Izbrani znak se ponovi {0}", rez);
+            
+            //OBJEKT ustvarimo
             Student s1 = new Student{ ime = "Miha", ocena = 10};
             //s1.ime = "Miha";
             //s1.ocena = 10;
             s1.Izpis();
             
         }
+        
+        public static int Sestevek(int a, int b)
+        {
+            return a + b;
+        }
 
+        public static void IzpisOdDo(int a, int b)
+        {
+            for (int i = a; i <= b; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        
         public static string Ponavljanje(string niz, int a)
         {
             string besede = ""; //naredimo spremenljivko, ki bo vračala niz
@@ -138,16 +178,7 @@ namespace Predavanje4
             return besede;
             //return string.Join("", Enumerable.Repeat(niz, a));
         }
-
-        public static void IzpisOdDo(int a, int b)
-        {
-            for (int i = a; i <= b; i++)
-            {
-                Console.WriteLine(i);
-            }
-        }
-
-        /* METODA */
+        
         public static string NajdaljsaBeseda(string[] tabela)
         {
             string najdaljsaBeseda = tabela[0];
@@ -158,14 +189,44 @@ namespace Predavanje4
                     najdaljsaBeseda = tabela[i];
             }
 
-            Console.WriteLine(najdaljsaBeseda);
+            //Console.WriteLine(najdaljsaBeseda);
 
             return najdaljsaBeseda;
         }
 
-        public static int Sestevek(int a, int b)
+        public static string Inicialke(String ime, String priimek)
         {
-            return a + b;
+            char imeInicialka, priimekInicialka;
+
+            imeInicialka = ime[0];
+            priimekInicialka = priimek[0];
+
+            return imeInicialka + "." + priimekInicialka + ".";
+        }
+
+        public static int VsotaDvomestnihDeljivih()
+        {
+            int vsota = 0;
+            for (int i = 10; i <= 100; i++)
+            {
+                if (i % 5 == 0) vsota += i;
+            }
+
+            return vsota;
+        }
+
+        public static int Kolikokrat(String stavek, char znak)
+        {
+            int stevec = 0;
+            for (int i = 0; i < stavek.Length; i++)
+            {
+                if (stavek[i].Equals(znak))
+                {
+                    stevec++;
+                }
+            }
+
+            return stevec;
         }
     }
     
