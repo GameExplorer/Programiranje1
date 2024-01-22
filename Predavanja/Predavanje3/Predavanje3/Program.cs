@@ -197,7 +197,7 @@ namespace Predavanje3
 
             Array.Resize(ref tabela, tabela.Length+1); //dobita dva parametra, referenco na tabelo in drug parameter je za koliko jo želimo razširiti
 
-            tabela[tabela.Length - 1] = 23; //vstavimo vrednost v tabelo 1 ... 4 gre mi pa odštejemo - 1 in ga vstavimo na 3 indexu
+            tabela[tabela.Length - 1] = 23; //vstavimo vrednost v tabelo 1 ... 4 gre mi pa odštejemo - 1 in ga vstavimo na 3 indexu zadnje mesto v tabeli
             
             Console.WriteLine(tabela[3]);
             
@@ -215,6 +215,7 @@ namespace Predavanje3
             int[] tab = new int[3]; //prazna tabela
 
             Console.WriteLine();
+            
 
             #endregion
 
