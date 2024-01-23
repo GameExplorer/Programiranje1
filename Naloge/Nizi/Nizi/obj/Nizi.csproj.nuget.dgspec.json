@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Nizi\\Nizi\\Nizi.csproj": {}
+    "/home/melioads/Documents/GitHub/Programiranje1/Naloge/Nizi/Nizi/Nizi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Nizi\\Nizi\\Nizi.csproj": {
+    "/home/melioads/Documents/GitHub/Programiranje1/Naloge/Nizi/Nizi/Nizi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Nizi\\Nizi\\Nizi.csproj",
+        "projectUniqueName": "/home/melioads/Documents/GitHub/Programiranje1/Naloge/Nizi/Nizi/Nizi.csproj",
         "projectName": "Nizi",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Nizi\\Nizi\\Nizi.csproj",
-        "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Nizi\\Nizi\\obj\\",
+        "projectPath": "/home/melioads/Documents/GitHub/Programiranje1/Naloge/Nizi/Nizi/Nizi.csproj",
+        "packagesPath": "/home/melioads/.nuget/packages/",
+        "outputPath": "/home/melioads/Documents/GitHub/Programiranje1/Naloge/Nizi/Nizi/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/melioads/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -56,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
