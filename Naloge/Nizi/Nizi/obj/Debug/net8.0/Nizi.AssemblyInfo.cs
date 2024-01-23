@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nizi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82cc29dce88f0cc378239aa7f907c9d52102d67f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6989a3449bc57ec924f52e10c9c03692598e7ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nizi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nizi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
