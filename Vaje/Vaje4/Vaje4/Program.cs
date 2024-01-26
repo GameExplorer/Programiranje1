@@ -28,17 +28,17 @@ namespace Vaje4
             // 3. Naloga
             //Presledki();
             
-            // 4. Naloga TODO revisit
-            Manipulacija();
+            // 4. Naloga
+            //Manipulacija();
 
             // 5. Naloga
-            //Razmnozi();
+            Razmnozi();
 
             // 6. Naloga TODO revisit
             //GeneriranjeGesel();
             
             // 7. Naloga
-            ModernaZgodba();
+            //ModernaZgodba();
 
         }
 
@@ -50,7 +50,6 @@ namespace Vaje4
 
             while (stevec < 10)
             {
-                
                 if (stevec < 5)
                 {
                     //Uporabniške številke
@@ -62,7 +61,7 @@ namespace Vaje4
                     // številka je liha in pozitivna, nobeno liho število ni mnogokratnik 10, ta pogoj je odveč
                     else if (stevilka % 2 != 0 && stevilka > 0) vsota -= stevilka;
 
-                    Console.WriteLine("Vsota je {0}", vsota); //sprotno preverjanje, vsota DELA pravilno
+                    //Console.WriteLine("Vsota je {0}", vsota); //sprotno preverjanje, vsota DELA pravilno
                     
                     stevec++;
                     continue; //nazaj na pogoj 
@@ -85,11 +84,10 @@ namespace Vaje4
 
                 //Console.WriteLine("Naključna številka " + rndStevilke);
                 
-                Console.WriteLine("Vsota števil je {0} ", vsota);
-
                 stevec++;
             }
             
+            Console.WriteLine("Vsota števil je {0} ", vsota);
         }
 
         public static void MnozenjeDoSto()
@@ -101,16 +99,18 @@ namespace Vaje4
 
             int stevec = 0;
 
-            //če ni pozitivno, konec izvajanja programa
+            //če ni pozitivno število se program zaključi
             if (vnos < 0)
             {
+                Console.WriteLine("Število mora biti večje od 0!");
                 Environment.Exit(1); 
             }
 
             while (true) //zanka se vendo izvede tudi za število večje od 100
             {
-                // torej izračuna tudi, če je večje od 100 ampak v if stavku potem števec odštejemo tako, da je 
-                // izpis pravilen
+                // izračuna tudi, če je večje od 100 ampak v if stavku potem števec odštejemo tako, da je 
+                // v izpisu za števila večje od 100 vedno piše da smo ga 0 pomnožili da smo prišli do 100 kar je pravilno.
+                
                 vnos *= 1.1;
                 //Console.WriteLine(vnos);
                 stevec++;
@@ -120,10 +120,8 @@ namespace Vaje4
                     stevec--;
                     break;
                 }
-                
-               
             }
-            //Console.WriteLine(vnos);
+
             Console.WriteLine("Vašo številko {0} je bilo potrebno {1} pomnožiti z 1.1 da ste prišli do 100", stevilkaZaIpis, stevec);
         }
         
@@ -134,9 +132,9 @@ namespace Vaje4
             Console.WriteLine(vnos);
             string noviStavek = "";
 
-            for (int i = 0; i < vnos.Length; i++)
+            for (int i = 0; i < vnos.Length; i++) //sprehod po nizu
             {
-                if (vnos[i] != 32) noviStavek += vnos[i] + " "; //če ti whitespace potem črka + presledek
+                if (vnos[i] != 32) noviStavek += vnos[i] + " "; //če ni presledek potem naredi presledek za znakom
                 else noviStavek += ""; // če je presledek ga ne podvoji
             }
 
@@ -146,13 +144,13 @@ namespace Vaje4
         public static void Manipulacija()
         {
             string stavek = "  Čeprav je še včeraj snežilo, je dan lep in sončen. Avtobus je imel zamudo, ampak nič ne de.   ";
-            string zamenjava = "";
             
             /* vodilni in končni presledki - TRIM */
             string trim = stavek.Trim();
             Console.WriteLine(trim);
             
-            /* Replace v angleške črke */
+            /* Zamenjava v angleške črke  ... ali poenostaviš pa uporabiš Replace v stavku*/
+            string zamenjava = "";
             for (int i = 0; i < stavek.Length; i++)
             {
                 char trenutniZnak = stavek[i];
@@ -165,19 +163,19 @@ namespace Vaje4
                         break;
                     case 'Č':
                     case 'Ć':
-                        zamenjava += 'C';
+                        zamenjava += 'c';
                         break;
                     case 'ž':
                         zamenjava += 'z';
                         break;
                     case 'Ž':
-                        zamenjava += 'Ž';
+                        zamenjava += 'ž';
                         break;
                     case 'š':
                         zamenjava += 's';
                         break;
                     case 'Š':
-                        zamenjava += 'Š';
+                        zamenjava += 'š';
                         break;
                     default:
                         zamenjava += trenutniZnak;
@@ -185,9 +183,9 @@ namespace Vaje4
                 }
 
             }
-            Console.WriteLine(zamenjava);
+            Console.WriteLine(zamenjava.ToLower());
 
-            /* Zadnji štiri znaki brez končnih presledkov */
+            /* Vrne podniz zadnji štirih znakov brez končnih presledkov */
             Console.WriteLine(trim.Substring(trim.Length - 4));
             
             /* Različni znaki od A in a*/
@@ -199,18 +197,18 @@ namespace Vaje4
                 if (maliStavek[i] != 'a') stevecZnakov++;
             }
 
-            Console.WriteLine("V stavku je {0} različnih od A oz. a", stevecZnakov);
+            Console.WriteLine("V stavku je {0} znakov različnih od A oz. a", stevecZnakov);
             
-            /* Zadnje tri znake nadomesti z ___  TODO */
-            string izpis = (stavek.Trim().Remove(stavek.Trim().Length - 3, 3));
-            Console.WriteLine(izpis.Insert(izpis.Length, "..."));
+            /* Zadnje tri znake nadomesti z ___  */
+            string izpis = stavek.Trim().Remove(stavek.Trim().Length - 3,3); // odstrani vodilne in končne presledke, nato odstrani de.
+            Console.WriteLine(izpis.Insert(izpis.Length, "...")); //vstavi ... na koncu niza
             
-            string nadomestek = trim.Substring(trim.Length - 3);
+            /*string nadomestek = trim.Substring(trim.Length - 3);
 
             for (int i = 0; i < nadomestek.Length; i++)
             {
                 nadomestek = nadomestek.Replace(nadomestek[i], '_');
-            }
+            }*/
             //Console.WriteLine(nadomestek);
             
             /* Sredina niza */
