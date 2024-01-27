@@ -32,10 +32,10 @@ namespace Vaje4
             //Manipulacija();
 
             // 5. Naloga
-            Razmnozi();
+            //Razmnozi();
 
             // 6. Naloga TODO revisit
-            //GeneriranjeGesel();
+            GeneriranjeGesel();
             
             // 7. Naloga
             //ModernaZgodba();
@@ -238,8 +238,7 @@ namespace Vaje4
                 Console.Write(string.Join("", ponovitev)); //združimo v en niz
             }
         }
-
-        // Revisit TODO
+        
         public static void GeneriranjeGesel()
         {
             string geslo = "";
@@ -253,35 +252,42 @@ namespace Vaje4
                 geslo += nakSt;
                 stevec++;
             }
-
             //Console.WriteLine(geslo);
 
             //3 znak je velika oz. mala črka ang abecede
-            int znakStevilka;
+
+            Random nakljucno = new Random();
+            string znaki = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            
+            char nakZnak = znaki[nakljucno.Next(znaki.Length)];
+            geslo += nakZnak;
+            
+            //Console.WriteLine(geslo);
+            
+            // 4 naključen soglasnik ang abecede
+            string soglasniki = "QqRrTtZzPpSsDdFfGgHhJjKkLlXxCcVvBbNnMm";
+            
+            int nakljucenSoglasnik = rnd.Next(soglasniki.Length); //naključen indeks znaka
+            char znakSoglasnik = soglasniki[nakljucenSoglasnik]; // ta indeks je shranjen v char znakSoglasnik
+            geslo += znakSoglasnik;
+
+            /*int znakStevilka;
             do
             {
                 znakStevilka = rnd.Next(65, 123);
                 char znak = Convert.ToChar(znakStevilka);
                 geslo += znak;
 
-            } while (znakStevilka >= 91 && znakStevilka <= 96 );
-
-       
-            //Console.WriteLine(geslo);
-            
-            // 4 naključen soglasnik ang abecede TODO
-            string soglasniki = "QqRrTtZzPpSsDdFfGgHhJjKkLlXxCcVvBbNnMm";
-            int nakljucenSoglasnik = rnd.Next(soglasniki.Length);
-            char znakSoglasnik = soglasniki[nakljucenSoglasnik];
-            geslo += znakSoglasnik;
+            } while (znakStevilka >= 91 && znakStevilka <= 96 );*/
             
             
-            // 5 naključen samoglasnik ang abecede TODO
-            string samoglasniki = "AEIOUWYaeiouwy"; //v angleščini sta w in y samoglasnia včasih
+            // 5 naključen samoglasnik ang abecede
+            string samoglasniki = "AEIOUWYaeiouwy"; //v angleščini sta w in y samoglasnika "včasih"
             int naključenSamoglasnik = rnd.Next(samoglasniki.Length);
             char znakSamoglasnika = samoglasniki[naključenSamoglasnik];
             geslo += znakSamoglasnika;
-            Console.WriteLine(geslo);
+            
+            //Console.WriteLine(geslo);
             
             // 6 - 7 naključno sodo število
             stevec = 0;
@@ -317,19 +323,21 @@ namespace Vaje4
             // Zamenjaj bedanec v starec in Kekec v deček
             besedilo = besedilo.Replace("Bedanec", "starec").Replace("Kekec", "deček");
             Console.WriteLine(besedilo);
+            Console.WriteLine();
 
             // odstrani pametno in vej
             besedilo = besedilo.Replace("pametno", "").Replace("vej", "");
             Console.WriteLine(besedilo);
+            Console.WriteLine();
             
             // Na koncu besedila vstavi niz
             besedilo = besedilo.Insert(besedilo.Length - 1, " Naslednjič bolje premisli!");
             Console.WriteLine(besedilo);
-
             Console.WriteLine();
-            // Prvi stavek z veliko začetnico TODO
-            string velikaPrva = Convert.ToString(besedilo[0]).ToUpper();
-            Console.WriteLine(velikaPrva + besedilo.Substring(1));
+
+            // Prvi stavek z veliko začetnico 
+            string velikaPrvaCrka = Convert.ToString(besedilo[0]).ToUpper(); //vzamemo prvi znak in ga spremenimo v veliko črko
+            Console.WriteLine(velikaPrvaCrka + besedilo.Substring(1)); //začnemo podniz od t naprej
         }
     }
 }
