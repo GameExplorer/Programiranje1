@@ -80,6 +80,8 @@ namespace Predavanje5
             return 2 * (dolzina + visina);
         }
     }
+
+    
     
     class Program
     {
@@ -143,6 +145,52 @@ namespace Predavanje5
             int[] tabelica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int izpisVsote = VsotaStevilVTabeli(tabelica);
             Console.WriteLine("Vsota števil v tabeli je: {0}", izpisVsote);
+            
+            //Napiši metodo, ki prejme 1D tabelo, ki prejme nize
+            // in število nizov, ki jih iz te tabele izpiše. Metoda
+            //izpiše toliko nizov iz tabele kot določa paramereter
+
+            string[] tabelaNizov = new string[] { "Prvi", "Drugi", "Tretji", "Četrti", "Peti" };
+            IzpisNizov(tabelaNizov, 8);
+
+            Stanovanje s1 = new Stanovanje();
+
+            Stanovanje[] stanovanja = new Stanovanje[5];
+            vnosVseh(stanovanja);
+
+            for (int i = 0; i < stanovanja.Length; i++)
+            {
+                stanovanja[i].izpis();
+            }
+            
+            s1.UporabniskiVnos();
+            s1.izpis();
+            Stanovanje najugodnejse = NajUgodnejsi(stanovanja);
+            Console.WriteLine("Najugodnejše stanovanje: ");
+            najugodnejse.izpis();
+        }
+
+        static Stanovanje NajUgodnejsi(Stanovanje[] stanovanja)
+        {
+            Stanovanje najugodneje = stanovanja[0];
+            for (int i = 1; i < stanovanja.Length; i++)
+            {
+                if (stanovanja[i].CenaNaM2() < najugodneje.CenaNaM2())
+                {
+                    najugodneje = stanovanja[i];
+                }
+            }
+
+            return najugodneje;
+        }
+        
+        static void vnosVseh(Stanovanje[] tabela)
+        {
+            for (int i = 0; i < tabela.Length; i++)
+            {
+                tabela[i] = new Stanovanje(); //rezerviramo mesto
+                tabela[i].UporabniskiVnos();
+            }
         }
         
         public static int VsotaStevilVTabeli(int[] tabela)
@@ -155,6 +203,50 @@ namespace Predavanje5
             }
 
             return vsota;
+        }
+
+        public static void IzpisNizov(string[] tabela, int stevilo)
+        {
+            string niz = "";
+            for (int i = 0; i < stevilo; i++)
+            {
+                niz += tabela[i % tabela.Length] + " "; //vrne Prvi Drugi Tretji Četrti Peti Prvi Drugi Tretji 
+            }
+            Console.WriteLine(niz);
+        }
+    }
+    
+    class Stanovanje
+    {
+        public int steviloSob;
+        public string Lokacija;
+        public double kvadratura;
+        public decimal cena;
+
+        public double CenaNaM2()
+        {
+            return (double)this.cena / this.kvadratura;
+        }
+
+        public void UporabniskiVnos()
+        {
+            Console.Write("Vnesi stevilo sob: ");
+            this.steviloSob = Int32.Parse(Console.ReadLine());
+
+            Console.Write("Vnesi lokacijo: ");
+            this.Lokacija = Console.ReadLine();
+            
+            Console.Write("Vnesi ceno: ");
+            this.cena = decimal.Parse(Console.ReadLine());
+            
+            Console.Write("Vnesi kvadraturo: ");
+            this.kvadratura = Int32.Parse(Console.ReadLine());
+        }
+        public void izpis()
+        {
+            Console.WriteLine("Stevilo sob: {0}, \nLokacija:{1}, " +
+                              "\nKvadratura: {2} \nCena:{3}",
+                steviloSob, Lokacija, kvadratura, cena);
         }
     }
 }
