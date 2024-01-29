@@ -80,8 +80,6 @@ namespace Predavanje5
             return 2 * (dolzina + visina);
         }
     }
-
-    
     
     class Program
     {
@@ -146,36 +144,40 @@ namespace Predavanje5
             int izpisVsote = VsotaStevilVTabeli(tabelica);
             Console.WriteLine("Vsota števil v tabeli je: {0}", izpisVsote);
             
-            //Napiši metodo, ki prejme 1D tabelo, ki prejme nize
+            //Napiši metodo, ki prejme 1D tabelo nizov
             // in število nizov, ki jih iz te tabele izpiše. Metoda
-            //izpiše toliko nizov iz tabele kot določa paramereter
+            //izpiše toliko nizov iz tabele kot določimo
 
             string[] tabelaNizov = new string[] { "Prvi", "Drugi", "Tretji", "Četrti", "Peti" };
             IzpisNizov(tabelaNizov, 8);
 
             Stanovanje s1 = new Stanovanje();
+            
+            //za eno stanovanje
+            s1.UporabniskiVnos();
+            s1.izpis();
 
             Stanovanje[] stanovanja = new Stanovanje[5];
-            vnosVseh(stanovanja);
+            vnosVseh(stanovanja); //vnesemo podatke o stanovanjih
 
+            //izpis stanovanj
             for (int i = 0; i < stanovanja.Length; i++)
             {
                 stanovanja[i].izpis();
             }
             
-            s1.UporabniskiVnos();
-            s1.izpis();
             Stanovanje najugodnejse = NajUgodnejsi(stanovanja);
             Console.WriteLine("Najugodnejše stanovanje: ");
             najugodnejse.izpis();
+
         }
 
         static Stanovanje NajUgodnejsi(Stanovanje[] stanovanja)
         {
-            Stanovanje najugodneje = stanovanja[0];
-            for (int i = 1; i < stanovanja.Length; i++)
+            Stanovanje najugodneje = stanovanja[0]; //shranimo prvi element kot najcenejši
+            for (int i = 1; i < stanovanja.Length; i++) //sprehod po stanovanjih
             {
-                if (stanovanja[i].CenaNaM2() < najugodneje.CenaNaM2())
+                if (stanovanja[i].CenaNaM2() < najugodneje.CenaNaM2()) //če je cenejši ga shrani v spremenljivko
                 {
                     najugodneje = stanovanja[i];
                 }
@@ -184,6 +186,7 @@ namespace Predavanje5
             return najugodneje;
         }
         
+        // S pomočjo te metode vnesemo podatke o stanovanjih
         static void vnosVseh(Stanovanje[] tabela)
         {
             for (int i = 0; i < tabela.Length; i++)
