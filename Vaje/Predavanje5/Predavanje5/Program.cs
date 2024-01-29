@@ -130,6 +130,31 @@ namespace Predavanje5
             Pravokotnik p1 = new Pravokotnik(dolzina, visina);
             Console.WriteLine("Obseg pravokotnika je {0} ", p1.Obseg());
             Console.WriteLine("Ploscina pravokotnika je {0} ", p1.Ploscina());
+            
+            
+            /********************************************************** */
+            
+            // PREDAVANJE 5
+            
+            /********************************************************** */
+            
+            //Napiši metodo, ki prejme 1-dimenzionalno tabelo
+            //vrne pa seštevek vseh elementov v njej
+            int[] tabelica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int izpisVsote = VsotaStevilVTabeli(tabelica);
+            Console.WriteLine("Vsota števil v tabeli je: {0}", izpisVsote);
+        }
+        
+        public static int VsotaStevilVTabeli(int[] tabela)
+        {
+            int vsota = 0;
+
+            for (int i = 0; i < tabela.Length; i++)
+            {
+                vsota += tabela[i];
+            }
+
+            return vsota;
         }
     }
 }

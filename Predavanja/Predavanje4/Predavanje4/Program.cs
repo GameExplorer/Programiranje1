@@ -151,7 +151,7 @@ namespace Predavanje4
             //s1.ime = "Miha";
             //s1.ocena = 10;
             s1.Izpis();
-            
+
         }
         
         public static int Sestevek(int a, int b)
@@ -228,10 +228,9 @@ namespace Predavanje4
 
             return stevec;
         }
+        
     }
     
-    
-
     class Student
     {
         public string ime;
