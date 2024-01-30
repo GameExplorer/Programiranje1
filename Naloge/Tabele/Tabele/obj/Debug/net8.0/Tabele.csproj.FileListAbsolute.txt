@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\bin\Debug\net8.0\Tabele.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\bin\Debug\net8.0\Tabele.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\bin\Debug\net8.0\Tabele.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\bin\Debug\net8.0\Tabele.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\bin\Debug\net8.0\Tabele.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\refint\Tabele.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\Tabele.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Tabele\Tabele\obj\Debug\net8.0\ref\Tabele.dll
