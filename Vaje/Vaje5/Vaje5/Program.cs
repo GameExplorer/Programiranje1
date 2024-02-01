@@ -13,8 +13,9 @@ namespace Vaje5
    //PrenosPodatkov();
    //Pregledovanje2DTabele();
    //PrimerjavaDvehTabel();
-   TabelaZRealnimiPodatki();
+   //TabelaZRealnimiPodatki();
    //DeloSTabelamiNizov();
+   KriptiranjePodatkov();
   }
 
   public static void PregledovanjeTabele()
@@ -248,6 +249,37 @@ namespace Vaje5
    {
     Console.WriteLine("{0}. {1} {2}", i+1, priimki[i], imena[i]);
    }
+  }
+
+  public static void KriptiranjePodatkov()
+  {
+   Console.Write("Vnesi niz: ");
+   string vnos = Console.ReadLine();
+
+   char[] transformiraniNiz = new char[vnos.Length];
+
+   char novaVrednost;
+   for (int i = 0; i < vnos.Length; i++)
+   {
+    if (char.IsLetter(vnos[i]))
+    {
+     novaVrednost = (char)(vnos[i] - 5);
+
+     if (novaVrednost < 'A')
+     {
+      novaVrednost += (char)26; // Vrnemo se na konec abecede
+     }
+
+     transformiraniNiz[i] = novaVrednost;
+    }
+    else
+    {
+     transformiraniNiz[i] = ' '; // Ohranimo presledek
+    }
+   }
+
+   Console.Write("Transformiran niz: ");
+   Console.WriteLine(transformiraniNiz);
   }
  }
 }
