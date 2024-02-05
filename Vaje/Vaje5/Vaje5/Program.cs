@@ -15,7 +15,7 @@ namespace Vaje5
    //PrimerjavaDvehTabel();
    //TabelaZRealnimiPodatki();
    //DeloSTabelamiNizov();
-   KriptiranjePodatkov();
+   //KriptiranjePodatkov();
   }
 
   public static void PregledovanjeTabele()
@@ -253,31 +253,35 @@ namespace Vaje5
 
   public static void KriptiranjePodatkov()
   {
+   // Uporabnik vnese niz
    Console.Write("Vnesi niz: ");
    string vnos = Console.ReadLine();
 
+   //definiramo tabelo in dodatno spremenljivko
    char[] transformiraniNiz = new char[vnos.Length];
-
-   char novaVrednost;
+   char novaCrka;
+   
+   //Zanka ki se sprehaja po vnosu
    for (int i = 0; i < vnos.Length; i++)
    {
-    if (char.IsLetter(vnos[i]))
+    if (char.IsLetter(vnos[i])) // če je trenutni znak črka potem...
     {
-     novaVrednost = (char)(vnos[i] - 5);
+     novaCrka = (char)(vnos[i] - 5); //od trenutne črke poišče novo črko ki je 5 mest stran 
 
-     if (novaVrednost < 'A')
+     if (novaCrka < 'A') //če je vrednost manjša od A se vrne na konec abecede
      {
-      novaVrednost += (char)26; // Vrnemo se na konec abecede
+      novaCrka += (char)26; 
      }
 
-     transformiraniNiz[i] = novaVrednost;
+     transformiraniNiz[i] = novaCrka; //novo črka se shrani v tabelo
     }
-    else
+    else //če ni črka oz. je presledek ga ohranimo
     {
-     transformiraniNiz[i] = ' '; // Ohranimo presledek
+     transformiraniNiz[i] = ' ';
     }
    }
 
+   //Izpis
    Console.Write("Transformiran niz: ");
    Console.WriteLine(transformiraniNiz);
   }
