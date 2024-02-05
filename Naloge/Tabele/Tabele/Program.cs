@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Globalization;
+
 namespace Tabele
 {
     class Program
@@ -11,7 +13,8 @@ namespace Tabele
             //TabelaZnakov();
             //TabelaRacunov();
             //TabelaNizov();
-            PrepisVNovoTabelo();
+            //PrepisVNovoTabelo();
+            KvadratnaMatrika();
 
             // TABELA PRODAJE PO MESECIH
             /*double[] mesecnaProdaja = new double[12];
@@ -248,6 +251,67 @@ namespace Tabele
                 Console.Write(novaTabela[i] + " ");
                 
                 //if(i + 1 % 10 == 0) Console.WriteLine();
+            }
+        }
+
+        public static void KvadratnaMatrika()
+        {
+            int[,] tabela = new int[7, 7];
+            Random rnd = new Random();
+
+            int maxVrednost = 0;
+            
+            //polnimo tabelo
+            for (int i = 0; i < tabela.GetLength(0); i++)
+            {
+                for (int j = 0; j < tabela.GetLength(1); j++)
+                {
+                    tabela[i, j] = rnd.Next(0, 1001);
+                    Console.Write(tabela[i,j] + " ");
+
+                    if ((j + 1) % 7 == 0) Console.WriteLine();
+                }
+            }
+
+            maxVrednost = 0;
+            int stolpec = 0;
+            int vrstica = 0;
+            int stevec = 0;
+
+            for (int i = 0; i < tabela.GetLength(0); i++)
+            {
+                for (int j = 0; j < tabela.GetLength(1); j++)
+                {
+                    if (maxVrednost < tabela[i, j])
+                    {
+                        maxVrednost = tabela[i, j];
+                        vrstica = i;
+                        stolpec = j;
+                    }
+
+                    if (tabela[i, j] % 5 == 0)
+                    {
+                        stevec++;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Največji element: {0} na indexu [{1}, {2}]", maxVrednost, vrstica, stolpec );
+            Console.WriteLine("Število števil, ki so deljiva s 5 je {0}", stevec);
+
+            Console.WriteLine();
+            //zmanjšane vrednost elementov
+            for (int i = 0; i < tabela.GetLength(0); i++)
+            {
+                for (int j = 0; j < tabela.GetLength(1); j++)
+                {
+                    tabela[i, j] -= 2;
+                    Console.Write(tabela[i,j] + " ");
+                    
+                    if ((j + 1) % 7 == 0) Console.WriteLine();
+
+                }
             }
         }
     }

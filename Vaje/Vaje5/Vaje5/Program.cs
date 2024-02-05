@@ -3,6 +3,8 @@
  * če izjava prvega stavka ni resnična, kršim disciplinska pravila."
  */
 
+using System.IO.Compression;
+
 namespace Vaje5
 {
  class Program
@@ -90,7 +92,7 @@ namespace Vaje5
    {
     for (int j = 0; j < tabela.GetLength(1); j++)
     {
-     tabela[i, j] = rnd.Next(-5, 5);
+     tabela[i, j] = rnd.Next(-5, 6);
      //Console.WriteLine(tabela[i,j]);
     }
    }
@@ -176,7 +178,7 @@ namespace Vaje5
 
   public static void TabelaZRealnimiPodatki()
   {
-   int[,] tabela = new int[2, 5];
+   int[,] tabela = new int[2, 10];
    int trenutnoStevilo;
 
    Random rnd = new Random();
@@ -285,5 +287,6 @@ namespace Vaje5
    Console.Write("Transformiran niz: ");
    Console.WriteLine(transformiraniNiz);
   }
+  
  }
 }
