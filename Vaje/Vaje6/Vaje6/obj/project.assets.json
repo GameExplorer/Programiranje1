@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje2\\Predavanje2\\Predavanje2.csproj",
-      "projectName": "Predavanje2",
-      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje2\\Predavanje2\\Predavanje2.csproj",
+      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje6\\Vaje6\\Vaje6.csproj",
+      "projectName": "Vaje6",
+      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje6\\Vaje6\\Vaje6.csproj",
       "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje2\\Predavanje2\\obj\\",
+      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje6\\Vaje6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

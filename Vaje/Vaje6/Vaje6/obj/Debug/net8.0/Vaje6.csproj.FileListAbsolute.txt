@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\bin\Debug\net8.0\Vaje6.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\bin\Debug\net8.0\Vaje6.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\bin\Debug\net8.0\Vaje6.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\bin\Debug\net8.0\Vaje6.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\bin\Debug\net8.0\Vaje6.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\refint\Vaje6.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\Vaje6.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Vaje\Vaje6\Vaje6\obj\Debug\net8.0\ref\Vaje6.dll
