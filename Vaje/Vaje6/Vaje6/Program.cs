@@ -22,6 +22,10 @@ namespace Vaje6
             //IskanjeSumljiveBesede();
 
             //6. Naloga
+            //TockeNaIzpitu();
+            
+            //7. Naloga
+            Loterija();
         }
 
         public static void PregledPodatkovForEach()
@@ -186,6 +190,113 @@ namespace Vaje6
             }
 
             return false;
+        }
+
+        public static void TockeNaIzpitu()
+        {
+            string[,] tabelaŠtudentov = new string[5, 2];
+            string ime = "";
+            string tocke = "";
+            
+            for (int i = 0; i < tabelaŠtudentov.GetLength(0); i++)
+            {
+                Console.Write("Študent: ");
+                ime = Console.ReadLine();
+                tabelaŠtudentov[i, 0] = ime;
+
+                Console.Write("Vnesi točke: ");
+                tocke = Console.ReadLine();
+                tabelaŠtudentov[i, 1] = tocke;
+            }
+
+            string imeIzpis = "";
+            string rez = "";
+
+            Console.WriteLine("PREGLED OCEN");
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
+            for (int i = 0; i < tabelaŠtudentov.GetLength(0); i++)
+            {
+                for (int j = 0; j < tabelaŠtudentov.GetLength(1); j++)
+                {
+                    int ocena = Convert.ToInt32(tabelaŠtudentov[i,1]);
+                    imeIzpis = tabelaŠtudentov[i, 0];
+                    rez = PreveriOceno(ocena);
+                }
+                Console.WriteLine("Študent/ka {0} je prejel/a oceno {1}.", imeIzpis, rez);
+
+            }
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
+
+        }
+
+        public static string PreveriOceno(int ocena)
+        {
+            if (ocena >= 85) return "ODLIČNO";
+            if (ocena >= 70 && ocena < 85) return "PRAV DOBRO";
+            if (ocena >= 60 && ocena < 70) return "DOBRO";
+            if (ocena >= 50 && ocena < 60) return "ZADOSTNO";
+            
+            return "NEZADOSTNO";
+        }
+
+        public static void Loterija()
+        {
+            string[,] tabelaTekmovalcev = new string[15, 2]
+            {
+                { "Cene", "0" }, { "Mitja", "0" }, { "Ana", "0" }, { "Klara", "0" }, { "Iva", "0" },
+                { "Mirko", "0" }, { "Janez", "0" }, { "Bine", "0" }, { "Gregor", "0" }, { "Špela", "0" },
+                { "Polona", "0" }, { "Manca", "0" }, { "Tilen", "0" }, { "Jakob", "0" }, { "Eva", "0" }
+            };
+
+            string[,] rezultati = Zrebanje(tabelaTekmovalcev);
+            
+            int maxTocke = 0;
+            int indexOsebe = 0;
+            
+            for (int i = 0; i < rezultati.GetLength(0); i++)
+            {
+                int trenutneTocke = Convert.ToInt32(rezultati[i, 1]);
+                if (maxTocke < trenutneTocke)
+                {
+                    maxTocke = trenutneTocke;
+                    indexOsebe = i;
+                }
+            }
+
+            string zmagovalec = rezultati[indexOsebe, 0];
+            string stTock = rezultati[indexOsebe, 1];
+
+            Console.WriteLine("Izžrebana oseba: {0} z doseženim številom točk: {1}", zmagovalec, stTock);
+
+            Console.WriteLine();
+            Console.WriteLine("Ostale osebe: ");
+            for (int i = 0; i < rezultati.GetLength(0); i++)
+            {
+                if (i != indexOsebe)
+                {
+                    Console.WriteLine(rezultati[i,0] + ": " + rezultati[i,1]);
+                }
+            }
+        }
+
+        public static string[,] Zrebanje(string[,] tabelaTekmovalcev)
+        {
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < 100000; i++)
+            {
+                int indexOsebe = rnd.Next(0, 15);
+                tabelaTekmovalcev[indexOsebe, 1] = Convert.ToString(Convert.ToInt32(tabelaTekmovalcev[indexOsebe, 1]) + 1);
+            }
+
+            return tabelaTekmovalcev;
+        }
+
+        public static void Izrebanje(string[,] tabelaTekmovalcev)
+        {
+            
+            
         }
     }
 }
