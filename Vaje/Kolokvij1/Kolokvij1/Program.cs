@@ -9,7 +9,7 @@ namespace Kolokvij1
             
             // 2013
 
-            Kolokvij_2013();
+            //Kolokvij_2013();
             
             // 2014
             //Kolokvij_2014();
@@ -43,7 +43,8 @@ namespace Kolokvij1
 
             //Kolokvij_2022();
             
-            //
+            // 2022 - 2
+            Kolokvij_2022_2();
 
         }
         
@@ -1114,7 +1115,112 @@ namespace Kolokvij1
         }
         
         // ******************************
+        
+        // 
+        public static void Kolokvij_2022_2()
+        {
+            int stv = 5;
+            for (int i=0;i<stv;i++)
+            {
+                Console.Write("{0}:", i+1);
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
 
+                Console.WriteLine();
+            }
+            
+            int[] originalnaTabela = new int[50];
+            Random rnd = new Random();
+
+            Console.WriteLine("Števila v tabeli: ");
+            for(int i = 0; i < originalnaTabela.Length; i++) {
+                originalnaTabela[i] = rnd.Next(0,11);
+                Console.Write(originalnaTabela[i] + " ");
+            }
+
+            int[] sodaTabela = new int[originalnaTabela.Length];
+            int[] lihaTabela = new int[originalnaTabela.Length];
+
+            for(int i = 0; i < originalnaTabela.Length; i++) {
+                if(originalnaTabela[i] % 2 == 0) sodaTabela[i] = originalnaTabela[i];
+                else lihaTabela[i] = originalnaTabela[i];
+            }
+            
+            int[,] tabela = new int[10,5];
+
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    tabela[i,j] = i+1;
+                }
+            }
+
+            double rez = Povprecje(tabela);
+            Console.WriteLine();
+            Console.WriteLine("Rezultat je {0}", rez);
+            
+            
+            do
+            {
+                Console.WriteLine("Vpišite prvo število:");
+                double prvoStevilo = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Vpišite operand (+, -, * ali /):");
+                char operand = Convert.ToChar(Console.ReadLine());
+
+                Console.WriteLine("Vpišite drugo število:");
+                double drugoStevilo = Convert.ToDouble(Console.ReadLine());
+
+                double rezultat = 0;
+
+                switch (operand)
+                {
+                    case '+':
+                        rezultat = prvoStevilo + drugoStevilo;
+                        break;
+                    case '-':
+                        rezultat = prvoStevilo - drugoStevilo;
+                        break;
+                    case '*':
+                        rezultat = prvoStevilo * drugoStevilo;
+                        break;
+                    case '/':
+                        if (drugoStevilo != 0)
+                        {
+                            rezultat = prvoStevilo / drugoStevilo;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Deljenje z 0 ni dovoljeno.");
+                            continue;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Napačen operand. Prosimo, vnesite +, -, * ali /.");
+                        continue;
+                }
+
+                Console.WriteLine("Rezultat: " + rezultat);
+
+                Console.WriteLine("Ali želite nadaljevati? (d/n)");
+            } while (Console.ReadLine().ToLower() == "d");
+
+            Console.WriteLine("Hvala, da ste uporabljali kalkulator. Nasvidenje!");
+
+        }
+        
+        public static double Povprecje(int[,] tabela) {
+            int vsota = 0;
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    vsota += tabela[i,j];
+                }
+            }
+            double povprecje = (double) vsota / (tabela.GetLength(0) + tabela.GetLength(1));
+            return povprecje;
+        }
+        
         
     }
 }
