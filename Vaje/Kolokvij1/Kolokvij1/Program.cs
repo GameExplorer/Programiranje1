@@ -7,6 +7,10 @@ namespace Kolokvij1
         public static void Main(String[] args)
         {
             
+            // 2013
+
+            Kolokvij_2013();
+            
             // 2014
             //Kolokvij_2014();
             
@@ -29,9 +33,91 @@ namespace Kolokvij1
             
             // 2019
 
-            Kolokvij_2019();
+            //Kolokvij_2019();
+            
+            // 2021
+            
+            //Kolokvij_2021();
+            
+            // 2022
+
+            //Kolokvij_2022();
+            
+            //
 
         }
+        
+        // ***** 2013 *****
+        public static void Kolokvij_2013()
+        {
+            string st = "Programiranje 1";
+            Console.WriteLine("Znaki: " + st[2]);
+            Console.WriteLine("Besede: " + st[1] + st[2] + st[3]);
+
+            double a;
+            int b = 2;
+            a = Izracunaj9(1, b);
+            Console.WriteLine(a);
+            
+            Console.Write("Vnesi besedo: ");
+            string vnos1 = Console.ReadLine();
+
+            Console.Write("Vnesi besedo: ");
+            string vnos2 = Console.ReadLine();
+            
+            Console.WriteLine("{0}.{1}.", vnos1[0], vnos2[0]);
+            
+            if(vnos1.Length > vnos2.Length) Console.WriteLine(vnos1);
+            else Console.WriteLine(vnos2);
+            
+            Console.WriteLine(vnos1);
+
+            string novStavek = "";
+
+            for(int i = 0; i < vnos2.Length; i++) {
+                novStavek = vnos2[i] + novStavek;
+            }
+
+            Console.WriteLine(novStavek);
+            
+            int[] tabela = new int[100];
+            Random rnd = new Random();
+            int stevec  = 0;
+
+            //Polnimo tabelo
+            for(int i = 0; i < tabela.Length; i++) {
+                tabela[i] = rnd.Next(-5,5);
+            }
+
+            //Preverjamo pogoj
+            for(int i = 0; i < tabela.Length; i++) {
+                if(tabela[i] > 0) stevec++;
+            }
+            
+            Console.WriteLine("{0} števil je večjih od 0", stevec);
+
+            int izpis = PikeInVejice("Ta metoda, vrne število vejic (,) in pik (.) v stavku.");
+            Console.WriteLine("Število pik in vejic v stavku je {0}", izpis);
+        }
+
+        public static double Izracunaj9(int x, int b)
+        {
+            double c = 1 + Math.Pow(b, 3);
+            c = c - x;
+            return c;
+        }
+        
+        public static int PikeInVejice(string stavek) {
+            int stevec = 0;
+
+            for(int i = 0; i < stavek.Length; i++) {
+                if(stavek[i] == '.' || stavek[i] == ',') stevec++;
+            }
+
+            return stevec;
+        }
+        
+        // ******************************
         
         // ***** 2014 *****
         public static void Kolokvij_2014()
@@ -767,9 +853,268 @@ namespace Kolokvij1
 
             Console.WriteLine("{0} znakov je različnih od {1}", stevec, znak);
         }
+        
         // ******************************
 
 
-        // ***** 2019 *****
+        // ***** 2021 *****
+
+        public static void Kolokvij_2021()
+        {
+            double rezultat = 10 + 10 % 7 - 4 / 3;
+            Console.WriteLine(rezultat);
+
+            //string racun = 10 + " != " + 1 - 1;
+
+            string vsota = "Vsota : " + 5 + (3 - 2);
+            Console.WriteLine(vsota);
+
+            bool logicna = (4 * 4 != 8 * 2);
+            Console.WriteLine(logicna);
+
+            int a = 2;
+            int b = 6;
+            a = Izracunaj7(a, b);
+            b++;
+            Console.WriteLine(a + " " + b);
+
+            Naloga("Datum: 1.2.2021", 1);
+            
+            Console.Write("Vnesi negativno število: ");
+            double znesek = Double.Parse(Console.ReadLine());
+            
+            while(znesek > 0) {
+                Console.Write("Vnesti morate negativno število: ");
+                znesek = Double.Parse(Console.ReadLine());
+            }
+            
+            int stevec = 0;
+            string tmp = znesek.ToString();
+
+            for(int i = 0; i < tmp.Length; i++) {
+                if(tmp[i] == '0') stevec++;
+            }
+            Console.WriteLine("V znesku je {0} ničel", stevec);
+            
+            znesek = (Math.Sqrt(Math.Pow(znesek,3) - Math.Pow(2.5,4)) + (1/3)) / (3 * Math.Pow(znesek,2));
+            Console.WriteLine(znesek);
+            
+            double[,] tabela = new double[10,10];
+            Random rnd = new Random();
+            int stevec2 = 0; 
+
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    tabela[i,j] = -rnd.NextDouble() * 100 - 5;
+                    Console.WriteLine(tabela[i,j]);
+                }
+            }
+
+
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    if(tabela[i,j] < 12 && i == j) stevec2++;
+                }
+            }
+
+            Console.WriteLine("V tej tabeli je {0} števil, ki so manjša od 12 in ležijo na diagonali", stevec);
+
+            string rez = Podvoji("Kolovrat", 'o');
+            Console.WriteLine(rez);
+            
+            int x = 33;
+            if (x > 0 && x <=50)
+                Console.WriteLine("nezadostno");
+            else
+            {
+                if (x == 33)
+                {
+                    Console.WriteLine("Točno 33");
+                }
+                else
+                {
+                    if (x < 70)
+                    {
+                        Console.WriteLine("dobro");
+                    }
+                    else
+                    {
+                        if (x < 80)
+                        {
+                            Console.WriteLine("prav dobro");
+                        }
+                        else
+
+                            Console.WriteLine("odlicno");
+                    }
+                }
+            }
+
+        }
+        
+        public static string Podvoji(string stavek, char znak)
+        {
+            string novStavek = "";
+            for(int i = 0; i < stavek.Length; i++) {
+
+                if(stavek[i] == znak)
+                {
+                    novStavek += stavek[i].ToString() + znak;
+                }
+                else
+                {
+                    novStavek += stavek[i];
+                }
+            }
+            return novStavek;
+        }
+
+        public static int Izracunaj7(int n, int k)
+        {
+            do
+            {
+                n = n + n / k;
+                n++;
+                Console.Write(n + " ");
+            } while (n <= k);
+
+            int m = 2 - n;
+            return m;
+        }
+
+        public static void Naloga(string stavek, int cifra)
+        {
+            int števec = 0;
+
+            for (int i = 0; i < stavek.Length; i++)
+            {
+                if(stavek[i] > '0' && stavek[i] < '9') števec++;
+                
+                else Console.Write(stavek[i]);
+            }
+            
+            Console.WriteLine("Število cifer je {0} ", števec);
+        }
+
+        
+        // ******************************
+        
+        // ***** 2022 *****
+        
+        public static void Kolokvij_2022()
+        {
+            double rezultat = 10 % 6 + 10 / 4 - 1.5;
+            Console.WriteLine(rezultat);
+            //string vsota = " Vsota: " + 5 - (3-2));
+            
+            int a = 3, b = 7;
+            a = Izracunaj8(a, b);
+            a--;
+            Console.WriteLine(a + " " + b);
+
+            string rez = Naloga2("Datum: 18.2.2022", 0);
+            Console.WriteLine(rez);
+            
+            Console.Write("Vnesi ime: ");
+            string vnos = Console.ReadLine();
+
+            while(vnos.Length <= 2) {
+                Console.Write("Vnesi ime z več kot 2 znakoma: ");
+                vnos = Console.ReadLine();
+            }
+            
+            int stevec = 0;
+
+            for(int i = 0; i < vnos.Length; i++) {
+                if(vnos[i] == 'A' || vnos[i] == 'O') stevec++;
+            }
+
+            Console.WriteLine("Število samoglasnikov A in O v spremenljivki ime je {0}", stevec);
+            
+            double[,] tabela = new double[10,10];
+
+            Random rnd = new Random();
+
+            int stevec3 = 0;
+
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    tabela[i, j] = Math.Round(-rnd.NextDouble() * 11, 2);
+                    Console.WriteLine(tabela[i,j]);
+                }
+            }
+
+            for(int i = 0; i < tabela.GetLength(0); i++) {
+                for(int j = 0; j < tabela.GetLength(1); j++) {
+                    if(tabela[i,j]% 2 == 0 && i != j) stevec3++;
+                }
+            }
+
+            Console.WriteLine("Števil, ki so soda in ne ležijo na diagonali je {0}", stevec);
+
+            string izpis = UstvariNiz("Kranj", 4);
+            Console.WriteLine(izpis);
+            
+            int x = 33;
+            if (x / 3 > 0 && x % 2 != 0)
+                Console.WriteLine(x);
+            else Console.WriteLine("A");
+
+            if (x > 33 || x < 50)
+                Console.WriteLine(x-10);
+            else Console.WriteLine("B");
+
+            if (x - 33 != 0 )
+                Console.WriteLine(x + 10);
+            else Console.WriteLine("C");
+      
+            if (x + x != 2 * x)
+                Console.WriteLine("D");
+            else Console.WriteLine(x % 5);
+
+        }
+
+        public static int Izracunaj8(int n, int k)
+        {
+            while (n <= k)
+            {
+                n = n + n % k;
+                n++;
+                Console.Write(n + " ");
+            }
+
+            int m = 2 - n;
+            return m;
+        }
+        
+        public static string Naloga2(string stavek, int cifra)
+        {
+            int števec = 0;
+            for (int i = 0; i < stavek.Length; i++)
+            {
+                if (stavek[i] >= '0' && stavek[i] <= '9')
+                    števec++;
+                else
+                    cifra++;
+            }
+            return števec.ToString()+", "+ cifra;
+        }
+
+        public static string UstvariNiz(string stavek, int stevilo)
+        {
+            string novStavek = "";
+
+            for (int i = 0; i < stavek.Length; i++)
+            {
+                novStavek += string.Concat(Enumerable.Repeat(stavek[i], stevilo));
+            }
+
+            return novStavek;
+
+        }
+        
+        // ******************************
+
+        
     }
 }
