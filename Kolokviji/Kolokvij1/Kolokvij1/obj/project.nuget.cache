@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "uGWRVBwVmU2jb3cxRBib0mS+XrxH44pqgj9t/z/nCXXZ8sdDLBx+gK/QJr5ibhk8d2O1JadUPPfpc5uSPBcvUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
+=======
+  "dgSpecHash": "VeNYwYBC4RQGLGcDYkG18cNFysY6ADzgtsHrQzRwfXl9UJVWngEw8YtISajLQoA4FozkY/briJTD+LlFZJICzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }
