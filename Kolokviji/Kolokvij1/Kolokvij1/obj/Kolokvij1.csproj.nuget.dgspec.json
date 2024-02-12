@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
-        "projectName": "Kolokvij1",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
-        "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Kolokvij1\\Kolokvij1\\obj\\",
-=======
     "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
