@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "X4UITgD7WXewW8MCI1k2B4v3uI4Hytq2KFD0+1xal4+qPV7R4TejNlkKgIDvb6LZWcbrtWU25ro+M9qptD0uhQ==",
+  "dgSpecHash": "VeNYwYBC4RQGLGcDYkG18cNFysY6ADzgtsHrQzRwfXl9UJVWngEw8YtISajLQoA4FozkY/briJTD+LlFZJICzw==",
   "success": true,
-  "projectFilePath": "/home/melioads/Documents/GitHub/Programiranje1/Kolokviji/Kolokvij1/Kolokvij1/Kolokvij1.csproj",
+  "projectFilePath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

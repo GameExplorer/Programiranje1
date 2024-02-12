@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Runtime.InteropServices;
+
 namespace Kolokvij1
 {
     class Program
@@ -35,16 +37,23 @@ namespace Kolokvij1
 
             //Kolokvij_2019();
             
+            // 2020
+
+            Kolokvij_2020();
+
             // 2021
-            
+
             //Kolokvij_2021();
-            
+
             // 2022
 
             //Kolokvij_2022();
-            
+
             // 2022 - 2
-            Kolokvij_2022_2();
+            //Kolokvij_2022_2();
+
+            // 2022 - 3
+            //Kolokvij_2022_3();
 
         }
         
@@ -857,6 +866,21 @@ namespace Kolokvij1
         
         // ******************************
 
+        // ***** 2020 *****
+
+        public static void Kolokvij_2020()
+        {
+            double rezultat = 12 % 9 + 11 / 9;
+            Console.WriteLine(rezultat);
+
+            string racun = 9 + 2 * 3 + " < " + 16;
+            Console.WriteLine(racun);
+
+            string izraz = 8 + 2 + " != " + 10;
+            Console.WriteLine(izraz);
+        }
+
+        // ******************************
 
         // ***** 2021 *****
 
@@ -1116,7 +1140,7 @@ namespace Kolokvij1
         
         // ******************************
         
-        // 
+        //  ***** 2022 - 2 *****
         public static void Kolokvij_2022_2()
         {
             int stv = 5;
@@ -1221,6 +1245,112 @@ namespace Kolokvij1
             return povprecje;
         }
         
+        // ******************************
+
+        
+        // ***** 2022 - 3 *****
+        public static void Kolokvij_2022_3()
+        {
+            Console.WriteLine("Izberi enoto:");
+            Console.WriteLine("m - metri \nd - decimetri \nc - centrimetri");
+            char vnos = Console.ReadLine()[0];
+           
+
+            if(vnos == 'm') {
+                Console.Write("Vnesi prvo dolžino: ");
+                double dolzina1 = Double.Parse(Console.ReadLine());
+
+                Console.Write("Vnesi drugo dolžino: ");
+                double dolzina2 = Double.Parse(Console.ReadLine());
+
+                if(dolzina1 > dolzina2) Console.WriteLine("Dolzina1 je večja od Dolzina2");
+                else Console.WriteLine("Dolzina2 je večja od Dolzina1");
+            }
+
+            else if(vnos == 'd') {
+
+                Console.Write("Vnesi prvo dolžino: ");
+                double dolzina1 = Double.Parse(Console.ReadLine());
+
+                Console.Write("Vnesi drugo dolžino: ");
+                double dolzina2 = Double.Parse(Console.ReadLine());
+
+                if(dolzina1 > dolzina2) Console.WriteLine("Dolzina1 je večja od Dolzina2");
+                else Console.WriteLine("Dolzina2 je večja od Dolzina1");
+            }
+            else {
+                Console.Write("Vnesi prvo dolžino: ");
+                double dolzina1 = Double.Parse(Console.ReadLine());
+
+                Console.Write("Vnesi drugo dolžino: ");
+                double dolzina2 = Double.Parse(Console.ReadLine());
+
+                if(dolzina1 > dolzina2) Console.WriteLine("Dolzina1 je večja od Dolzina2");
+                else Console.WriteLine("Dolzina2 je večja od Dolzina1");
+            }
+
+
+            Console.WriteLine("Vnesi stranice trikotnika!");
+            Console.Write("Stranica a: ");
+            int a = Int32.Parse(Console.ReadLine());
+            
+            Console.Write("Stranica b: ");
+            int b = Int32.Parse(Console.ReadLine());
+            
+            Console.Write("Stranica c: ");
+            int c = Int32.Parse(Console.ReadLine());
+
+            if (a + b > c && b + c > a && c + a > b)
+            {
+                if (a == b && b == c && a == c)
+                {
+                    Console.WriteLine("Trikotnik je enakostraničen");
+                }
+                else if (a == b || b == c || a == c)
+                {
+                    Console.WriteLine("Trikotnik je enakokrak");
+                }
+                else
+                {
+                    Console.WriteLine("Trikotnik je pravokoten");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tak trikotnik ne obstaja");
+            }
+
+
+            int leto = 2024;
+            
+            if(leto % 4 == 0 && leto % 100 != 0 || leto % 400 == 0) Console.WriteLine("Prestopno leto");
+
+            Console.Write("Vnesi poljuben niz: ");
+            string beseda = Console.ReadLine();
+
+            while (beseda.Length < 1)
+            {
+                Console.Write("Vnesi poljuben niz: ");
+                beseda = Console.ReadLine();
+            }
+
+            for (int i = 0; i < beseda.Length; i++)
+            {
+                Console.Write(beseda[i] + "  ");
+            }
+
+            Console.WriteLine();
+
+            int stevec = 0;
+            for (int i = 0; i < beseda.Length; i++)
+            {
+                if (beseda[i] >= 'A' && beseda[i] <= 'Z') stevec++;
+            }
+            
+            Console.WriteLine("Število velikih črk je {0}", stevec);
+        }
+        
+        // ******************************
         
     }
 }
