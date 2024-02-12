@@ -1,0 +1,15 @@
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/bin/Debug/net8.0/predavanje6
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/bin/Debug/net8.0/predavanje6.deps.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/bin/Debug/net8.0/predavanje6.runtimeconfig.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/bin/Debug/net8.0/predavanje6.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/bin/Debug/net8.0/predavanje6.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.GeneratedMSBuildEditorConfig.editorconfig
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.AssemblyInfoInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.AssemblyInfo.cs
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.csproj.CoreCompileInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.sourcelink.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/refint/predavanje6.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/predavanje6.genruntimeconfig.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/Debug/net8.0/ref/predavanje6.dll
