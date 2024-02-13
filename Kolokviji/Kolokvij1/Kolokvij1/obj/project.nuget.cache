@@ -4,12 +4,5 @@
   "success": true,
   "projectFilePath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\Kolokvij1.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Kolokviji\\Kolokvij1\\Kolokvij1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
