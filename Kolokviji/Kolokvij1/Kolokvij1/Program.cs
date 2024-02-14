@@ -1,4 +1,7 @@
 ﻿
+using System.Security.AccessControl;
+using System.Threading.Channels;
+
 #pragma warning disable CS8604 // Possible null reference argument.
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
@@ -39,16 +42,20 @@ namespace Kolokvij1
 
             //Kolokvij_2019();
             
+            // 2019 - 2
+
+            Kolokvij_2019_2();
+
             // 2020
 
             //Kolokvij_2020();
-            
+
             // 2020 - 2
 
             //Kolokvij_2020_2();
-            
+
             // 2020 - 3
-            Kolokvij_2020_3();
+            //Kolokvij_2020_3();
 
             // 2021
 
@@ -875,12 +882,107 @@ namespace Kolokvij1
         
         // ******************************
         
-        
-        //  ***** 2019 - 3 *****
-        public static void Kolokvij_2019_3()
+        // ***** 2019 - 2 *****
+        public static void Kolokvij_2019_2()
         {
+            int k = 7;
+            double rez = Izracunaj4(11, k);
+            Console.WriteLine(rez);
+            Console.WriteLine(2*rez-1);
+
+
+            //Console.WriteLine(Test3(11, "Kolo"));
             
+            int znesek = 0;
+            bool veljavenVnos = false;
+
+            while (!veljavenVnos)
+            {
+                Console.Write("Vnesite poljubno celo število:");
+                string vnos = Console.ReadLine();
+
+                // Preverjanje, ali je vnos celo število
+                try
+                {
+                    znesek = int.Parse(vnos);
+                    veljavenVnos = true;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Vnos ni veljaven. Vnesite celo število.");
+                }
+            }
+
+            // Nadaljevanje programa z zneskom
+            Console.WriteLine("Vnesli ste število: {0}", znesek);
+
+            string zacasna = Convert.ToString(znesek);
+            zacasna += "5";
+
+            double ogVrednost = Math.Sqrt(znesek);
+
+            znesek = Convert.ToInt32(zacasna);
+            znesek = (int) (znesek - ogVrednost);
+            Console.WriteLine(znesek);
+            
+            int stevecLihih = 0;
+            while(znesek > 0) {
+                int enica = znesek % 10; //enice dobimo
+
+                if(enica % 2 != 0) stevecLihih++;
+    
+                znesek /= 10;
+            }
+
+            Console.WriteLine("Število lihih števil je {0}", stevecLihih);
+            
+            double[] tabela = new double[100];
+
+            Random rnd = new Random();
+
+            int stevec = 0;
+
+            for(int i = 0; i < tabela.Length; i++) {
+                tabela[i] = Math.Round(rnd.NextDouble() * 99.9,1);
+                Console.WriteLine(tabela[i]);
+                
+            }
+
+            for(int i = 0; i < tabela.Length; i++) {
+                if(tabela[i] < 50) stevec++;
+            }
+
+            Console.WriteLine(stevec);
+
+            string[] tabelaNizov = new string[] { "Da", "Torek", "Pust", "Y", "Ferrari" };
+            Izpis(tabelaNizov);
         }
+
+        public static void Izpis(string[] tabela)
+        {
+            for (int i = 0; i < tabela.Length; i++)
+            {
+                string trenutnaDolzina = tabela[i];
+
+                if (trenutnaDolzina.Length > 3 && trenutnaDolzina.Length < 10)
+                {
+                    Console.WriteLine(tabela[i]);
+                }
+            }
+        }
+
+        public static void Test3(int st, string niz)
+        {
+            Console.WriteLine(st + " " + niz);
+        }
+
+        public static double Izracunaj4(int a, int b)
+        {
+            a = a % b;
+            int c = b + a;
+            return c;
+        }
+        
         
         // ******************************
 
