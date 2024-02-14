@@ -24,7 +24,7 @@ namespace Kolokvij1
             
             // 2015
             
-            //Kolokvij_2015();
+            Kolokvij_2015();
             
             // 2016
 
@@ -70,7 +70,7 @@ namespace Kolokvij1
 
             // 2021
 
-            Kolokvij_2021();
+            //Kolokvij_2021();
 
             // 2022
 
@@ -135,6 +135,20 @@ namespace Kolokvij1
 
             int izpis = PikeInVejice("Ta metoda, vrne število vejic (,) in pik (.) v stavku.");
             Console.WriteLine("Število pik in vejic v stavku je {0}", izpis);
+
+            int rez5 = vaja(2, 3);
+            Console.WriteLine(rez5);
+        }
+
+        public static int vaja(int st1, int st2)
+        {
+            int sum = 0;
+            for (int i = 1; i <= st1; i++)
+            {
+                sum = sum + (st1 * st2);
+            }
+
+            return sum;
         }
 
         public static double Izracunaj9(int x, int b)
