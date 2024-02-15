@@ -13,6 +13,7 @@ namespace Kolokvij1
     {
         public static void Main(String[] args)
         {
+            //Switck, ki pokliče posamezne kolokvije!
             
             // 2013
 
@@ -70,7 +71,7 @@ namespace Kolokvij1
 
             // 2021
 
-            //Kolokvij_2021();
+            Kolokvij_2021();
 
             // 2022
 
@@ -1571,8 +1572,7 @@ namespace Kolokvij1
                     Console.WriteLine(tabela[i,j]);
                 }
             }
-
-
+            
             for(int i = 0; i < tabela.GetLength(0); i++) {
                 for(int j = 0; j < tabela.GetLength(1); j++) {
                     if(tabela[i,j] < 12 && i == j) stevec2++;
@@ -1655,7 +1655,6 @@ namespace Kolokvij1
             
             Console.WriteLine("Število cifer je {0} ", stevec);
         }
-
         
         // ******************************
         
@@ -1819,7 +1818,6 @@ namespace Kolokvij1
             Console.WriteLine();
             Console.WriteLine("Rezultat je {0}", rez);
             
-            
             do
             {
                 Console.WriteLine("Vpišite prvo število:");
@@ -1881,7 +1879,6 @@ namespace Kolokvij1
         }
         
         // ******************************
-
         
         // ***** 2022 - 3 *****
         public static void Kolokvij_2022_3()
@@ -1923,8 +1920,7 @@ namespace Kolokvij1
                 if(dolzina1 > dolzina2) Console.WriteLine("Dolzina1 je večja od Dolzina2");
                 else Console.WriteLine("Dolzina2 je večja od Dolzina1");
             }
-
-
+            
             Console.WriteLine("Vnesi stranice trikotnika!");
             Console.Write("Stranica a: ");
             int a = Int32.Parse(Console.ReadLine());
@@ -1954,8 +1950,7 @@ namespace Kolokvij1
             {
                 Console.WriteLine("Tak trikotnik ne obstaja");
             }
-
-
+            
             int leto = 2024;
             
             if(leto % 4 == 0 && leto % 100 != 0 || leto % 400 == 0) Console.WriteLine("Prestopno leto");
