@@ -70,7 +70,9 @@ namespace predavanje6
         }
         
         public static void Main(String[] args)
-        {
+        { 
+           
+           
            Izpis(6,10);
 
            int[] tabela = new int[] { 1, 2, 3 };

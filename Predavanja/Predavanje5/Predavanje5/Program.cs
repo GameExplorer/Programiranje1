@@ -85,6 +85,99 @@ namespace Predavanje5
     {
         public static void Main(String[] args)
         {
+            Console.Write("Vnesi stavek: ");
+            string stavek = Console.ReadLine();
+
+
+            int pike = 0, vejice = 0, dvopicje = 0;
+
+            for (int i = 0; i < stavek.Length; i++)
+            {
+                switch (stavek[i])
+                {
+                    case '.':
+                        pike++;
+                        break;
+                    case ',':
+                        vejice++;
+                        break;
+                    case ':':
+                        dvopicje++;
+                        break;
+                }
+            }
+           
+            Console.WriteLine("Število pik: " + pike + "\nvejice: " + vejice + "\ndvopičja: " + dvopicje);
+            Console.ReadKey();
+
+            Random rnd = new Random();
+            int ocena = rnd.Next(5, 11);
+
+            switch (ocena)
+            {
+                case 5:
+                    Console.WriteLine("Nezadostno");
+                    break;
+                case 6:
+                    Console.WriteLine("Zadostno");
+                    break;
+                case 7:
+                    Console.WriteLine("Dobro");
+                    break;
+                case 8:
+                    Console.WriteLine("Prav dobro");
+                    break;
+                case 9:
+                    Console.WriteLine("Prav dobro");
+                    break;
+                case 10:
+                    Console.WriteLine("Odlično");
+                    break;
+            }
+
+            //FOREACH
+
+            int[] vrednosti = { 1, 2, 3 };
+            int rez = 0;
+
+            foreach (int vrednost in vrednosti)
+            {
+                rez += vrednost;
+            }
+
+            Console.WriteLine("Rezultat je {0}", rez);
+
+            string znaki = "abcdefg";
+
+            string znakiSPresledki = "";
+
+            foreach (char znak in znaki)
+            {
+                znakiSPresledki += znak + " ";
+            }
+
+            Console.WriteLine("Zanki s presledki: {0}", znakiSPresledki);
+            
+            /*
+             * Ustvarimo enodimenzionalno tabelo 10 decimalnih števil in jo napolnimo z naključnimi
+             * decimalnimi števili med 0 in 1, zaokroženimi na 3 decimalke. Vsebino tabele
+             * nato izpišimo s pomočjo zanke foreach!
+             */
+
+            double[] tabela = new double[10];
+
+            for (int i = 0; i < tabela.Length; i++)
+            {
+                tabela[i] = Math.Round(rnd.NextDouble(), 3);
+            }
+
+            Console.Write("Vrednosti: ");
+            foreach (double vrednost in tabela)
+            {
+                Console.Write(vrednost + " ");
+            }
+
+            Console.WriteLine();
             // KREIRANJE OSEB BREZ KONSTRUKTORJA 
             /*Oseba o1 = new Oseba(); //ustvarimo objekt ... deklaracija objekta
             o1.Ime = "Jure";

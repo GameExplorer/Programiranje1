@@ -8,19 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/melioads/.nuget/packages/": {}
+    "C:\\Users\\Dom\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/predavanje6.csproj",
+      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\predavanje6\\predavanje6\\predavanje6.csproj",
       "projectName": "predavanje6",
-      "projectPath": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/predavanje6.csproj",
-      "packagesPath": "/home/melioads/.nuget/packages/",
-      "outputPath": "/home/melioads/Documents/GitHub/Programiranje1/Predavanja/predavanje6/predavanje6/obj/",
+      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\predavanje6\\predavanje6\\predavanje6.csproj",
+      "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\predavanje6\\predavanje6\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/melioads/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
