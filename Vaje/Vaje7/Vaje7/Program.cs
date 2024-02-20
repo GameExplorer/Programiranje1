@@ -6,7 +6,7 @@ namespace Vaje7
 {
     class PravokotniTrikotnik
     {
-        public int a;
+        public int a; //javna atributa, kateti
         public int b;
 
         /*public PravokotniTrikotnik()
@@ -14,19 +14,19 @@ namespace Vaje7
             this.a = a;
             this.b = b;
         }*/
-        public double Hipotenuza(int a, int b)
+        public double Hipotenuza()
         {
             return Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
         }
 
-        public double Ploscina(int a, int b)
+        public double Ploscina()
         {
             return a * b / 2.0;
         }
 
-        public double Obseg(int a, int b)
+        public double Obseg()
         {
-            return a + b + Hipotenuza(a,b);
+            return a + b + Hipotenuza();
         }
     }
 
@@ -34,25 +34,28 @@ namespace Vaje7
     {
         public string imeDatoteke;
 
-        public AnalizaDatoteke(string imeDatoteke)
+        //Konstrutor za vnos podatka o celotnem imenu datoteke
+        public AnalizaDatoteke(string imeDatoteke) 
         {
             this.imeDatoteke = imeDatoteke;
         }
 
-        public string Mapa(string imeDatoteke)
+        public string Mapa()
         {
             string mapa = imeDatoteke;
 
             //vzamemo dolžino celotnega niza, odštejemo imeDatoteke in koncnico + 2 pa za piko in zadnji slash
             //nalogo sem se lotil od zadaj naprej sem dobil koncnico nato imeDatoteke in šele na konec pot
-            int dolzina = imeDatoteke.Length - (datotekaIme(imeDatoteke).Length + koncnica(imeDatoteke).Length + 2);
+            //dobimo dolžino mape
+            int dolzina = imeDatoteke.Length - (datotekaIme().Length + koncnica().Length + 2);
             
+            //izpišemo mapo tako, da izpišemo od prve črke do zadnje za dolžino mape, ki jo dobimo zgoraj
             mapa = mapa.Substring(0, dolzina);
 
             return mapa;
         }
 
-        public string datotekaIme(string imeDatoteke)
+        public string datotekaIme()
         {
             string datoteka = "";
 
@@ -60,15 +63,17 @@ namespace Vaje7
             {
                 string trenutniZnak = imeDatoteke[i].ToString();
                 if (trenutniZnak == "\\") break;
-                datoteka = imeDatoteke[i] + datoteka;
+                datoteka = imeDatoteke[i] + datoteka; //Seznam,txt
             }
 
-            datoteka = datoteka.Remove(datoteka.IndexOf('.'));
+            datoteka = datoteka.Remove(datoteka.IndexOf('.')); //znebimo vse kar je po piki
             return datoteka;
         }
 
-        public string koncnica(string imeDatoteke)
+        public string koncnica()
         {
+            //odstrani vse znake od prvega do pike .. nato pa s substringom začnemo po piki in izpišemo le 
+            //končnico datoteke
             string koncnica = imeDatoteke.Remove(0, imeDatoteke.IndexOf('.'));
             koncnica = koncnica.Substring(1);
             return koncnica;
@@ -194,13 +199,16 @@ namespace Vaje7
 
                         Console.WriteLine();
 
-                        PravokotniTrikotnik pt = new PravokotniTrikotnik();
+                        PravokotniTrikotnik trikotnik = new PravokotniTrikotnik();
 
-                        Console.WriteLine("Dolžina hipotenuze: {0}", pt.Hipotenuza(a, b));
+                        trikotnik.a = a; //zapis katet v atribute objekta
+                        trikotnik.b = b;
 
-                        Console.WriteLine("Ploščina obsega: {0}", pt.Ploscina(a, b));
+                        Console.WriteLine("Dolžina hipotenuze: {0}", trikotnik.Hipotenuza());
 
-                        Console.WriteLine("Obseg trikotnika: {0}", pt.Obseg(a, b));
+                        Console.WriteLine("Ploščina obsega: {0}", trikotnik.Ploscina());
+
+                        Console.WriteLine("Obseg trikotnika: {0}", trikotnik.Obseg());
 
                         Console.WriteLine("\nPritisni tipko za nadaljevanje...");
                         Console.ReadKey();
@@ -215,12 +223,12 @@ namespace Vaje7
 
                         AnalizaDatoteke ad = new AnalizaDatoteke(datoteka);
 
-                        Console.WriteLine("Polno ime: {0}", datoteka);
+                        Console.WriteLine("Polno ime: {0}", ad.imeDatoteke);
                         Console.WriteLine(string.Concat(Enumerable.Repeat("-", 32)));
 
-                        Console.WriteLine("Mapa: {0}", ad.Mapa(datoteka));
-                        Console.WriteLine("Datoteka: {0}", ad.datotekaIme(datoteka));
-                        Console.WriteLine("Končnica: {0}", ad.koncnica(datoteka));
+                        Console.WriteLine("Mapa: {0}", ad.Mapa());
+                        Console.WriteLine("Datoteka: {0}", ad.datotekaIme());
+                        Console.WriteLine("Končnica: {0}", ad.koncnica());
 
                         Console.WriteLine("\nPritisni tipko za nadaljevanje...");
                         Console.ReadKey();
