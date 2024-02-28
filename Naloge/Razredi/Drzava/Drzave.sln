@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drzave", "Drzave\Drzave.csproj", "{7AFF74F8-5D17-40D8-8DDE-B408F81D6481}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AFF74F8-5D17-40D8-8DDE-B408F81D6481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFF74F8-5D17-40D8-8DDE-B408F81D6481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFF74F8-5D17-40D8-8DDE-B408F81D6481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFF74F8-5D17-40D8-8DDE-B408F81D6481}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\bin\Debug\net8.0\Gasilec.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\bin\Debug\net8.0\Gasilec.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\bin\Debug\net8.0\Gasilec.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\bin\Debug\net8.0\Gasilec.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\bin\Debug\net8.0\Gasilec.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\refint\Gasilec.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\Gasilec.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Gasilec\Gasilec\obj\Debug\net8.0\ref\Gasilec.dll

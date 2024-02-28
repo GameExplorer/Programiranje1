@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kocka", "Kocka\Kocka.csproj", "{D200D702-F274-489F-A392-8E891B0F5090}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D200D702-F274-489F-A392-8E891B0F5090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D200D702-F274-489F-A392-8E891B0F5090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D200D702-F274-489F-A392-8E891B0F5090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D200D702-F274-489F-A392-8E891B0F5090}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

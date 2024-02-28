@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\bin\Debug\net8.0\Drzave.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\bin\Debug\net8.0\Drzave.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\bin\Debug\net8.0\Drzave.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\bin\Debug\net8.0\Drzave.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\bin\Debug\net8.0\Drzave.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\refint\Drzave.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\Drzave.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Drzava\Drzave\obj\Debug\net8.0\ref\Drzave.dll

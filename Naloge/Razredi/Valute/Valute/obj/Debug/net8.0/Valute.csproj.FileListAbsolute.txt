@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\bin\Debug\net8.0\Valute.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\bin\Debug\net8.0\Valute.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\bin\Debug\net8.0\Valute.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\bin\Debug\net8.0\Valute.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\bin\Debug\net8.0\Valute.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\refint\Valute.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\Valute.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Valute\Valute\obj\Debug\net8.0\ref\Valute.dll
