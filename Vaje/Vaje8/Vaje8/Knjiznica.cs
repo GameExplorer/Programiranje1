@@ -1,13 +1,11 @@
 ﻿
-
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.JavaScript;
+using System.Diagnostics;
 
 namespace Knjiznica
 {
     class Predmet
     {
-        public string[] seznamPredmetov;
+        public string[] seznamPredmetov; //tabela predmetov
 
         public Predmet(string[] seznamPredmetov)
         {
@@ -41,16 +39,18 @@ namespace Knjiznica
         private DateOnly datumRojstva;
         public int letnik;
         public string oddelek;
+        public int[,] redovalnica;
 
-        public Ucenec(string ime, string priimek, DateOnly datumRojstva)
+        public Ucenec(string ime, string priimek, DateOnly datumRojstva, Predmet predmeti)
         {
             SpremenjenoIme(ime);
             SpremenjenPriimek(priimek);
             SpremenjenDatumRojstva(datumRojstva);
+            redovalnica = new int[predmeti.seznamPredmetov.Length, 5];
         }
 
-        public Ucenec(string ime, string priimek, DateOnly datumRojstva, int letnik, string oddelek)
-            : this(ime, priimek, datumRojstva) //kjer smo jih v prejšen konstruktorju naredili
+        public Ucenec(string ime, string priimek, DateOnly datumRojstva, Predmet predmeti, int letnik, string oddelek)
+            : this(ime, priimek, datumRojstva, predmeti) //kjer smo jih v prejšen konstruktorju naredili
         {
             this.letnik = letnik;
             this.oddelek = oddelek;
@@ -136,6 +136,103 @@ namespace Knjiznica
 
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 56)));
             Console.WriteLine("Podatki učenca: " + ime + " " + priimek + " " + datumRojstva.ToString("dd.MM.yyyy"));
+        }
+
+        public string vnosOcen(string imePredmeta, int ocena, Predmet predmet)
+        {
+            
+            
+            
+            bool predmetObstaja = false;
+            int indeksPredmeta = -1;
+
+
+            //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks
+            for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
+            {
+                if (predmet.seznamPredmetov[i] == imePredmeta)
+                {
+                    predmetObstaja = true;
+                    indeksPredmeta = i;
+                    break;
+                }
+            }
+
+            //če predmet ne obstaja
+            if (!predmetObstaja)
+            {
+                return "Predmet ne obstaja!";
+            }
+
+            bool vseOcenePredmeta = true; //predpostavimo, da ima predmet vse ocene
+            for (int i = 0; i < 5; i++)
+            {
+                //če predmet na tem mestu nima ocene potem nastavimo bool vrednost na false
+                if (redovalnica[indeksPredmeta, i] == 0)
+                {
+                    vseOcenePredmeta = false;
+                    break;
+                }
+            }
+
+            //če je predmet že poln, ne moremo vnesti dodatne ocene
+            if (vseOcenePredmeta)
+            {
+                return "Dodatne ocene ni mogoče vnesti!";
+            }
+
+            //ocena ni med 1 in 5
+            if (ocena < 1 || ocena > 5)
+            {
+                return "Ocena ni ustrezna!";
+            }
+            
+            //poiščemo prazen prostor v redovalnici
+            for (int i = 0; i < 5; i++)
+            {
+                if (redovalnica[indeksPredmeta, i] == 0)
+                {
+                    redovalnica[indeksPredmeta, i] = ocena;
+                    return "Ocena " + ocena + " uspešno zapisana za predmet " + imePredmeta;
+                }
+            }
+            
+
+            return "";
+        }
+        public void IzpisRedovalnice(Predmet predmet)
+        {
+            
+            Console.WriteLine();
+            Console.WriteLine("Redovalnica za učenca {0} {1}:", ime, priimek);
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
+            
+            //izpis ocen in imen predmetov
+            for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
+            {
+                Console.Write(predmet.seznamPredmetov[i] + ": ");
+
+                bool niOcen = true;
+                for (int j = 0; j < 5; j++)
+                {
+                    if (redovalnica[i, j] != 0)
+                    {
+                        Console.Write(redovalnica[i, j] + ", ");
+                        niOcen = false;
+                    }
+                }
+
+                Console.WriteLine();
+            }
+            
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
+        }
+        
+        //Destruktor
+        ~Ucenec()
+        {
+            //Preverimo ali je tabela že izbirisana, če ni jo izbrišemo
+            if(redovalnica != null) redovalnica = null;
         }
         
     }

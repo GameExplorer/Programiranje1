@@ -19,7 +19,7 @@ namespace Vaje8
 
             Console.Clear();
 
-            Ucenec ucenec = new Ucenec("Janez", "Novak", new DateOnly(2001,07,25), 4, "Ra");
+            Ucenec ucenec = new Ucenec("Janez", "Novak", new DateOnly(2001,07,25), predmet, 4, "Ra");
             Console.Clear();
             
             //izpis podatkov o študentu
@@ -37,7 +37,29 @@ namespace Vaje8
             ucenec.SpremenjeniIzpis("ŠTEFAN", "a", new DateOnly(2000,12,12));
             Console.WriteLine("Pritisni tipko za nadaljevanje...");
             Console.ReadKey();
+
+            Console.Clear();
             
+            //Vnos ocen
+            Console.WriteLine("Vnos ocen: ");
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
+
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet)); //ocena uspešno dodana
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet));
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet));
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet));
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet));
+            Console.WriteLine(ucenec.vnosOcen("Matematika", 5, predmet)); //dodatne ocene ni mogoče vnesti
+            Console.WriteLine(ucenec.vnosOcen("Programiranje", 5, predmet)); //ne obstaja
+            Console.WriteLine(ucenec.vnosOcen("Fizika", 10, predmet)); //ocena ni ustrezna
+            
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
+            
+            //Izpis redovalnice za študenta
+            ucenec.IzpisRedovalnice(predmet);
+
+            Console.WriteLine("Pritisni tipko za nadaljevanje...");
+            Console.ReadKey();
         }
 
         public static string[] Vnos()
