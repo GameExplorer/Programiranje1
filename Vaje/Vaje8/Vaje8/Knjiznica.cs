@@ -118,7 +118,7 @@ namespace Knjiznica
             DateTime najnizjeLeto = new DateTime(1900, 1, 1); 
             //Če vneseni datum ni večji od trenutnega datuma (datum.now vzame trenutni dan, ko je program zagnan) in pogledamo
             //da uporabnik ni vnesel datuma pred 1.1.1900
-            if (novDatumRojstva <= DateTime.Now && novDatumRojstva >= najnizjeLeto) 
+            if (novDatumRojstva <= DateTime.Now && novDatumRojstva >= najnizjeLeto && novDatumRojstva != null) 
             {
                 datumRojstva = novDatumRojstva;
                 Console.WriteLine("Datum rojstva učenca je spremenjen na " + datumRojstva.ToString("dd.MM.yyyy"));
@@ -184,7 +184,7 @@ namespace Knjiznica
             //če je predmet že poln, ne moremo vnesti dodatne ocene
             if (vseOcenePredmeta)
             {
-                return "Dodatne ocene ni mogoče vnesti!";
+                return "Dodatne ocene pri predmetu " + imePredmeta + " ni mogoče vnesti!";
             }
 
             //Preverimo ali je vnešena ocena med 1 in 5
