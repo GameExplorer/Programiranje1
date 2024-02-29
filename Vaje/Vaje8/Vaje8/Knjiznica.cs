@@ -150,7 +150,7 @@ namespace Knjiznica
             //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks in nastavimo
             //bool vrednost na true
             bool predmetObstaja = false;
-            int indeksPredmeta = -1;
+            int indeksPredmeta = -1; //vrstica 0 nekaj pomeni, -1 pa nič ne pomeni
             
             for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
             {
@@ -193,7 +193,7 @@ namespace Knjiznica
             }
             
             //poiščemo prazen prostor v redovalnici in zapišemo oceno
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < redovalnica.GetLength(1); i++)
             {
                 if (redovalnica[indeksPredmeta, i] == 0)
                 {
