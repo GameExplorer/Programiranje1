@@ -3,12 +3,10 @@ namespace Knjiznica
 {
     class Predmet
     {
-        public string[] seznamPredmetov; //tabela predmetov
+        public string[] seznamPredmetov = new [] {"Slovenščina", "Matematika", "Fizika", "Kemija", "Angleščina"}; //tabela predmetov
 
-        public Predmet(string[] seznamPredmetov) //konstrutor
-        {
-            this.seznamPredmetov = seznamPredmetov;
-        }
+        public Predmet() //konstrutor
+        { }
 
         /**
          * Metoda izpiše seznam predmetov
@@ -146,8 +144,9 @@ namespace Knjiznica
             Console.WriteLine("Podatki učenca: " + priimek + " " + ime + " " + datumRojstva.ToString("dd.MM.yyyy"));
         }
 
-        public string vnosOcen(string imePredmeta, int ocena, Predmet predmet)
+        public string vnosOcen(string imePredmeta, int ocena)
         {
+            Predmet predmet = new Predmet();
             //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks in nastavimo
             //bool vrednost na true
             bool predmetObstaja = false;
@@ -166,7 +165,7 @@ namespace Knjiznica
             //če predmet ne obstaja izpišemo, da ne obstaja
             if (!predmetObstaja)
             {
-                return "Predmet ne obstaja!";
+                return "Predmet \"" + imePredmeta + "\" ne obstaja!";
             }
 
             //Pogledamo ali predmet nima več kot 5 ocen
@@ -205,9 +204,9 @@ namespace Knjiznica
 
             return "";
         }
-        public void IzpisRedovalnice(Predmet predmet)
+        public void IzpisRedovalnice()
         {
-            
+            Predmet predmet = new Predmet();
             Console.WriteLine();
             Console.WriteLine("Redovalnica za učenca {0} {1}:", ime, priimek);
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
