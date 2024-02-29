@@ -1,17 +1,18 @@
 ﻿
-using System.Diagnostics;
-
 namespace Knjiznica
 {
     class Predmet
     {
         public string[] seznamPredmetov; //tabela predmetov
 
-        public Predmet(string[] seznamPredmetov)
+        public Predmet(string[] seznamPredmetov) //konstrutor
         {
             this.seznamPredmetov = seznamPredmetov;
         }
 
+        /**
+         * Metoda izpiše seznam predmetov
+         */
         public void IzpisPredmetov()
         {
             Console.WriteLine("Seznam predmetov");
@@ -25,7 +26,7 @@ namespace Knjiznica
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 24)));
         }
         
-        //Destruktor
+        //Destruktor, zapremo tabelo (objekt uničimo)
         ~Predmet()
         {
             seznamPredmetov = null;
@@ -36,60 +37,60 @@ namespace Knjiznica
     {
         private string ime;
         private string priimek;
-        private DateOnly datumRojstva;
+        private DateTime datumRojstva; 
         public int letnik;
         public string oddelek;
-        public int[,] redovalnica;
+        public int[,] redovalnica; //tabela ocen
 
-        public Ucenec(string ime, string priimek, DateOnly datumRojstva, Predmet predmeti)
+        public Ucenec(string ime, string priimek, DateTime datumRojstva, Predmet predmeti)
         {
-            SpremenjenoIme(ime);
-            SpremenjenPriimek(priimek);
-            SpremenjenDatumRojstva(datumRojstva);
-            redovalnica = new int[predmeti.seznamPredmetov.Length, 5];
+            SpremeniIme(ime);
+            SpremeniPriimek(priimek);
+            SpremeniDatumRojstva(datumRojstva);
+            redovalnica = new int[predmeti.seznamPredmetov.Length, 5]; //število predmetov enako
+                                                                       //št. predmetov v razredz Predmet in največ 5 ocen za vsak predmet
         }
 
-        public Ucenec(string ime, string priimek, DateOnly datumRojstva, Predmet predmeti, int letnik, string oddelek)
-            : this(ime, priimek, datumRojstva, predmeti) //kjer smo jih v prejšen konstruktorju naredili
+        public Ucenec(string ime, string priimek, DateTime datumRojstva, Predmet predmeti, int letnik, string oddelek)
+            : this(ime, priimek, datumRojstva, predmeti) //kjer smo jih v prejšen konstruktorju naredili lahko samo pokličemo this
+                                                        // in se izgonemo, da bi še enkrart pisali isto
         {
             this.letnik = letnik;
             this.oddelek = oddelek;
         }
 
-        public void IzpisPodatkov(char izbira)
+        public string IzpisPodatkov(string izbira)
         {
-            Console.WriteLine("Podatki o učencu");
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 56)));
-
-            if (izbira == 'y' || izbira == 'Y')
+            //Metoda izpiše podatke o učencu, navodila sem tako razumel tako, da
+            //se uporabnik odloči ali izpisal osnovne ali vse podatke o učencu
+            switch (izbira)
             {
-                Console.WriteLine("Ime učenca: " + ime);
-                Console.WriteLine("Priimek učenca: " + priimek);
-                Console.WriteLine("Letnik: " + letnik);
-                Console.WriteLine("Oddelek: " + oddelek);
+                case "ime":
+                    return "Ime učenca: " + ime;
+                case "priimek":
+                    return "Priimek učenca: " + priimek;
+                case "datumrojstva":
+                    return "Datum rojstva: " + datumRojstva.ToString("dd.MM.yyyy");
+                case "letnik":
+                    return "Letnik: " + letnik;
+                case "oddelek" :
+                    return "Oddelek: " + oddelek;
+                case "osnovni":
+                    return string.Join("Osnovni podatki: {0}, {1}, roj. {2}", ime, priimek,
+                        datumRojstva.ToString("dd.MM.yyyy"));
+                default:
+                    return string.Join("Vsi podatki: {0}, {1} roj. {2}, odd. {3}.{4} ", ime, priimek, datumRojstva.ToString("dd.MM.yyyy"), letnik, oddelek);
             }
-            else
-            {
-                Console.WriteLine("Ime učenca: " + ime);
-                Console.WriteLine("Priimek učenca: " + priimek);
-                Console.WriteLine("Letnik: " + letnik);
-                Console.WriteLine("Oddelek: " + oddelek);
-                Console.WriteLine("Osnovni podatki: {0}, {1}, roj. {2}", ime, priimek, datumRojstva);
-                Console.WriteLine("Vsi podatki: {0}, {1} roj. {2}, odd. {3}.{4} ", ime, priimek, datumRojstva, letnik, oddelek);
-            }
-            
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 56)));
         }
         
         //Metode za spreminjanje podatkov
-        public void SpremenjenoIme(string novoIme)
+        public void SpremeniIme(string novoIme)
         {
             if (novoIme.Length > 1 && novoIme != "")
             {
-                ime = novoIme;
+                ime = novoIme; //da izpiše originalni vnos
                 Console.WriteLine("Ime učenca spremenjeno v " + ime);
                 ime = novoIme.Substring(0, 1).ToUpper() + novoIme.Substring(1).ToLower();
-
             }
             else
             {
@@ -97,11 +98,11 @@ namespace Knjiznica
             }
         }
         
-        public void SpremenjenPriimek(string novPriimek)
+        public void SpremeniPriimek(string novPriimek)
         {
             if (novPriimek.Length > 1 && novPriimek != "")
             {
-                priimek = novPriimek;
+                priimek = novPriimek; //da izpiše originalni vnos, drugače ni potreben
                 Console.WriteLine("Priimek učenca spremenjen v " + priimek);
                 priimek = novPriimek.Substring(0, 1).ToUpper() + novPriimek.Substring(1).ToLower();
 
@@ -112,42 +113,46 @@ namespace Knjiznica
             }
         }
 
-        public void SpremenjenDatumRojstva(DateOnly novDatumRojstva)
+        public void SpremeniDatumRojstva(DateTime novDatumRojstva)
         {
-            if (novDatumRojstva <= DateOnly.FromDateTime(DateTime.Now) )
+            DateTime najnizjeLeto = new DateTime(1900, 1, 1); 
+            //Če vneseni datum ni večji od trenutnega datuma (datum.now vzame trenutni dan, ko je program zagnan) in pogledamo
+            //da uporabnik ni vnesel datuma pred 1.1.1900
+            if (novDatumRojstva <= DateTime.Now && novDatumRojstva >= najnizjeLeto) 
             {
                 datumRojstva = novDatumRojstva;
-                Console.WriteLine("Datum rojstva učenca je spremenjen na " + datumRojstva);
+                Console.WriteLine("Datum rojstva učenca je spremenjen na " + datumRojstva.ToString("dd.MM.yyyy"));
             }
+            // ... sicer javi napako
             else
             {
                 Console.WriteLine("Datum rojstva ne more biti v prihodnosti!");
             }
         }
         
-        public void SpremenjeniIzpis(string novoIme, string novPriimek, DateOnly novDatumRojstva)
+        //Metoda, ki izpiše spremenjene podatke o učencu
+        public void SpremenjeniIzpis(string novoIme, string novPriimek, DateTime novDatumRojstva)
         {
+            //Izpis originalnih podatkov
             Console.WriteLine("Podatki učenca: " + ime + " " + priimek + " roj. " + datumRojstva.ToString("dd.MM.yyyy"));
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 56)));
 
-            SpremenjenoIme(novoIme);
-            SpremenjenPriimek(novPriimek);
-            SpremenjenDatumRojstva(novDatumRojstva);
+            //Klic metod in izpis spremenjenih podatkov
+            SpremeniIme(novoIme);
+            SpremeniPriimek(novPriimek);
+            SpremeniDatumRojstva(novDatumRojstva);
 
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 56)));
-            Console.WriteLine("Podatki učenca: " + ime + " " + priimek + " " + datumRojstva.ToString("dd.MM.yyyy"));
+            Console.WriteLine("Podatki učenca: " + priimek + " " + ime + " " + datumRojstva.ToString("dd.MM.yyyy"));
         }
 
         public string vnosOcen(string imePredmeta, int ocena, Predmet predmet)
         {
-            
-            
-            
+            //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks in nastavimo
+            //bool vrednost na true
             bool predmetObstaja = false;
             int indeksPredmeta = -1;
-
-
-            //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks
+            
             for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
             {
                 if (predmet.seznamPredmetov[i] == imePredmeta)
@@ -158,12 +163,13 @@ namespace Knjiznica
                 }
             }
 
-            //če predmet ne obstaja
+            //če predmet ne obstaja izpišemo, da ne obstaja
             if (!predmetObstaja)
             {
                 return "Predmet ne obstaja!";
             }
 
+            //Pogledamo ali predmet nima več kot 5 ocen
             bool vseOcenePredmeta = true; //predpostavimo, da ima predmet vse ocene
             for (int i = 0; i < 5; i++)
             {
@@ -181,13 +187,13 @@ namespace Knjiznica
                 return "Dodatne ocene ni mogoče vnesti!";
             }
 
-            //ocena ni med 1 in 5
+            //Preverimo ali je vnešena ocena med 1 in 5
             if (ocena < 1 || ocena > 5)
             {
                 return "Ocena ni ustrezna!";
             }
             
-            //poiščemo prazen prostor v redovalnici
+            //poiščemo prazen prostor v redovalnici in zapišemo oceno
             for (int i = 0; i < 5; i++)
             {
                 if (redovalnica[indeksPredmeta, i] == 0)
@@ -196,7 +202,6 @@ namespace Knjiznica
                     return "Ocena " + ocena + " uspešno zapisana za predmet " + imePredmeta;
                 }
             }
-            
 
             return "";
         }
@@ -228,7 +233,7 @@ namespace Knjiznica
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
         }
         
-        //Destruktor
+        //Destruktor, zapremo tabelo redovalnica
         ~Ucenec()
         {
             //Preverimo ali je tabela že izbirisana, če ni jo izbrišemo
