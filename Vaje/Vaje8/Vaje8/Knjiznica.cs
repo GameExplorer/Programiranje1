@@ -238,6 +238,5 @@ namespace Knjiznica
             //Preverimo ali je tabela že izbirisana, če ni jo izbrišemo
             if(redovalnica != null) redovalnica = null;
         }
-        
     }
 }
