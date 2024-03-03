@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\bin\Debug\net8.0\ZglediOsnovnihRazredov.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\bin\Debug\net8.0\ZglediOsnovnihRazredov.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\bin\Debug\net8.0\ZglediOsnovnihRazredov.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\bin\Debug\net8.0\ZglediOsnovnihRazredov.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\bin\Debug\net8.0\ZglediOsnovnihRazredov.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\refint\ZglediOsnovnihRazredov.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ZglediOsnovnihRazredov.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\ZglediOsnovnihRazredov\ZglediOsnovnihRazredov\obj\Debug\net8.0\ref\ZglediOsnovnihRazredov.dll

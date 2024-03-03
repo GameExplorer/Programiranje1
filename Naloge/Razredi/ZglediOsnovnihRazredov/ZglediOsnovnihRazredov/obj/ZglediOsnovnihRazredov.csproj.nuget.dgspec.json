@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje7\\Vaje7\\Vaje7.csproj": {}
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje7\\Vaje7\\Vaje7.csproj": {
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje7\\Vaje7\\Vaje7.csproj",
-        "projectName": "Vaje7",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje7\\Vaje7\\Vaje7.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov.csproj",
+        "projectName": "ZglediOsnovnihRazredov",
+        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje7\\Vaje7\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\ZglediOsnovnihRazredov\\ZglediOsnovnihRazredov\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
