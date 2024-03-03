@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\bin\Debug\net8.0\TekaskiPraznik.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\bin\Debug\net8.0\TekaskiPraznik.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\bin\Debug\net8.0\TekaskiPraznik.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\bin\Debug\net8.0\TekaskiPraznik.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\bin\Debug\net8.0\TekaskiPraznik.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\refint\TekaskiPraznik.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\TekaskiPraznik.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\TekaskiPraznik\TekaskiPraznik\obj\Debug\net8.0\ref\TekaskiPraznik.dll

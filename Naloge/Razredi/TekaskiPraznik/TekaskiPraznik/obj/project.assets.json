@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje8\\Vaje8\\Vaje8.csproj",
-      "projectName": "Vaje8",
-      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje8\\Vaje8\\Vaje8.csproj",
+      "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\TekaskiPraznik\\TekaskiPraznik\\TekaskiPraznik.csproj",
+      "projectName": "TekaskiPraznik",
+      "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\TekaskiPraznik\\TekaskiPraznik\\TekaskiPraznik.csproj",
       "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje8\\Vaje8\\obj\\",
+      "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Razredi\\TekaskiPraznik\\TekaskiPraznik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
