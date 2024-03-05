@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\bin\Debug\net8.0\Teorija.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\bin\Debug\net8.0\Teorija.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\bin\Debug\net8.0\Teorija.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\bin\Debug\net8.0\Teorija.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\bin\Debug\net8.0\Teorija.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\refint\Teorija.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\Teorija.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Razredi\Teorija\Teorija\obj\Debug\net8.0\ref\Teorija.dll

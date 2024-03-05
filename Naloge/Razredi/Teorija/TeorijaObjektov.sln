@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teorija", "Teorija\Teorija.csproj", "{AB7D68AB-7441-4E2C-A3D6-B756B43D45D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB7D68AB-7441-4E2C-A3D6-B756B43D45D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7D68AB-7441-4E2C-A3D6-B756B43D45D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7D68AB-7441-4E2C-A3D6-B756B43D45D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7D68AB-7441-4E2C-A3D6-B756B43D45D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
