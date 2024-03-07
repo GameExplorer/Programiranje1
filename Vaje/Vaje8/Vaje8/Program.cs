@@ -21,7 +21,6 @@ namespace Vaje8
             
             #endregion
             
-            #region Naloge 3 - 6
             Ucenec ucenec = new Ucenec("Janez", "Novak", new DateTime(2001,07,25), predmet, 4, "Ra");
             Console.Clear();
 
@@ -45,7 +44,7 @@ namespace Vaje8
             //Vnos ocen
             Console.WriteLine("Vnos ocen: ");
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
-
+            
             Console.WriteLine(ucenec.vnosOcen("Matematika", 5)); //ocena uspešno dodana
             Console.WriteLine(ucenec.vnosOcen("Matematika", 5));
             Console.WriteLine(ucenec.vnosOcen("Matematika", 5));
@@ -65,11 +64,27 @@ namespace Vaje8
             
             //Izpis redovalnice za študenta
             ucenec.IzpisRedovalnice();
-
-            Console.WriteLine("Pritisni tipko za nadaljevanje...");
-            Console.ReadKey();
+            Console.WriteLine();
             
-            #endregion
+            
+            Oddelek oddelek = new Oddelek(4, "Ra");
+            
+            oddelek.VnosPdatkovUcenca( 0, "Max", "Verstappen", new DateTime(1975,12,5));
+            oddelek.VnosPdatkovUcenca( 1, "Fernando", "Alonso", new DateTime(1987,3,5));
+            oddelek.VnosPdatkovUcenca( 2, "Charlec", "Leclerc", new DateTime(1997,8,11));
+
+            oddelek.SpremembaImenaUcenca(2, "Charles");
+            oddelek.SpremembaPriimkaUcenca(0, "Maximilian");
+
+            oddelek.IzpisSeznamUcencev();
+
+            Console.ReadKey();
+            oddelek.VnosOceneUcenca(1, "Fizika", 4);
+            oddelek.VnosOceneUcenca(1, "Slovenščina", 5);
+
+            // Izpišemo redovalnico učenca
+            oddelek.IzpisRedovalniceUcenca(0);
+
         }
     }
 }

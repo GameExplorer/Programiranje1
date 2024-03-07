@@ -39,12 +39,14 @@ namespace Knjiznica
         public int letnik;
         public string oddelek;
         public int[,] redovalnica; //tabela ocen
+        private Predmet predmeti;
 
         public Ucenec(string ime, string priimek, DateTime datumRojstva, Predmet predmeti)
         {
             SpremeniIme(ime);
             SpremeniPriimek(priimek);
             SpremeniDatumRojstva(datumRojstva);
+            this.predmeti = predmeti;
             redovalnica = new int[predmeti.seznamPredmetov.Length, 5]; //število predmetov enako
                                                                        //št. predmetov v razredz Predmet in največ 5 ocen za vsak predmet
         }
@@ -57,6 +59,13 @@ namespace Knjiznica
             this.oddelek = oddelek;
         }
 
+        public Ucenec(string ime, string priimek, DateTime datumRojstva)
+        {
+            this.ime = ime;
+            this.priimek = priimek;
+            this.datumRojstva = datumRojstva;
+        }
+        
         public string IzpisPodatkov(string izbira)
         {
             //Metoda izpiše podatke o učencu, navodila sem tako razumel tako, da
@@ -74,10 +83,9 @@ namespace Knjiznica
                 case "oddelek" :
                     return "Oddelek: " + oddelek;
                 case "osnovni":
-                    return string.Join("Osnovni podatki: {0}, {1}, roj. {2}", ime, priimek,
-                        datumRojstva.ToString("dd.MM.yyyy"));
+                    return $"Osnovni podatki: {ime}, {priimek}, roj. {datumRojstva.ToString("dd.MM.yyyy")}";
                 default:
-                    return string.Join("Vsi podatki: {0}, {1} roj. {2}, odd. {3}.{4} ", ime, priimek, datumRojstva.ToString("dd.MM.yyyy"), letnik, oddelek);
+                    return $"Vsi podatki: {ime}, {priimek} roj. {datumRojstva.ToString("dd.MM.yyyy")}, odd. {letnik}.{oddelek}";
             }
         }
         
@@ -146,33 +154,29 @@ namespace Knjiznica
 
         public string vnosOcen(string imePredmeta, int ocena)
         {
-            Predmet predmet = new Predmet();
-            //pogledamo ali predmet obstaja v seznamu predmetov, če obstaja mu pripišemo ustrezen indeks in nastavimo
-            //bool vrednost na true
-            bool predmetObstaja = false;
-            int indeksPredmeta = -1; //vrstica 0 nekaj pomeni, -1 pa nič ne pomeni
-            
-            for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
+            // Predmet predmet = new Predmet(); 
+
+            // Poiščemo indeks predmeta
+            int indeksPredmeta = -1;
+            for (int i = 0; i < predmeti.seznamPredmetov.Length; i++)
             {
-                if (predmet.seznamPredmetov[i] == imePredmeta)
+                if (predmeti.seznamPredmetov[i] == imePredmeta)
                 {
-                    predmetObstaja = true;
                     indeksPredmeta = i;
                     break;
                 }
             }
 
-            //če predmet ne obstaja izpišemo, da ne obstaja
-            if (!predmetObstaja)
+            // Preverimo, ali je bil predmet najden
+            if (indeksPredmeta == -1)
             {
                 return "Predmet \"" + imePredmeta + "\" ne obstaja!";
             }
 
-            //Pogledamo ali predmet nima več kot 5 ocen
-            bool vseOcenePredmeta = true; //predpostavimo, da ima predmet vse ocene
+            // Preverimo, ali ima predmet prostor za novo oceno
+            bool vseOcenePredmeta = true;
             for (int i = 0; i < 5; i++)
             {
-                //če predmet na tem mestu nima ocene potem nastavimo bool vrednost na false
                 if (redovalnica[indeksPredmeta, i] == 0)
                 {
                     vseOcenePredmeta = false;
@@ -180,19 +184,18 @@ namespace Knjiznica
                 }
             }
 
-            //če je predmet že poln, ne moremo vnesti dodatne ocene
             if (vseOcenePredmeta)
             {
                 return "Dodatne ocene pri predmetu " + imePredmeta + " ni mogoče vnesti!";
             }
 
-            //Preverimo ali je vnešena ocena med 1 in 5
+            // Preverimo, ali je ocena veljavna
             if (ocena < 1 || ocena > 5)
             {
                 return "Ocena ni ustrezna!";
             }
-            
-            //poiščemo prazen prostor v redovalnici in zapišemo oceno
+
+            // Najdemo prazen prostor v redovalnici in zapišemo oceno
             for (int i = 0; i < redovalnica.GetLength(1); i++)
             {
                 if (redovalnica[indeksPredmeta, i] == 0)
@@ -202,19 +205,18 @@ namespace Knjiznica
                 }
             }
 
-            return "";
+            return "Dodatne ocene pri predmetu " + imePredmeta + " ni mogoče vnesti!";
         }
         public void IzpisRedovalnice()
         {
-            Predmet predmet = new Predmet();
             Console.WriteLine();
             Console.WriteLine("Redovalnica za učenca {0} {1}:", ime, priimek);
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
-            
-            //izpis ocen in imen predmetov
-            for (int i = 0; i < predmet.seznamPredmetov.Length; i++)
+        
+            // Izpis ocen in imen predmetov z uporabo členske spremenljivke predmet
+            for (int i = 0; i < predmeti.seznamPredmetov.Length; i++)
             {
-                Console.Write(predmet.seznamPredmetov[i] + ": ");
+                Console.Write(predmeti.seznamPredmetov[i] + ": ");
 
                 bool niOcen = true;
                 for (int j = 0; j < 5; j++)
@@ -228,15 +230,129 @@ namespace Knjiznica
 
                 Console.WriteLine();
             }
-            
+        
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
         }
         
         //Destruktor, zapremo tabelo redovalnica
         ~Ucenec()
         {
-            //Preverimo ali je tabela že izbirisana, če ni jo izbrišemo
-            if(redovalnica != null) redovalnica = null;
+            redovalnica = null;
         }
+    }
+
+    class Oddelek
+    {
+        private int letnik;
+        private string kodaOddelka;
+        private Ucenec[] seznamUcencev;
+
+        public Oddelek(int letnik, string kodaOddelka)
+        {
+            this.letnik = letnik;
+            this.kodaOddelka = kodaOddelka;
+            seznamUcencev = new Ucenec[15];
+        }
+
+
+        public void VnosPdatkovUcenca(int index, string ime, string priimek, DateTime datumRojstva)
+        {
+            // Preverimo, če je indeks v mejah tabele in če na tem indeksu že obstaja učenec
+            if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] == null)
+            {
+                seznamUcencev[index] = new Ucenec(ime, priimek, datumRojstva);
+                Console.WriteLine($"Podatki o učencu {ime} {priimek} uspešno vnešeni.");
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri vnosu podatkov o učencu.");
+            }
+        }
+
+        public void SpremembaImenaUcenca(int index, string novoIme)
+        {
+            if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] != null)
+            {
+                seznamUcencev[index].SpremeniIme(novoIme);
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri spreminjanju imena učenca.");
+            }
+        }
+
+        public void SpremembaPriimkaUcenca(int index, string novPriimek)
+        {
+            if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] != null)
+            {
+                seznamUcencev[index].SpremeniPriimek(novPriimek);
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri spreminjanju priimka učenca.");
+            }
+        }
+
+        public void SpremembaDatumaRojstva(int index, DateTime novDatumRojstva)
+        {
+            if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] != null)
+            {
+                seznamUcencev[index].SpremeniDatumRojstva(novDatumRojstva);
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri spreminjanju datuma rojstva učenca.");
+            }
+        }
+        
+        // Metoda za izpis seznama vnesenih učencev
+        public void IzpisSeznamUcencev()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Seznam učencev v oddelku: " + letnik + "." + kodaOddelka);
+            Console.WriteLine(string.Concat(new string('-', 40)));
+
+            foreach (Ucenec ucenec in seznamUcencev)
+            {
+                if (ucenec != null)
+                {
+                    Console.WriteLine(ucenec.IzpisPodatkov("osnovni"));
+                }
+            }
+
+            Console.WriteLine(string.Concat(new string('-', 40)));
+        }
+        
+        public void VnosOceneUcenca(int indexUcenca, string imePredmeta, int ocena)
+        {
+            if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
+            {
+                // Pozor: Tukaj uporabljamo ustrezni objekt Predmet
+                string sporočilo = seznamUcencev[indexUcenca].vnosOcen(imePredmeta, ocena);
+                Console.WriteLine(sporočilo);
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri vnosu ocene. Učenec ne obstaja v tem oddelku.");
+            }
+        }
+
+        public void IzpisRedovalniceUcenca(int indexUcenca)
+        {
+            if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
+            {
+                seznamUcencev[indexUcenca].IzpisRedovalnice();
+            }
+            else
+            {
+                Console.WriteLine("Napaka pri izpisu redovalnice. Učenec ne obstaja v tem oddelku.");
+            }
+        }
+
+        ~Oddelek()
+        {
+            seznamUcencev = null;
+        }
+        
     }
 }
