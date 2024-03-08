@@ -1,0 +1,15 @@
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/bin/Debug/net8.0/Predavanje8
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/bin/Debug/net8.0/Predavanje8.deps.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/bin/Debug/net8.0/Predavanje8.runtimeconfig.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/bin/Debug/net8.0/Predavanje8.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/bin/Debug/net8.0/Predavanje8.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.GeneratedMSBuildEditorConfig.editorconfig
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.AssemblyInfoInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.AssemblyInfo.cs
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.csproj.CoreCompileInputs.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.sourcelink.json
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/refint/Predavanje8.dll
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.pdb
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/Predavanje8.genruntimeconfig.cache
+/home/melioads/Documents/GitHub/Programiranje1/Predavanja/Predavanje8/Predavanje8/obj/Debug/net8.0/ref/Predavanje8.dll

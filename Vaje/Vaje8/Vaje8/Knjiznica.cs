@@ -39,14 +39,14 @@ namespace Knjiznica
         public int letnik;
         public string oddelek;
         public int[,] redovalnica; //tabela ocen
-        private Predmet predmeti;
+        public Predmet predmeti;
 
         public Ucenec(string ime, string priimek, DateTime datumRojstva, Predmet predmeti)
         {
             SpremeniIme(ime);
             SpremeniPriimek(priimek);
             SpremeniDatumRojstva(datumRojstva);
-            this.predmeti = predmeti;
+            this.predmeti = new Predmet();
             redovalnica = new int[predmeti.seznamPredmetov.Length, 5]; //število predmetov enako
                                                                        //št. predmetov v razredz Predmet in največ 5 ocen za vsak predmet
         }
@@ -57,6 +57,8 @@ namespace Knjiznica
         {
             this.letnik = letnik;
             this.oddelek = oddelek;
+            this.predmeti = new Predmet();
+            
         }
 
         public Ucenec(string ime, string priimek, DateTime datumRojstva)
@@ -64,6 +66,9 @@ namespace Knjiznica
             this.ime = ime;
             this.priimek = priimek;
             this.datumRojstva = datumRojstva;
+            this.predmeti = new Predmet();
+            redovalnica = new int[predmeti.seznamPredmetov.Length, 5]; //število predmetov enako
+            //št. predmetov v razredz Predmet in največ 5 ocen za vsak predmet
         }
         
         public string IzpisPodatkov(string izbira)
@@ -158,13 +163,20 @@ namespace Knjiznica
 
             // Poiščemo indeks predmeta
             int indeksPredmeta = -1;
-            for (int i = 0; i < predmeti.seznamPredmetov.Length; i++)
+            try
             {
-                if (predmeti.seznamPredmetov[i] == imePredmeta)
+                for (int i = 0; i < predmeti.seznamPredmetov.Length; i++)
                 {
-                    indeksPredmeta = i;
-                    break;
+                    if (predmeti.seznamPredmetov[i] == imePredmeta)
+                    {
+                        indeksPredmeta = i;
+                        break;
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Napaka: " + e.Message);
             }
 
             // Preverimo, ali je bil predmet najden
@@ -247,13 +259,13 @@ namespace Knjiznica
         private string kodaOddelka;
         private Ucenec[] seznamUcencev;
 
+        
         public Oddelek(int letnik, string kodaOddelka)
         {
             this.letnik = letnik;
             this.kodaOddelka = kodaOddelka;
             seznamUcencev = new Ucenec[15];
         }
-
 
         public void VnosPdatkovUcenca(int index, string ime, string priimek, DateTime datumRojstva)
         {
@@ -323,30 +335,30 @@ namespace Knjiznica
             Console.WriteLine(string.Concat(new string('-', 40)));
         }
         
-        public void VnosOceneUcenca(int indexUcenca, string imePredmeta, int ocena)
+        public string VnosOceneUcenca(int indexUcenca, string imePredmeta, int ocena)
         {
             if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
             {
-                // Pozor: Tukaj uporabljamo ustrezni objekt Predmet
-                string sporočilo = seznamUcencev[indexUcenca].vnosOcen(imePredmeta, ocena);
-                Console.WriteLine(sporočilo);
+                return seznamUcencev[indexUcenca].vnosOcen(imePredmeta, ocena);
             }
             else
             {
-                Console.WriteLine("Napaka pri vnosu ocene. Učenec ne obstaja v tem oddelku.");
+                return "Napaka";
             }
         }
 
         public void IzpisRedovalniceUcenca(int indexUcenca)
         {
             if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
-            {
-                seznamUcencev[indexUcenca].IzpisRedovalnice();
-            }
-            else
-            {
-                Console.WriteLine("Napaka pri izpisu redovalnice. Učenec ne obstaja v tem oddelku.");
-            }
+                {
+                    seznamUcencev[indexUcenca].IzpisRedovalnice();
+                }
+                else
+                {
+                    Console.WriteLine("Napaka pri izpisu redovalnice. Učenec ne obstaja v tem oddelku.");
+                }
+                    
+            
         }
 
         ~Oddelek()

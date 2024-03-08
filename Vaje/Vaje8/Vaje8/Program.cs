@@ -66,7 +66,6 @@ namespace Vaje8
             ucenec.IzpisRedovalnice();
             Console.WriteLine();
             
-            
             Oddelek oddelek = new Oddelek(4, "Ra");
             
             oddelek.VnosPdatkovUcenca( 0, "Max", "Verstappen", new DateTime(1975,12,5));
@@ -79,11 +78,11 @@ namespace Vaje8
             oddelek.IzpisSeznamUcencev();
 
             Console.ReadKey();
-            oddelek.VnosOceneUcenca(1, "Fizika", 4);
-            oddelek.VnosOceneUcenca(1, "Slovenščina", 5);
-
+            Console.WriteLine(oddelek.VnosOceneUcenca(1, "Fizika", 4));
+            Console.WriteLine(oddelek.VnosOceneUcenca(1, "Slovenščina", 5));
+            
             // Izpišemo redovalnico učenca
-            oddelek.IzpisRedovalniceUcenca(0);
+            oddelek.IzpisRedovalniceUcenca(1);
 
         }
     }
