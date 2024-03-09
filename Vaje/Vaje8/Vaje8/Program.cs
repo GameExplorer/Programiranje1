@@ -66,23 +66,6 @@ namespace Vaje8
             ucenec.IzpisRedovalnice();
             Console.WriteLine();
             
-            Oddelek oddelek = new Oddelek(4, "Ra");
-            
-            oddelek.VnosPdatkovUcenca( 0, "Max", "Verstappen", new DateTime(1975,12,5));
-            oddelek.VnosPdatkovUcenca( 1, "Fernando", "Alonso", new DateTime(1987,3,5));
-            oddelek.VnosPdatkovUcenca( 2, "Charlec", "Leclerc", new DateTime(1997,8,11));
-
-            oddelek.SpremembaImenaUcenca(2, "Charles");
-            oddelek.SpremembaPriimkaUcenca(0, "Maximilian");
-
-            oddelek.IzpisSeznamUcencev();
-
-            Console.ReadKey();
-            Console.WriteLine(oddelek.VnosOceneUcenca(1, "Fizika", 4));
-            Console.WriteLine(oddelek.VnosOceneUcenca(1, "Slovenščina", 5));
-            
-            // Izpišemo redovalnico učenca
-            oddelek.IzpisRedovalniceUcenca(1);
 
         }
     }
