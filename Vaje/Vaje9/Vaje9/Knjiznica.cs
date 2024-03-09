@@ -266,25 +266,31 @@ namespace Knjiznica
             seznamUcencev = new Ucenec[15];
         }
 
-        public void VnosPdatkovUcenca(int index, string ime, string priimek, DateTime datumRojstva)
+        private int index = 0; //indeks izven metod, ker ga bomo potrebovali še drugje
+        //Metoda, za vnos učenca
+        public void VnosPdatkovUcenca(string ime, string priimek, DateTime datumRojstva)
         {
-            // Preverimo, če je indeks v mejah tabele in če na tem indeksu že obstaja učenec
+            // Preverimo, če je indeks v mejah tabele in če na tem indeksu ne obstaja učenec
             if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] == null)
             {
                 seznamUcencev[index] = new Ucenec(ime, priimek, datumRojstva);
-                Console.WriteLine($"Podatki o učencu {ime} {priimek} uspešno vnešeni.");
+                Console.WriteLine($"Podatki o učencu {ime} {priimek} so uspešno vnešeni.");
+                index++; //povečamo indeks
             }
             else
             {
-                Console.WriteLine("Napaka pri vnosu podatkov o učencu.");
+                Console.WriteLine("Napaka pri vnosu podatkov o učencu. Poskusi ponovno");
             }
         }
 
+        //Metode, ki bodo spremenile ime, priimek in datum rojstva učenca tako da bodo poklicale metode iz 
+        //prejšnega razreda
         public void SpremembaImenaUcenca(int index, string novoIme)
         {
+            //pogledamo, če je znotraj meja indeks in če ni prazen
             if (index >= 0 && index < seznamUcencev.Length && seznamUcencev[index] != null)
             {
-                seznamUcencev[index].SpremeniIme(novoIme);
+                seznamUcencev[index].SpremeniIme(novoIme); //na tem indeksu spremeni ime
             }
             else
             {
@@ -321,19 +327,22 @@ namespace Knjiznica
         {
             Console.WriteLine();
             Console.WriteLine("Seznam učencev v oddelku: " + letnik + "." + kodaOddelka);
-            Console.WriteLine(string.Concat(new string('-', 40)));
+            Console.WriteLine(string.Concat(new string('-', 64)));
 
             foreach (Ucenec ucenec in seznamUcencev)
             {
-                if (ucenec != null)
+                if (ucenec != null) //izpišemo samo če učenec obstaja
                 {
                     Console.WriteLine(ucenec.IzpisPodatkov("osnovni"));
                 }
             }
 
-            Console.WriteLine(string.Concat(new string('-', 40)));
+            Console.WriteLine(string.Concat(new string('-', 64)));
         }
         
+        //Metoda, ki omogoča vnos ocene učencu tako, da podamo indeks predmeta, ime predmeta in oceno
+        //Ponovno pogledamo da je indeks znotraj meje in da učenec obstaja, na tistem indeksu pokličemo metodo
+        //vnos ocen
         public string VnosOceneUcenca(int indexUcenca, string imePredmeta, int ocena)
         {
             if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
@@ -342,10 +351,12 @@ namespace Knjiznica
             }
             else
             {
-                return "Napaka";
+                return "Napaka pri vnosu ocene poskusi ponovno";
             }
         }
 
+        //Metoda, ki izpiše redovalnico  za posameznega učenca tako, da podamo indeks učenca, pokličemo metodo iz 
+        //prejšnega razreda
         public void IzpisRedovalniceUcenca(int indexUcenca)
         {
             if (indexUcenca >= 0 && indexUcenca < seznamUcencev.Length && seznamUcencev[indexUcenca] != null)
@@ -358,6 +369,7 @@ namespace Knjiznica
             }
         }
 
+        //Destruktor, ki zapre tabelo
         ~Oddelek()
         {
             seznamUcencev = null;
