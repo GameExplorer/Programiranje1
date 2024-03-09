@@ -1,5 +1,6 @@
 # Programiranje 1
 
+Code from Programiranje 1 it includes codes from lessons, HWs, Exams and Other minor exercises
 
 ## Content
 
