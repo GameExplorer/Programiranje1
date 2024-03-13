@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\bin\Debug\net8.0\RazredDirectoryOsnove.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\bin\Debug\net8.0\RazredDirectoryOsnove.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\bin\Debug\net8.0\RazredDirectoryOsnove.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\bin\Debug\net8.0\RazredDirectoryOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\bin\Debug\net8.0\RazredDirectoryOsnove.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\refint\RazredDirectoryOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\RazredDirectoryOsnove.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\RazredDirectoryOsnove\RazredDirectoryOsnove\obj\Debug\net8.0\ref\RazredDirectoryOsnove.dll
