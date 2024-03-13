@@ -1,0 +1,2 @@
+Ta stavek bomo zapisali v datoteko!
+Ta stavek bomo dodali v datoteko

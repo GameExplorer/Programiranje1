@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\bin\Debug\net8.0\DatotekeOsnove.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\bin\Debug\net8.0\DatotekeOsnove.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\bin\Debug\net8.0\DatotekeOsnove.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\bin\Debug\net8.0\DatotekeOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\bin\Debug\net8.0\DatotekeOsnove.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\refint\DatotekeOsnove.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\DatotekeOsnove.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\DatotekeOsnove\DatotekeOsnove\obj\Debug\net8.0\ref\DatotekeOsnove.dll
