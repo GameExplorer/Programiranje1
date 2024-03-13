@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\bin\Debug\net8.0\ObelavaDatoteke.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\bin\Debug\net8.0\ObelavaDatoteke.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\bin\Debug\net8.0\ObelavaDatoteke.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\bin\Debug\net8.0\ObelavaDatoteke.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\bin\Debug\net8.0\ObelavaDatoteke.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\refint\ObelavaDatoteke.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ObelavaDatoteke.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Naloge\Datoteke\ObelavaDatoteke\ObelavaDatoteke\obj\Debug\net8.0\ref\ObelavaDatoteke.dll

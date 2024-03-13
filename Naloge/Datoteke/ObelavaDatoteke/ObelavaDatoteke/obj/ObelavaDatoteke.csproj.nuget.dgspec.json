@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje9\\Predavanje9\\Predavanje9.csproj": {}
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\ObelavaDatoteke\\ObelavaDatoteke\\ObelavaDatoteke.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje9\\Predavanje9\\Predavanje9.csproj": {
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\ObelavaDatoteke\\ObelavaDatoteke\\ObelavaDatoteke.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje9\\Predavanje9\\Predavanje9.csproj",
-        "projectName": "Predavanje9",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje9\\Predavanje9\\Predavanje9.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\ObelavaDatoteke\\ObelavaDatoteke\\ObelavaDatoteke.csproj",
+        "projectName": "ObelavaDatoteke",
+        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\ObelavaDatoteke\\ObelavaDatoteke\\ObelavaDatoteke.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Predavanja\\Predavanje9\\Predavanje9\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\ObelavaDatoteke\\ObelavaDatoteke\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
