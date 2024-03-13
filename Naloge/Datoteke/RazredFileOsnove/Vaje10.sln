@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaje10", "Vaje10\Vaje10.csproj", "{DA1E399D-9FDA-4BC5-9278-BFFEEEB4268B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA1E399D-9FDA-4BC5-9278-BFFEEEB4268B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1E399D-9FDA-4BC5-9278-BFFEEEB4268B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1E399D-9FDA-4BC5-9278-BFFEEEB4268B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1E399D-9FDA-4BC5-9278-BFFEEEB4268B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
