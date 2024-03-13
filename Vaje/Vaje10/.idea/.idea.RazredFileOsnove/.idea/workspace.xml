@@ -8,7 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e558471c-1172-4ed7-a370-71483a58f33b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Vaje10/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje10/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vaje10/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje10/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2ddJ4znoyus0ljqgUM70FehrICd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +33,7 @@
     ".NET Project.RazredFileOsnove.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "DatotekeNaloge",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710331834755</updated>
-      <workItem from="1710331835838" duration="2485000" />
+      <workItem from="1710331835838" duration="4013000" />
     </task>
     <servers />
   </component>
