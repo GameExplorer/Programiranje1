@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj": {}
+    "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje10/Vaje10/Vaje10.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj": {
+    "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje10/Vaje10/Vaje10.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj",
+        "projectUniqueName": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje10/Vaje10/Vaje10.csproj",
         "projectName": "Vaje10",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj",
-        "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\obj\\",
+        "projectPath": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje10/Vaje10/Vaje10.csproj",
+        "packagesPath": "/home/melioads/.nuget/packages/",
+        "outputPath": "/home/melioads/Documents/GitHub/Programiranje1/Vaje/Vaje10/Vaje10/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/melioads/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -56,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

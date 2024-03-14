@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vaje7")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9cf6b8f09d479c45a216a2698890e109c9cb1d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vaje7")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vaje7")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

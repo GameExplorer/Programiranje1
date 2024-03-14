@@ -30,11 +30,13 @@ namespace Vaje10
         public void ShranjevanjeVozil(Avto[] tabelaAvtomobilov)
         {
             StreamWriter sw = new StreamWriter(imeDatoteke);
-
+            
             foreach (Avto avto in tabelaAvtomobilov)
             {
-                sw.Write($"{avto.Znamka};{avto.Tip};{avto.Letnik};{avto.stPrevozenihKilometrov}");
+                sw.Write($"{avto.Znamka};{avto.Tip};{avto.Letnik};{avto.stPrevozenihKilometrov};\n");
+                
             }
+            sw.Close();
         }
 
         public Avto[] BranjePodatkov()
@@ -82,7 +84,6 @@ namespace Vaje10
                 Console.WriteLine("Neustrezno ime mape. Ime mape ne sme biti prazno in ne sme vsebovati #$&!");
             }
             
-            
             //2. Naloga
             string trenutniDirektorij = Directory.GetCurrentDirectory();
             string[] datoteke = Directory.GetFiles(trenutniDirektorij);
@@ -111,40 +112,81 @@ namespace Vaje10
                 Console.WriteLine("-----------------------------------------------------------");
                 Console.WriteLine("X. Izhod Programa");
                 
+                Console.Write("Izbira: ");
                 izbira = Console.ReadLine()[0];
 
                 switch (izbira)
                 {
                     case '1':
+                        Console.Clear();
                         Console.Write("Vnesi ime datoteke: ");
                         string vnos = Console.ReadLine();
                         datotekaAvtomobilov = new AvtoDatoteka(vnos);
-                        break;
-                    case '2':
-                        tabelaAvtomobilov = TestniPodatki();
-                        break;
-                    case '3':
-                        IzpisSeznamVozil(tabelaAvtomobilov);
-                        break;
-                    case '4':
-                        if (tabelaAvtomobilov != null && datotekaAvtomobilov != null)
+                        if (datotekaAvtomobilov != null)
                         {
-                            datotekaAvtomobilov.ShranjevanjeVozil(tabelaAvtomobilov);
+                            Console.WriteLine("Datoteka uspešno kreirana!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
                         }
                         else
                         {
-                            Console.WriteLine("Vnesi ime datoteke in napolni in nato napolni datoteko");
+                            Console.WriteLine("Napaka pri kreiranju datoteke!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
+                        }
+                        break;
+                    case '2':
+                        Console.Clear();
+                        tabelaAvtomobilov = TestniPodatki();
+                        if (tabelaAvtomobilov != null)
+                        {
+                            Console.WriteLine("Podatki uspešno napolnjeni!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Podatki neuspešno napolnjeni!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
+                        }
+                        break;
+                    case '3':
+                        Console.Clear();
+                        IzpisSeznamVozil(tabelaAvtomobilov);
+                        Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                        Console.ReadKey();
+                        break;
+                    case '4':
+                        Console.Clear();
+                        if (tabelaAvtomobilov != null && datotekaAvtomobilov != null)
+                        {
+                            datotekaAvtomobilov.ShranjevanjeVozil(tabelaAvtomobilov);
+                            Console.WriteLine("Podatki uspešno shranjeni v datoteko!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Vnesi ime datoteke in jo napolni s podatki!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
                         }
                         break;
                     case '5':
+                        Console.Clear();
                         if (tabelaAvtomobilov != null)
                         {
                             tabelaAvtomobilov = datotekaAvtomobilov.BranjePodatkov();
-                            Console.WriteLine("Podatki uspešno prebrani");
+                            Console.WriteLine("Podatki uspešno prebrani!");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
                         }
                         else
                         {
                             Console.WriteLine("Napaka pri branju podatkov.");
+                            Console.WriteLine("\nPritisni tipko za nadaljevanje...");
+                            Console.ReadKey();
                         }
                         break;
                     case 'X':

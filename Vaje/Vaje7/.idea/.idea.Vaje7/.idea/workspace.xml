@@ -8,20 +8,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b76803e-61ca-4965-ad47-09f261de35a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/bin/Debug/net8.0/Vaje10.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/bin/Debug/net8.0/Vaje10.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/bin/Debug/net8.0/Vaje10.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/bin/Debug/net8.0/Vaje10.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/Vaje10.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/ref/Vaje10.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/ref/Vaje10.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/refint/Vaje10.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Debug/net8.0/refint/Vaje10.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Vaje10.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Vaje10.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Vaje10.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/Vaje10.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Vaje10/Vaje10/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Vaje7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Vaje7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/bin/Debug/net8.0/Vaje7.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/Vaje7.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/ref/Vaje7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/ref/Vaje7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/refint/Vaje7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Debug/net8.0/refint/Vaje7.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Vaje7.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Vaje7.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/Vaje7.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/Vaje7.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vaje7/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Vaje7/obj/project.assets.json" afterDir="false" />
@@ -65,9 +78,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Dom\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Dom\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Dom\\AppData\\Local\\Symbols\\src"
+      "/home/melioads/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/melioads/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/home/melioads/.local/share/Symbols/src"
     ]
   }
 }]]></component>
@@ -103,6 +116,7 @@
       <workItem from="1708440914818" duration="4083000" />
       <workItem from="1708932404966" duration="1869000" />
       <workItem from="1709462811538" duration="816000" />
+      <workItem from="1710429480805" duration="614000" />
     </task>
     <servers />
   </component>
