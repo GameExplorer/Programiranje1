@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\RazredFileOsnove\\Vaje10\\Vaje10.csproj": {}
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\RazredFileOsnove\\Vaje10\\Vaje10.csproj": {
+    "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\RazredFileOsnove\\Vaje10\\Vaje10.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj",
         "projectName": "Vaje10",
-        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\RazredFileOsnove\\Vaje10\\Vaje10.csproj",
+        "projectPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\Vaje10.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Naloge\\Datoteke\\RazredFileOsnove\\Vaje10\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Documents\\GitHub\\Programiranje1\\Vaje\\Vaje10\\Vaje10\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
