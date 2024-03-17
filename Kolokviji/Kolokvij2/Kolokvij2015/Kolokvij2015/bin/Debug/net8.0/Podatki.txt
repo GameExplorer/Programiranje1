@@ -1,0 +1,2 @@
+Kranj 23,44 Ljubljana 11,4 Koper 1,9
+Celje 23,77 Maribor 56,66
