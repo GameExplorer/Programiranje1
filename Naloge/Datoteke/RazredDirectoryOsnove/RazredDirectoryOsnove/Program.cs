@@ -40,11 +40,18 @@ namespace RazredDirectoryOsnove
             {
                 Console.WriteLine(ime + " " + Directory.GetCreationTime(ime));
             }
+
+            string pot = Directory.GetDirectoryRoot("TestniDirektorij1");
+            Console.WriteLine(pot);
+
+            string pot1 = Directory.GetCurrentDirectory();
+            Console.WriteLine(pot1);
             
             Console.WriteLine("Mapa '" + direktorij + "' se nahaja na disku " + Directory.GetDirectoryRoot(@"c:\Program Files"));
             
             Console.WriteLine(@"V mapi C:\Program Files je " + Directory.GetFiles(direktorij).Length +  " datoteke");
             Console.WriteLine(@"V mapi C:\Program Files je " + Directory.GetDirectories(direktorij).Length + " podmap");
+            
         }
     }
 }

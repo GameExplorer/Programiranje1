@@ -58,6 +58,9 @@ namespace ObdelavaDatoteke
             string datoteka2 = "IzhodnaDatoteka2.txt";
             bool rez = Primerjaj(datoteka1, datoteka2);
             Console.WriteLine(rez);
+            
+            
+            
 
         }
 

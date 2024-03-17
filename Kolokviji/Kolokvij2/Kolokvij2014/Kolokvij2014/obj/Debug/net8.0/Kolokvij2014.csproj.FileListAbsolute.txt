@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\bin\Debug\net8.0\Kolokvij2014.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\bin\Debug\net8.0\Kolokvij2014.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\bin\Debug\net8.0\Kolokvij2014.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\bin\Debug\net8.0\Kolokvij2014.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\bin\Debug\net8.0\Kolokvij2014.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\refint\Kolokvij2014.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\Kolokvij2014.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2014\Kolokvij2014\obj\Debug\net8.0\ref\Kolokvij2014.dll

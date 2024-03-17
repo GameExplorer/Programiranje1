@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RazredDirectoryOsnove")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f50ab010d402769fd665c67dccb5524b240fcd56")]
 [assembly: System.Reflection.AssemblyProductAttribute("RazredDirectoryOsnove")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RazredDirectoryOsnove")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

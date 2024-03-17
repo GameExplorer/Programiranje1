@@ -1,0 +1,6 @@
+Ljubljana - 1000
+Maribor - 2000
+Celje - 3000
+Kranj - 4000
+Koper - 5000
+2267141
