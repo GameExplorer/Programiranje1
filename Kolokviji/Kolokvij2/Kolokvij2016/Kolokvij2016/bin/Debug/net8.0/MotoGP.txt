@@ -1,0 +1,3 @@
+﻿Valentino Rossi;55,445
+Jorge Lorenzo;55,145
+Marc Marquez;55,333
