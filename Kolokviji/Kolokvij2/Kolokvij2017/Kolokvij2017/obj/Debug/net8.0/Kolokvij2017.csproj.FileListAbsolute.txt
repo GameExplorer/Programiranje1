@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\bin\Debug\net8.0\Kolokvij2017.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\bin\Debug\net8.0\Kolokvij2017.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\bin\Debug\net8.0\Kolokvij2017.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\bin\Debug\net8.0\Kolokvij2017.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\bin\Debug\net8.0\Kolokvij2017.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\refint\Kolokvij2017.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\Kolokvij2017.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2017\Kolokvij2017\obj\Debug\net8.0\ref\Kolokvij2017.dll
