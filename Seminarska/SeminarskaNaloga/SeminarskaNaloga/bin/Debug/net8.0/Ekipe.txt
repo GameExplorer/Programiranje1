@@ -1,0 +1,10 @@
+﻿Mercedes;Mercedes-Benz;Toto Wolff;Brackley, United Kingdom;8
+Red Bull Racing;Honda;Christian Horner;Milton Keynes, United Kingdom;4
+Scuderia Ferrari;Ferrari;Frédéric Vasseur;Maranello, Italy;16
+Mclaren;Mercedes-Benz;Zak Brown;Woking, United Kingdom;8
+Aston Martin;Mercedes-Benz;Mike Krack;Silverstone, United Kingdom;0
+Alpine;Renault;Bruno Famin;Enstone, United Kingdom;2
+AlphaTauri;Honda;Laurent Mekies;Faenza, Italy;0
+Alfa Romeo Racing;Ferrari;Alessandro Alunni Bravi;Hinwil, Switzerland;0
+Haas;Ferrari;Ayao Komatsu;Kannapolis, United States;0
+Williams;Mercedes-Benz;James Vowles;Grove, United Kingdom;9
