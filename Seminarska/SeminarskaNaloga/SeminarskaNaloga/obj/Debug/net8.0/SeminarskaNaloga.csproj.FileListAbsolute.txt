@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\bin\Debug\net8.0\SeminarskaNaloga.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\bin\Debug\net8.0\SeminarskaNaloga.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\bin\Debug\net8.0\SeminarskaNaloga.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\bin\Debug\net8.0\SeminarskaNaloga.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\bin\Debug\net8.0\SeminarskaNaloga.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\refint\SeminarskaNaloga.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\SeminarskaNaloga.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Seminarska\SeminarskaNaloga\SeminarskaNaloga\obj\Debug\net8.0\ref\SeminarskaNaloga.dll
