@@ -8,4 +8,4 @@ Code from Programiranje 1 it includes codes from lessons, HWs, Exams and Other m
 - [Vaje](https://github.com/GameExplorer/Programiranje1/tree/main/Vaje)
 - [Naloge](https://github.com/GameExplorer/Programiranje1/tree/main/Naloge)
 - [Kolokviji](https://github.com/GameExplorer/Programiranje1/tree/main/Kolokviji/Kolokvij1)
-- [Teorija](https://github.com/GameExplorer/Programiranje1/blob/main/Teorija/Teorija.pdf)
+- [Teorija](https://github.com/GameExplorer/Programiranje1/tree/main/Teorija)
