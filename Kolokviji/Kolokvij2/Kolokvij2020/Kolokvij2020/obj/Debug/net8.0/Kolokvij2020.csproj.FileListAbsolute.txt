@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\bin\Debug\net8.0\Kolokvij2020.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\bin\Debug\net8.0\Kolokvij2020.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\bin\Debug\net8.0\Kolokvij2020.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\bin\Debug\net8.0\Kolokvij2020.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\bin\Debug\net8.0\Kolokvij2020.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\refint\Kolokvij2020.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\Kolokvij2020.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020\Kolokvij2020\obj\Debug\net8.0\ref\Kolokvij2020.dll

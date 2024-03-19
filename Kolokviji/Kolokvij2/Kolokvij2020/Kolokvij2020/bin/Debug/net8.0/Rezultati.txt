@@ -1,0 +1,4 @@
+﻿Emerson;33
+Brener;88
+Russel;12
+Fittipaldi;50
