@@ -1,0 +1,3 @@
+﻿Emerson;1213,45
+Rogljič;1010,45
+Nibali;1111,23
