@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\bin\Debug\net8.0\Kolokvij2013B.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\bin\Debug\net8.0\Kolokvij2013B.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\bin\Debug\net8.0\Kolokvij2013B.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\bin\Debug\net8.0\Kolokvij2013B.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\bin\Debug\net8.0\Kolokvij2013B.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\refint\Kolokvij2013B.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\Kolokvij2013B.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2013B\Kolokvij2013B\obj\Debug\net8.0\ref\Kolokvij2013B.dll
