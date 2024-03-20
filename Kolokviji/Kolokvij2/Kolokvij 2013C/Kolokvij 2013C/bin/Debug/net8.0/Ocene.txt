@@ -1,0 +1,4 @@
+﻿Janko|25
+Miha|23
+Anka|33
+Mici|33
