@@ -1,0 +1,15 @@
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\bin\Debug\net8.0\Kolokvij2020C.exe
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\bin\Debug\net8.0\Kolokvij2020C.deps.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\bin\Debug\net8.0\Kolokvij2020C.runtimeconfig.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\bin\Debug\net8.0\Kolokvij2020C.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\bin\Debug\net8.0\Kolokvij2020C.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.AssemblyInfoInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.AssemblyInfo.cs
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.sourcelink.json
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\refint\Kolokvij2020C.dll
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.pdb
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\Kolokvij2020C.genruntimeconfig.cache
+C:\Users\Dom\Documents\GitHub\Programiranje1\Kolokviji\Kolokvij2\Kolokvij2020C\Kolokvij2020C\obj\Debug\net8.0\ref\Kolokvij2020C.dll
