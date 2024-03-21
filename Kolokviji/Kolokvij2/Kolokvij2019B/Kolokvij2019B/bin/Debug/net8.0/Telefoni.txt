@@ -1,0 +1,5 @@
+LG 300;870,00
+Samsung A52;400,00
+Iphone 15;1200,00                     
+Google Pixel 2;800,00
+Iphone 14;1100
