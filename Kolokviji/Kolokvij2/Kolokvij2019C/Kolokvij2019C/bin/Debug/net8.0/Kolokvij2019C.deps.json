@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Kolokvij2019C/1.0.0": {
+        "runtime": {
+          "Kolokvij2019C.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kolokvij2019C/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
