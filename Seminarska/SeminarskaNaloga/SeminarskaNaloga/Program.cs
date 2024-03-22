@@ -23,24 +23,25 @@ class Program
         while (true)
         {
             
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 42)));
             
-            Console.WriteLine(" ---- LETALIŠČE ----".PadLeft(26));
+            Console.WriteLine(" ---- INFORMACIJE ----".PadLeft(26));
             Console.WriteLine("1. Izpis podatkov".PadLeft(24));
             Console.WriteLine("2. Dodaj novo destinacijo".PadLeft(28));
             
-            Console.WriteLine(" ----  ---- ".PadLeft(26));
+            Console.WriteLine(" ---- LETALIŠČE ---- ".PadLeft(26));
             Console.WriteLine("3. Ustvari lete".PadLeft(24));
             Console.WriteLine("4. Izpiši seznam letov".PadLeft(28));
-            Console.WriteLine("5. Izpis popularnih destinacij");
+            Console.WriteLine("5. Izpis popularnih destinacij".PadLeft(32));
 
-            Console.WriteLine(" ---  ---".PadLeft(24));
+            Console.WriteLine(" --- TAJNICA --- ".PadLeft(24));
             Console.WriteLine("6. Tajnica (Pretvori v csv)".PadLeft(32));
+            //7.naloga - VOZOVNICA
 
-            Console.WriteLine(" --- IZHOD ---".PadLeft(24));
+            Console.WriteLine(" --- IZHOD --- ".PadLeft(24));
             Console.WriteLine("X. Zapri datoteko".PadLeft(24));
             
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 42)));
 
             Console.WriteLine();
             Console.Write("Izberi nalogo: ");
@@ -157,7 +158,7 @@ class Program
                     
                     PretvoriCSV(vnosNoveDatoteke, vnosCSV);
                     
-                    Console.WriteLine("");
+                    Console.WriteLine("Podatki pretvorjeni v csv datoteko");
                     Console.WriteLine("Pritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
