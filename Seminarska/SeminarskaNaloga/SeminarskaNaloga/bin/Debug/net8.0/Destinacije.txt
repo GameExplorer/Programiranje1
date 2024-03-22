@@ -1,0 +1,10 @@
+Pariz;Francija
+Ljubljana;Slovenija
+Oslo;Norveška
+London;Združeno Kraljestvo
+Barcelona;Španija
+New York;ZDA
+Los Angeles;ZDA
+Melbourne;Avstralija
+Tokio;Japonska
+Istanbul;Turčija
