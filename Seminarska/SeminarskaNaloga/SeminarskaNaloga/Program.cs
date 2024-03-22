@@ -1,5 +1,7 @@
 ﻿namespace SeminarskaNaloga;
 
+using Destinacije;
+
 //"Izjavljam, da sem nalogo opravil samostojno in da sem njen avtor. Zavedam se, da v primeru, če izjava prvega stavka ni resnična, kršim disciplinska pravila."
 
 class Program
@@ -12,41 +14,150 @@ class Program
         
         //Menu z nalogami
         char izbira;
+        string destinacijeDatoteka = "Destinacije.txt";
+        string letalaDatoteka = "Letala.txt";
+        string vnosNoveDatoteke = "";
+        
+        Destinacije destinacija = new Destinacije();
         
         while (true)
         {
+            
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
-            Console.WriteLine("NALOGE:".PadLeft(18));
+            
+            Console.WriteLine(" ---- LETALIŠČE ----".PadLeft(26));
             Console.WriteLine("1. Izpis podatkov".PadLeft(24));
-            Console.WriteLine("2. Dodaj ekipe v datoteko");
-            Console.WriteLine("3. Tajnica (Pretvori v csv)");
+            Console.WriteLine("2. Dodaj novo destinacijo".PadLeft(28));
+            
+            Console.WriteLine(" ----  ---- ".PadLeft(26));
+            Console.WriteLine("3. Ustvari lete".PadLeft(24));
+            Console.WriteLine("4. Izpiši seznam letov".PadLeft(28));
+            Console.WriteLine("5. Izpis popularnih destinacij");
+
+            Console.WriteLine(" ---  ---".PadLeft(24));
+            Console.WriteLine("6. Tajnica (Pretvori v csv)".PadLeft(32));
+
+            Console.WriteLine(" --- IZHOD ---".PadLeft(24));
             Console.WriteLine("X. Zapri datoteko".PadLeft(24));
+            
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 64)));
 
             Console.WriteLine();
             Console.Write("Izberi nalogo: ");
             izbira = Console.ReadLine()[0];
             
-
             switch (izbira)
-            {
+            { 
                 case '1':
+                    Console.Clear();
                     Console.WriteLine("Izberi način izpisa");
-                    Console.WriteLine("a - Izpis imen vseh ekip");
-                    Console.WriteLine("b - Izpis vseh podatkov o eni ekipi");
+                    Console.WriteLine("a - Izpis vseh destinacij");
+                    Console.WriteLine("b - Izpis vseh letal");
                     Console.Write("Izberi izpis: ");
                     char izpisIzbira = Console.ReadLine()[0];
                     switch (izpisIzbira)
                     {
                         case 'a':
                             Console.Clear();
-                            BranjeDatoteke("Ekipa.txt", 'a');
+                            Console.WriteLine("--- SEZNAM DESTINACIJ ---".PadLeft(24));
+                            BranjeDatoteke(destinacijeDatoteka, 'a');
                             break;
                         case 'b':
                             Console.Clear();
-                            BranjeDatoteke("Ekipa.txt", 'b');
+                            Console.WriteLine("--- SEZNAM LETAL ---".PadLeft(24));
+                            BranjeDatoteke(letalaDatoteka, 'b');
                             break;
                     }
+                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '2':
+                    Console.Clear();
+                    
+                    Console.Write("Vnesi število destinacij, ki jih želiš dodati: ");
+                    int steviloDestinacij = Int32.Parse(Console.ReadLine());
+                    Destinacije[] destinacije = new Destinacije[steviloDestinacij];
+                    
+                    destinacije = destinacija.VnosDestinacij(destinacije);
+                    destinacija.ZapisDestinacij(destinacije, destinacijeDatoteka);
+                    Console.WriteLine("Destinacije dodane!");
+                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '3':
+                    Console.Clear();
+                    
+                    if (vnosNoveDatoteke == "")
+                    {
+                        Console.Clear();
+                        Console.Write("Vnesi ime datoteke (za lete): ");
+                        vnosNoveDatoteke = Console.ReadLine() + ".txt";
+
+                        if (File.Exists(vnosNoveDatoteke)) 
+                        {
+                            Console.WriteLine("Datoteka s tem imenom že obstaja!");
+                            //vnosNoveDatoteke = ""; // Ponastavimo ime datoteke, da jo bo treba ponovno vnesti
+                        }
+                        else
+                        {
+                            UstvariNakljucneLete(destinacijeDatoteka, letalaDatoteka, vnosNoveDatoteke);
+                            Console.WriteLine("Datoteka z leti uspešno ustvarjena!");
+                        }
+                    }
+                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '4':
+                    Console.Clear();
+                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    else
+                    {
+                        Console.WriteLine("SEZNAM LETOV".PadLeft(48));
+                        Console.WriteLine("Odhod".PadRight(32) + "Prihod".PadRight(32) + "Letalo".PadRight(32) + "Potniki".PadRight(32) + "Razdalja[km]");
+                        IzpisLetov(vnosNoveDatoteke);
+                    }
+
+                    Console.WriteLine();
+                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '5':
+                    Console.Clear();
+
+                    List<string> top5Destinacij = Destinacije.NajboljPriljubljeneDestinacije(vnosNoveDatoteke);
+                    
+                    Console.WriteLine("--- TOP 5 DESTINACIJ ---".PadLeft(40));
+                    foreach (var dest in top5Destinacij)
+                    {
+                        Console.WriteLine(dest);
+                    }
+                    
+                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '6':
+                    Console.Clear();
+                    
+                    Console.Write("Vnesi ime csv datoteke: ");
+                    string vnosCSV = Console.ReadLine();
+
+                    if (vnosCSV == "")
+                    {
+                        Console.WriteLine("Nisi vnesel ime csv datoteke");
+                        Console.WriteLine("Ponovno jo vnesi!");
+                        Console.Write("Vnesi ime csv datoteke: ");
+                        vnosCSV = Console.ReadLine();
+                    }
+                    if (!vnosCSV.Contains(".csv")) vnosCSV += ".csv";
+                    
+                    PretvoriCSV(vnosNoveDatoteke, vnosCSV);
+                    
+                    Console.WriteLine("");
                     Console.WriteLine("Pritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
@@ -59,20 +170,17 @@ class Program
                     Console.WriteLine("Napačna izbira naloge");
                     break;
             }
-
-            
         }
     }
 
     public static void Naslov()
     {
-        Console.WriteLine("███████╗ ██████╗ ██████╗ ███╗   ███╗██╗   ██╗██╗      █████╗      ██╗");
-        Console.WriteLine("██╔════╝██╔═══██╗██╔══██╗████╗ ████║██║   ██║██║     ██╔══██╗    ███║");
-        Console.WriteLine("█████╗  ██║   ██║██████╔╝██╔████╔██║██║   ██║██║     ███████║    ╚██║");
-        Console.WriteLine("██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██║   ██║██║     ██╔══██║     ██║");
-        Console.WriteLine("██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║╚██████╔╝███████╗██║  ██║     ██║");
-        Console.WriteLine("╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝     ╚═╝");
-        Console.WriteLine("                                                                      ");
+        Console.WriteLine("░██████╗██╗░░░░░░█████╗░░█████╗░██╗██████╗░");
+        Console.WriteLine("██╔════╝██║░░░░░██╔══██╗██╔══██╗██║██╔══██╗");
+        Console.WriteLine("╚█████╗░██║░░░░░██║░░██║███████║██║██████╔╝");
+        Console.WriteLine("░╚═══██╗██║░░░░░██║░░██║██╔══██║██║██╔══██╗");
+        Console.WriteLine("██████╔╝███████╗╚█████╔╝██║░░██║██║██║░░██║");
+        Console.WriteLine("╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝");
         
         Console.WriteLine();
         Console.Write("Pritisni tipko za nadaljevanje...");
@@ -83,53 +191,131 @@ class Program
     {
         try
         {
-            StreamReader beri = File.OpenText("Ekipe.txt");
+            StreamReader beri = File.OpenText(datoteka);
             string vrstica = beri.ReadLine();
-            string[][] vseEkipe = new string[10][];
-
-            int stevec = 0;
             
             while (vrstica != null)
             {
-                vseEkipe[stevec] = vrstica.Split(";");
-                stevec++;
+                string[] podatki = vrstica.Split(";");
+                
+                //Izpis vseh destinacij
+                if (izbira == 'a')
+                {
+                    Console.WriteLine(podatki[0].PadLeft(12) + " - " + podatki[1]); //izpis destinacij na tem indeksu in samo njeno ime
+                }
+                //Izpis vseh letal
+                if (izbira == 'b')
+                {
+                    Console.WriteLine(vrstica.PadLeft(20));
+                }
                 vrstica = beri.ReadLine();
             }
-
-            //Izpis imen vseh ekip
-            if (izbira == 'a')
-            {
-                Console.WriteLine("--- SEZNAM EKIP ---".PadLeft(24));
-                for(int i = 0; i < stevec; i++)
-                {
-                    Console.WriteLine(vseEkipe[i][0].PadLeft(20)); //izpis ekipe na tem indeksu in samo njeno ime
-                }
-            }
-
-            //Izpis vseh podatkov o eni ekipi
-            if (izbira == 'b')
-            {
-                Console.Write("Vnesi ime ekipe: ");
-                string vnos = Console.ReadLine();
-                bool najden = false;
-                for(int i = 0; i < stevec; i++)
-                {
-                    if (vnos == vseEkipe[i][0])
-                    {
-                        Console.WriteLine("Ekipa: " + vseEkipe[i][0] + " \nMotor: " + vseEkipe[i][1] + " \nTP: " + vseEkipe[i][2] +
-                                          " \nLokacija: " + vseEkipe[i][3] + " \nNaslovi: " + vseEkipe[i][4]);
-                        najden = true;
-                        break;
-                    }
-                }
-                if(!najden) Console.WriteLine("Ekipa ni bila najdena!");
-            }
-            
             beri.Close();
         }
         catch (Exception e)
         {
             Console.WriteLine("Napaka pri branju datoteke: " + e.Message);
         }
+    }
+
+    public static void UstvariNakljucneLete(string destDatoteka, string letalaDatoteka, string izhodnaDatoteka)
+    {
+        string[] tabDestinacij = File.ReadAllLines(destDatoteka);
+        string[] tabLetal = File.ReadAllLines(letalaDatoteka);
+
+        Random rnd = new Random();
+
+        int stDestinacij = tabDestinacij.Length;
+        int stLetal = tabLetal.Length;
+
+        List<string> leti = new List<string>();
+
+        int stLetov = rnd.Next(15, 51);
+
+        for (int i = 0; i < stLetov; i++)
+        {
+            //Naključna destinacija (prihod in odhod) in letalo
+            string odhod = tabDestinacij[rnd.Next(stDestinacij)];
+            string prihod = tabDestinacij[rnd.Next(stDestinacij)];
+            string letalo = tabLetal[rnd.Next(stLetal)];
+
+            string[] odhodPodatki = odhod.Split(";");
+            string[] prihodPodatki = prihod.Split(";");
+
+            string odhodMesto = odhodPodatki[0];
+            string odhodDrzava = odhodPodatki[1];
+
+            string prihodMesto = prihodPodatki[0];
+            string prihodDrzava = prihodPodatki[1];
+            
+            //Naključna razdalja
+            int razdalja = rnd.Next(400, 10000);
+            
+            //Naključno št. potnikov
+            int potniki = rnd.Next(1, 350);
+            
+            //Sestavljanje leta
+            string infoLeta = $"{odhodMesto} ({odhodDrzava});{prihodMesto} ({prihodDrzava});"
+                                                                           + $"{letalo};{potniki};{razdalja}";
+            
+            //Dodajanje v seznam
+            leti.Add(infoLeta);
+        }
+        
+        //Zapis v datoteko
+        File.WriteAllLines(izhodnaDatoteka, leti);
+    }
+
+    public static void IzpisLetov(string letiDatoteka)
+    {
+        try
+        {
+            StreamReader beriLete = File.OpenText(letiDatoteka);
+
+            string vrstica = beriLete.ReadLine();
+
+            while (vrstica != null)
+            {
+                string[] podatki = vrstica.Split(";");
+
+                string odhod = podatki[0];
+                string prihod = podatki[1];
+                string letalo = podatki[2];
+                string stPotnikov = podatki[3];
+                string razdalja = podatki[4];
+
+                Console.WriteLine($"{odhod}".PadRight(32) + $"{prihod}".PadRight(32) + $"{letalo}".PadRight(32) + $"{stPotnikov}".PadRight(32) + $"{razdalja}".PadRight(32));
+                vrstica = beriLete.ReadLine();
+            }
+
+            beriLete.Close(); 
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Napaka pri branju datoteke: " + e.Message);
+        }
+    }
+
+    public static void PretvoriCSV(string tekstovnaDatoteka, string csvDatoteka)
+    {
+        try
+        {
+            string[] vrstice = File.ReadAllLines(tekstovnaDatoteka);
+
+            // Imena stolpcev
+            string[] imenaStolpcev = { "Odhod", "Prihod", "Letalo", "St. Potnikov", "Razdalja" };
+
+            // dodajanje imena stolpcev
+            string zapis = string.Join(";", imenaStolpcev) + Environment.NewLine;
+            
+            zapis += string.Join(Environment.NewLine,
+                vrstice.Select(x => x.Split(';')).Select(x => string.Join(";", x)));
+            File.WriteAllText(csvDatoteka, zapis);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Napaka bri branju datoteke ali pri zapisovanju v csv: " + e.Message);
+        }
+        
     }
 }

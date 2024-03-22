@@ -1,0 +1,10 @@
+Airbus A320
+Airbus A330
+Superjet 100
+Comac C919
+Airbus A380
+Comac ARJ21
+Ikrut MC-21
+MRJ Jet
+Boeing 747
+Boeing 707
