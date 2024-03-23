@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeminarskaNaloga")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81a5b50b163cdfec3972e2a84a0db96a48aa37c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b40c4ba55f8528db254aa9d1ac7cf3b6ce92ca86")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeminarskaNaloga")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeminarskaNaloga")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
