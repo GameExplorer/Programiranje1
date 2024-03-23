@@ -1,4 +1,6 @@
-﻿namespace SeminarskaNaloga;
+﻿using System.Reflection;
+
+namespace SeminarskaNaloga;
 
 using Destinacije;
 
@@ -27,6 +29,8 @@ class Program
             
             Console.WriteLine(" ---- INFORMACIJE ----".PadLeft(26));
             Console.WriteLine("1. Izpis podatkov".PadLeft(24));
+            
+            Console.WriteLine(" --- DESTINACIJE ---".PadLeft(26));
             Console.WriteLine("2. Dodaj novo destinacijo".PadLeft(28));
             
             Console.WriteLine(" ---- LETALIŠČE ---- ".PadLeft(26));
@@ -36,8 +40,10 @@ class Program
 
             Console.WriteLine(" --- TAJNICA --- ".PadLeft(24));
             Console.WriteLine("6. Tajnica (Pretvori v csv)".PadLeft(32));
-            //7.naloga - VOZOVNICA
 
+            Console.WriteLine(" --- VOZOVNICA --- ".PadLeft(26));
+            Console.WriteLine("7. Kupi Vozovnico".PadLeft(24));
+            
             Console.WriteLine(" --- IZHOD --- ".PadLeft(24));
             Console.WriteLine("X. Zapri datoteko".PadLeft(24));
             
@@ -60,7 +66,7 @@ class Program
                     {
                         case 'a':
                             Console.Clear();
-                            Console.WriteLine("--- SEZNAM DESTINACIJ ---".PadLeft(24));
+                            Console.WriteLine("--- SEZNAM DESTINACIJ ---".PadLeft(28));
                             BranjeDatoteke(destinacijeDatoteka, 'a');
                             break;
                         case 'b':
@@ -69,7 +75,7 @@ class Program
                             BranjeDatoteke(letalaDatoteka, 'b');
                             break;
                     }
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -83,7 +89,7 @@ class Program
                     destinacije = destinacija.VnosDestinacij(destinacije);
                     destinacija.ZapisDestinacij(destinacije, destinacijeDatoteka);
                     Console.WriteLine("Destinacije dodane!");
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -107,7 +113,7 @@ class Program
                             Console.WriteLine("Datoteka z leti uspešno ustvarjena!");
                         }
                     }
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -122,44 +128,65 @@ class Program
                     }
 
                     Console.WriteLine();
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
                 case '5':
                     Console.Clear();
 
-                    List<string> top5Destinacij = Destinacije.NajboljPriljubljeneDestinacije(vnosNoveDatoteke);
-                    
-                    Console.WriteLine("--- TOP 5 DESTINACIJ ---".PadLeft(40));
-                    foreach (var dest in top5Destinacij)
+                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    else
                     {
-                        Console.WriteLine(dest);
+                        List<string> top5Destinacij = Destinacije.NajboljPriljubljeneDestinacije(vnosNoveDatoteke);
+
+                        Console.WriteLine("--- TOP 5 DESTINACIJ ---".PadLeft(40));
+                        foreach (var dest in top5Destinacij)
+                        {
+                            Console.WriteLine(dest);
+                        }
                     }
-                    
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
                 case '6':
                     Console.Clear();
                     
-                    Console.Write("Vnesi ime csv datoteke: ");
-                    string vnosCSV = Console.ReadLine();
-
-                    if (vnosCSV == "")
+                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    else
                     {
-                        Console.WriteLine("Nisi vnesel ime csv datoteke");
-                        Console.WriteLine("Ponovno jo vnesi!");
                         Console.Write("Vnesi ime csv datoteke: ");
-                        vnosCSV = Console.ReadLine();
+                        string vnosCSV = Console.ReadLine();
+
+                        if (vnosCSV == "")
+                        {
+                            Console.WriteLine("Nisi vnesel ime csv datoteke");
+                            Console.WriteLine("Ponovno jo vnesi!");
+                            Console.Write("Vnesi ime csv datoteke: ");
+                            vnosCSV = Console.ReadLine();
+                        }
+
+                        if (!vnosCSV.Contains(".csv")) vnosCSV += ".csv";
+
+                        PretvoriCSV(vnosNoveDatoteke, vnosCSV);
                     }
-                    if (!vnosCSV.Contains(".csv")) vnosCSV += ".csv";
-                    
-                    PretvoriCSV(vnosNoveDatoteke, vnosCSV);
-                    
+
                     Console.WriteLine("Podatki pretvorjeni v csv datoteko");
-                    Console.WriteLine("Pritisni tipko za nadaljevanje...");
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                case '7':
+                    Console.Clear();
+                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    else
+                    {
+                        KupiVozovnico(destinacijeDatoteka, vnosNoveDatoteke);
+                    }
+
+                    Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -318,5 +345,64 @@ class Program
             Console.WriteLine("Napaka bri branju datoteke ali pri zapisovanju v csv: " + e.Message);
         }
         
+    }
+
+    public static void KupiVozovnico(string destDatoteka, string letalisce)
+    {
+        try
+        {
+            StreamReader destinacije = File.OpenText(destDatoteka);
+            string vrstica = destinacije.ReadLine();
+
+            Console.WriteLine("OSEBNI PODATKI");
+            Console.Write("Vnesi ime: ");
+            string ime = Console.ReadLine();
+
+            Console.Write("Vnesi priimek: ");
+            string priimek = Console.ReadLine();
+
+            Console.Write("\nNadaljuj na naslednji korak ->");
+            Console.ReadKey();
+            Console.Clear();
+
+            
+            //IZBERI LETALIŠČE, IN NATO IZPIŠI MOŽNE DESTINACIJE
+            //ČE DESTINACIJE NI TO JAVI, SICER NADALJUJ NA GENERIRANJE VOZOVNICE
+            
+            Console.WriteLine("SEZNAM DESTINACIJ".PadRight(20));
+
+            BranjeDatoteke(destDatoteka, 'a');
+
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 28)));
+            Console.Write("Destinacija: ");
+            string lokacija = Console.ReadLine();
+
+            while (vrstica != null)
+            {
+                string[] podatki = vrstica.Split(";");
+                string mesto = podatki[0];
+                if (lokacija != mesto)
+                {
+                    Console.WriteLine("Lokacije ni na seznamu! Ponovno vnesi lokacijo");
+                    Console.Write("Lokacija: ");
+                    lokacija = Console.ReadLine();
+                }
+            }
+
+            Console.WriteLine("Lokacija izbrana");
+            Console.Write("\nNadaljuj na naslednji korak ->");
+            Console.ReadKey();
+
+            //Izbira lokacije odhoda in izpis koliko časa bi potreboval do tiste lokacije 
+            //Npr. Izbereš destinacijo Pariz (prejšni korak) in nato izbereš 
+            
+            
+            //Generiraj vozovnico
+            //Osebni podatki Odhod (lokacija in čas) Prihod (lokacija in čas) Čas Letenja (h min) order no (rnd number)
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Napaka: " + e.Message);
+        }
     }
 }
