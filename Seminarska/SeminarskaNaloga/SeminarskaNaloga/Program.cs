@@ -13,17 +13,18 @@ class Program
         Naslov();
         Console.Clear();
         
-        //Menu z nalogami
-        char izbira;
+        //DATOTEKE
         string destinacijeDatoteka = "Destinacije.txt";
         string letalaDatoteka = "Letala.txt";
-        string vnosNoveDatoteke = "";
+        string letiDatoteka = ""; //za shranjevanje datoteke v nalogi 3
+        
+        char izbira;
         
         Destinacije destinacija = new Destinacije();
         
+        //Naloge
         while (true)
         {
-            
             Console.WriteLine(string.Concat(Enumerable.Repeat("-", 42)));
             
             Console.WriteLine(" ---- INFORMACIJE ----".PadLeft(26));
@@ -38,7 +39,7 @@ class Program
             Console.WriteLine("5. Izpis popularnih destinacij".PadLeft(32));
 
             Console.WriteLine(" --- TAJNICA --- ".PadLeft(24));
-            Console.WriteLine("6. Tajnica (Pretvori v csv)".PadLeft(32));
+            Console.WriteLine("6. Pretvori v CSV".PadLeft(24));
 
             Console.WriteLine(" --- VOZOVNICA --- ".PadLeft(26));
             Console.WriteLine("7. Kupi Vozovnico".PadLeft(24));
@@ -95,20 +96,19 @@ class Program
                 case '3':
                     Console.Clear();
                     
-                    if (vnosNoveDatoteke == "")
+                    if (letiDatoteka == "")
                     {
                         Console.Clear();
                         Console.Write("Vnesi ime datoteke (za lete): ");
-                        vnosNoveDatoteke = Console.ReadLine() + ".txt";
+                        letiDatoteka = Console.ReadLine() + ".txt";
 
-                        if (File.Exists(vnosNoveDatoteke)) 
+                        if (File.Exists(letiDatoteka)) 
                         {
                             Console.WriteLine("Datoteka s tem imenom že obstaja!");
-                            //vnosNoveDatoteke = ""; // Ponastavimo ime datoteke, da jo bo treba ponovno vnesti
                         }
                         else
                         {
-                            UstvariNakljucneLete(destinacijeDatoteka, letalaDatoteka, vnosNoveDatoteke);
+                            UstvariNakljucneLete(destinacijeDatoteka, letalaDatoteka, letiDatoteka);
                             Console.WriteLine("Datoteka z leti uspešno ustvarjena!");
                         }
                     }
@@ -118,12 +118,12 @@ class Program
                     break;
                 case '4':
                     Console.Clear();
-                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    if(letiDatoteka == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
                     else
                     {
                         Console.WriteLine("SEZNAM LETOV".PadLeft(48));
-                        Console.WriteLine("Odhod".PadRight(32) + "Prihod".PadRight(32) + "Letalo".PadRight(32) + "Potniki".PadRight(32) + "Razdalja[km]");
-                        IzpisLetov(vnosNoveDatoteke);
+                        Console.WriteLine("Odhod".PadLeft(12) + "Prihod".PadLeft(24) + "Letalo".PadLeft(24) + "Potniki".PadLeft(24) + "Razdalja[km]".PadLeft(24));
+                        IzpisLetov(letiDatoteka);
                     }
 
                     Console.WriteLine();
@@ -134,10 +134,11 @@ class Program
                 case '5':
                     Console.Clear();
 
-                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    if(letiDatoteka == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
                     else
                     {
-                        List<string> top5Destinacij = Destinacije.NajboljPriljubljeneDestinacije(vnosNoveDatoteke);
+                        //seznam top5 destinacij
+                        List<string> top5Destinacij = Destinacije.NajboljPriljubljeneDestinacije(letiDatoteka);
 
                         Console.WriteLine("--- TOP 5 DESTINACIJ ---".PadLeft(40));
                         foreach (var dest in top5Destinacij)
@@ -153,7 +154,7 @@ class Program
                 case '6':
                     Console.Clear();
                     
-                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    if(letiDatoteka == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
                     else
                     {
                         Console.Write("Vnesi ime csv datoteke: ");
@@ -169,7 +170,7 @@ class Program
 
                         if (!vnosCSV.Contains(".csv")) vnosCSV += ".csv";
 
-                        PretvoriCSV(vnosNoveDatoteke, vnosCSV);
+                        PretvoriCSV(letiDatoteka, vnosCSV);
                     }
 
                     Console.WriteLine("Podatki pretvorjeni v csv datoteko");
@@ -179,10 +180,10 @@ class Program
                     break;
                 case '7':
                     Console.Clear();
-                    if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
+                    if(letiDatoteka == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
                     else
                     {
-                        KupiVozovnico(vnosNoveDatoteke);
+                        KupiVozovnico(letiDatoteka);
                     }
 
                     Console.Write("\nPritisni tipko za nadaljevanje...");
@@ -214,6 +215,7 @@ class Program
         Console.ReadKey();
     }
 
+    //Branje podatkov iz datotek
     public static void BranjeDatoteke(string datoteka, char izbira)
     {
         try
@@ -245,6 +247,7 @@ class Program
         }
     }
 
+    //Metoda ustvari naključne lete 
     public static void UstvariNakljucneLete(string destDatoteka, string letalaDatoteka, string izhodnaDatoteka)
     {
         string[] tabDestinacij = File.ReadAllLines(destDatoteka);
@@ -255,20 +258,23 @@ class Program
         int stDestinacij = tabDestinacij.Length;
         int stLetal = tabLetal.Length;
 
+        //Seznam letov
         List<string> leti = new List<string>();
 
-        int stLetov = rnd.Next(15, 51);
+        //Naključno število letov
+        int stLetov = rnd.Next(25, 101);
 
         for (int i = 0; i < stLetov; i++)
         {
-            //Naključna destinacija (prihod in odhod) in letalo
+            //Naključna destinacija (prihod in odhod) in naključno letalo
             string odhod = tabDestinacij[rnd.Next(stDestinacij)];
             string prihod = tabDestinacij[rnd.Next(stDestinacij)];
             string letalo = tabLetal[rnd.Next(stLetal)];
-
+            
             string[] odhodPodatki = odhod.Split(";");
             string[] prihodPodatki = prihod.Split(";");
 
+            //Dobimo podatke za mesto in državo odhoda/prihoda
             string odhodMesto = odhodPodatki[0];
             string odhodDrzava = odhodPodatki[1];
 
@@ -284,7 +290,6 @@ class Program
             //Sestavljanje leta
             string infoLeta = $"{odhodMesto} ({odhodDrzava});{prihodMesto} ({prihodDrzava});"
                                                                            + $"{letalo};{potniki};{razdalja}";
-            
             //Dodajanje v seznam
             leti.Add(infoLeta);
         }
@@ -293,6 +298,7 @@ class Program
         File.WriteAllLines(izhodnaDatoteka, leti);
     }
 
+    //Metoda izpiše lete ustvarjene v prejšni metodi
     public static void IzpisLetov(string letiDatoteka)
     {
         try
@@ -311,7 +317,7 @@ class Program
                 string stPotnikov = podatki[3];
                 string razdalja = podatki[4];
 
-                Console.WriteLine($"{odhod}".PadRight(32) + $"{prihod}".PadRight(32) + $"{letalo}".PadRight(32) + $"{stPotnikov}".PadRight(32) + $"{razdalja}".PadRight(32));
+                Console.WriteLine($"{odhod}".PadRight(26) + $"{prihod}".PadRight(26) + $"{letalo}".PadRight(28) + $"{stPotnikov}".PadRight(20) + $"{razdalja}");
                 vrstica = beriLete.ReadLine();
             }
 
@@ -323,6 +329,7 @@ class Program
         }
     }
 
+    //Metoda pretovri txt datoteko v csv datoteko
     public static void PretvoriCSV(string tekstovnaDatoteka, string csvDatoteka)
     {
         try
@@ -332,12 +339,14 @@ class Program
             // Imena stolpcev
             string[] imenaStolpcev = { "Odhod", "Prihod", "Letalo", "St. Potnikov", "Razdalja" };
 
-            // dodajanje imena stolpcev
+            // dodajanje imena stolpcev na začetku vrstice
             string zapis = string.Join(";", imenaStolpcev) + Environment.NewLine;
             
+            //Dodajanje ostalih podatkov v datoteko source: stackoverflow
             zapis += string.Join(Environment.NewLine,
-                vrstice.Select(x => x.Split(';')).Select(x => string.Join(";", x)));
-            File.WriteAllText(csvDatoteka, zapis);
+                vrstice.Select(x => x.Split(';')) //razdeli vsako vrstico na podnize
+                    .Select(x => string.Join(";", x))); //razdeljene dele združi nazaj v nize ločeni z ;
+            File.WriteAllText(csvDatoteka, zapis); //zapis v datoteko
         }
         catch (Exception e)
         {
@@ -346,10 +355,12 @@ class Program
         
     }
 
+    //Metoda ustvari vozonico za uporabnika
     public static void KupiVozovnico(string letalisce)
     {
         try
         {
+            //OSEBNI PODATKI
             Console.WriteLine("OSEBNI PODATKI");
             Console.Write("Vnesi ime: ");
             string ime = Console.ReadLine();
@@ -361,11 +372,17 @@ class Program
             Console.ReadKey();
             Console.Clear();
 
+            //Izpis seznam letalisc
             IzpisiLetalisca(letalisce);
             
             // Klic metode za izbiro letališča
             string izbranoLetalisce = PreberiInPreveriLetalisce(letalisce);
             
+            Console.Write("\nPritisni tipko za nadaljevanje...");
+            Console.ReadKey();
+            Console.Clear();
+            
+            //Izpis odhodov
             IzpisiOdhode(izbranoLetalisce, letalisce);
 
             // Klic metode za izbiro destinacije
@@ -374,14 +391,26 @@ class Program
             // Izračun časa potovanja
             (int ur, int minute) casPotovanja = IzracunajCasPotovanja(izbranoLetalisce, izbranaDestinacija, letalisce);
 
+            Random rnd = new Random();
+
+            int stNakupa = rnd.Next(1000, 10001);
+            int stNakupa1 = rnd.Next(100, 1001);
+            string stNakupaZnak = "";
+            for (int i = 0; i < 4; i++)
+            {
+                int nakSt = rnd.Next(65, 91);
+                stNakupaZnak += Convert.ToChar(nakSt);
+            }
+            
             if (casPotovanja.ur != -1 && casPotovanja.minute != -1)
             {
                 Console.Clear();
-                Console.WriteLine("".PadRight(25, '-'));
+                Console.WriteLine("".PadRight(36, '-'));
                 Console.WriteLine("OSEBNI PODATKI");
                 Console.WriteLine($"Ime: {ime}");
                 Console.WriteLine($"Priimek: {priimek}");
-                Console.WriteLine("".PadRight(25, '-'));
+                Console.WriteLine($"Številka nakupa: {stNakupa} - {stNakupa1}{stNakupaZnak}");
+                Console.WriteLine("".PadRight(36, '-'));
 
                 Console.WriteLine();
                 Console.WriteLine("".PadRight(64, '-'));
@@ -411,11 +440,13 @@ class Program
             .Select(vrstica => vrstica.Split(';')[0])
             .Distinct();
 
-        Console.WriteLine("Možna letališča:");
+        Console.WriteLine("SEZNAM LETALISC".PadLeft(18));
+        Console.WriteLine("----------------------");
         foreach (var letalisce in letalisca)
         {
             Console.WriteLine(letalisce);
         }
+        Console.WriteLine("----------------------");
     }
 
     // Metoda za branje vnosa uporabnika in preverjanje veljavnosti letališča
@@ -441,10 +472,12 @@ class Program
     public static void IzpisiOdhode(string letalisce, string datoteka)
     {
         Console.WriteLine($"\nOdhodi iz letališča {letalisce}:");
+        Console.WriteLine(string.Concat(Enumerable.Repeat("-", 48)));
         var odhodi = File.ReadLines(datoteka)
-            .Where(vrstica => vrstica.Split(';')[0] == letalisce)
-            .Select(vrstica => vrstica.Split(';')[1]);
+            .Where(vrstica => vrstica.Split(';')[0] == letalisce) // filtrira vrstice na podlagi pogoj, preveri ali je prvi del enak "letalisce"
+            .Select(vrstica => vrstica.Split(';')[1]); //zbere določen del vsake vrstice po razdelitvi po podpičju
 
+        //Izpis
         foreach (var odhod in odhodi)
         {
             Console.WriteLine($"{letalisce} -> {odhod}");
@@ -456,9 +489,9 @@ class Program
     {
         while (true)
         {
-            Console.Write($"\nIzberi destinacijo iz seznama odhodov za letališče {izbranoLetalisce}: ");
+            Console.Write($"\nIzberi destinacijo iz seznama za letališče {izbranoLetalisce}: ");
             string izbranaDestinacija = Console.ReadLine();
-
+            
             if (File.ReadLines(datoteka).Any(vrstica => vrstica.Split(';')[1] == izbranaDestinacija && vrstica.Split(';')[0] == izbranoLetalisce))
             {
                 return izbranaDestinacija; // Vrnemo izbrano destinacijo, če je veljavna
@@ -470,27 +503,30 @@ class Program
         }
     }
     
+    //Metoda, ki izračuna čas potovanja
     public static (int ur, int minute) IzracunajCasPotovanja(string izbranoLetalisce, string izbranaDestinacija, string datoteka)
     {
         try
         {
+            //rebere vrstice iz datoteke in nato poišče prvo vrstico, ki ustreza določenemu pogojnemu izrazu
+            //Ko je najdena prva vrstica, ki ustreza tem pogojem, se razdeli na dele in shrani v niz podatki
             string[] podatki = File.ReadLines(datoteka)
                 .First(vrstica => vrstica.Split(';')[0] == izbranoLetalisce && vrstica.Split(';')[1] == izbranaDestinacija)
                 .Split(';');
 
-            int razdalja = int.Parse(podatki[4]); // Razdalja je v petem stolpcu
+            int razdalja = int.Parse(podatki[4]);
 
-            double casPotovanja = razdalja / 800.0; // Izračun časa potovanja v urah
+            double casPotovanja = razdalja / 800.0; // Izračun časa potovanja v urah, vsa letalo se premikajo z 800km/h
 
             int ur = (int)casPotovanja; // Celotno število ur
-            int minute = (int)((casPotovanja - ur) * 60); // Pretvorba delovnih ur v minute
+            int minute = (int)((casPotovanja - ur) * 60); // Pretvorba ur v minute
 
             return (ur, minute);
         }
         catch (Exception e)
         {
             Console.WriteLine("Napaka pri izračunu časa potovanja: " + e.Message);
-            return (-1, -1); // V primeru napake vrnemo neveljavne vrednosti
+            return (-1, -1);
         }
     }
     

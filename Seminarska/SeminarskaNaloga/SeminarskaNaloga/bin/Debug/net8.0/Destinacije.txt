@@ -1,7 +1,7 @@
 Pariz;Francija
 Ljubljana;Slovenija
 Oslo;Norveška
-London;Združeno Kraljestvo
+Madrid;Španija
 Barcelona;Španija
 New York;ZDA
 Los Angeles;ZDA
