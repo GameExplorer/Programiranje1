@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-
+﻿
 namespace SeminarskaNaloga;
 
 using Destinacije;
@@ -183,7 +182,7 @@ class Program
                     if(vnosNoveDatoteke == "") Console.WriteLine("Najprej ustvarite datoteko (Naloga 3)");
                     else
                     {
-                        KupiVozovnico(destinacijeDatoteka, vnosNoveDatoteke);
+                        KupiVozovnico(vnosNoveDatoteke);
                     }
 
                     Console.Write("\nPritisni tipko za nadaljevanje...");
@@ -347,13 +346,10 @@ class Program
         
     }
 
-    public static void KupiVozovnico(string destDatoteka, string letalisce)
+    public static void KupiVozovnico(string letalisce)
     {
         try
         {
-            StreamReader destinacije = File.OpenText(destDatoteka);
-            string vrstica = destinacije.ReadLine();
-
             Console.WriteLine("OSEBNI PODATKI");
             Console.Write("Vnesi ime: ");
             string ime = Console.ReadLine();
@@ -365,44 +361,137 @@ class Program
             Console.ReadKey();
             Console.Clear();
 
+            IzpisiLetalisca(letalisce);
             
-            //IZBERI LETALIŠČE, IN NATO IZPIŠI MOŽNE DESTINACIJE
-            //ČE DESTINACIJE NI TO JAVI, SICER NADALJUJ NA GENERIRANJE VOZOVNICE
+            // Klic metode za izbiro letališča
+            string izbranoLetalisce = PreberiInPreveriLetalisce(letalisce);
             
-            Console.WriteLine("SEZNAM DESTINACIJ".PadRight(20));
+            IzpisiOdhode(izbranoLetalisce, letalisce);
 
-            BranjeDatoteke(destDatoteka, 'a');
+            // Klic metode za izbiro destinacije
+            string izbranaDestinacija = PreberiInPreveriDestinacijo(izbranoLetalisce, letalisce);
 
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", 28)));
-            Console.Write("Destinacija: ");
-            string lokacija = Console.ReadLine();
+            // Izračun časa potovanja
+            (int ur, int minute) casPotovanja = IzracunajCasPotovanja(izbranoLetalisce, izbranaDestinacija, letalisce);
 
-            while (vrstica != null)
+            if (casPotovanja.ur != -1 && casPotovanja.minute != -1)
             {
-                string[] podatki = vrstica.Split(";");
-                string mesto = podatki[0];
-                if (lokacija != mesto)
-                {
-                    Console.WriteLine("Lokacije ni na seznamu! Ponovno vnesi lokacijo");
-                    Console.Write("Lokacija: ");
-                    lokacija = Console.ReadLine();
-                }
+                Console.Clear();
+                Console.WriteLine("".PadRight(25, '-'));
+                Console.WriteLine("OSEBNI PODATKI");
+                Console.WriteLine($"Ime: {ime}");
+                Console.WriteLine($"Priimek: {priimek}");
+                Console.WriteLine("".PadRight(25, '-'));
+
+                Console.WriteLine();
+                Console.WriteLine("".PadRight(64, '-'));
+                Console.WriteLine("INFORMACIEJ O LETU".PadLeft(32));
+                Console.WriteLine("\nODHOD".PadLeft(24) + "PRIHOD".PadLeft(24));
+                Console.WriteLine($"{izbranoLetalisce}".PadRight(12) + $" -> {izbranaDestinacija} ".PadRight(20) +
+                                  $" Cas: {casPotovanja.ur}h {casPotovanja.minute}min");
+                Console.WriteLine("".PadRight(64, '-'));
+
             }
-
-            Console.WriteLine("Lokacija izbrana");
-            Console.Write("\nNadaljuj na naslednji korak ->");
-            Console.ReadKey();
-
-            //Izbira lokacije odhoda in izpis koliko časa bi potreboval do tiste lokacije 
-            //Npr. Izbereš destinacijo Pariz (prejšni korak) in nato izbereš 
-            
-            
-            //Generiraj vozovnico
-            //Osebni podatki Odhod (lokacija in čas) Prihod (lokacija in čas) Čas Letenja (h min) order no (rnd number)
+            else
+            {
+                Console.WriteLine("Napaka pri izračunu časa potovanja!");
+            }
         }
         catch (Exception e)
         {
             Console.WriteLine("Napaka: " + e.Message);
         }
     }
+    
+    // Metoda za izpis letališč
+    public static void IzpisiLetalisca(string datoteka)
+    {
+        // Preberemo datoteko in izpišemo vsako letališče le enkrat
+        var letalisca = File.ReadLines(datoteka)
+            .Select(vrstica => vrstica.Split(';')[0])
+            .Distinct();
+
+        Console.WriteLine("Možna letališča:");
+        foreach (var letalisce in letalisca)
+        {
+            Console.WriteLine(letalisce);
+        }
+    }
+
+    // Metoda za branje vnosa uporabnika in preverjanje veljavnosti letališča
+    public static string PreberiInPreveriLetalisce(string datoteka)
+    {
+        while (true)
+        {
+            Console.Write("\nIzberi letališče: ");
+            string izbranoLetalisce = Console.ReadLine();
+
+            if (File.ReadLines(datoteka).Any(vrstica => vrstica.Split(';')[0] == izbranoLetalisce))
+            {
+                return izbranoLetalisce; // Vrnemo izbrano letališče, če je veljavno
+            }
+            else
+            {
+                Console.WriteLine("Vnešeno letališče ni na seznamu! Poskusite znova.");
+            }
+        }
+    }
+
+    // Metoda za izpis odhodov iz izbranega letališča
+    public static void IzpisiOdhode(string letalisce, string datoteka)
+    {
+        Console.WriteLine($"\nOdhodi iz letališča {letalisce}:");
+        var odhodi = File.ReadLines(datoteka)
+            .Where(vrstica => vrstica.Split(';')[0] == letalisce)
+            .Select(vrstica => vrstica.Split(';')[1]);
+
+        foreach (var odhod in odhodi)
+        {
+            Console.WriteLine($"{letalisce} -> {odhod}");
+        }
+    }
+    
+    // Metoda za branje vnosa uporabnika in preverjanje veljavnosti destinacije
+    public static string PreberiInPreveriDestinacijo(string izbranoLetalisce, string datoteka)
+    {
+        while (true)
+        {
+            Console.Write($"\nIzberi destinacijo iz seznama odhodov za letališče {izbranoLetalisce}: ");
+            string izbranaDestinacija = Console.ReadLine();
+
+            if (File.ReadLines(datoteka).Any(vrstica => vrstica.Split(';')[1] == izbranaDestinacija && vrstica.Split(';')[0] == izbranoLetalisce))
+            {
+                return izbranaDestinacija; // Vrnemo izbrano destinacijo, če je veljavna
+            }
+            else
+            {
+                Console.WriteLine("Vnešena destinacija ni na seznamu odhodov! Poskusite znova.");
+            }
+        }
+    }
+    
+    public static (int ur, int minute) IzracunajCasPotovanja(string izbranoLetalisce, string izbranaDestinacija, string datoteka)
+    {
+        try
+        {
+            string[] podatki = File.ReadLines(datoteka)
+                .First(vrstica => vrstica.Split(';')[0] == izbranoLetalisce && vrstica.Split(';')[1] == izbranaDestinacija)
+                .Split(';');
+
+            int razdalja = int.Parse(podatki[4]); // Razdalja je v petem stolpcu
+
+            double casPotovanja = razdalja / 800.0; // Izračun časa potovanja v urah
+
+            int ur = (int)casPotovanja; // Celotno število ur
+            int minute = (int)((casPotovanja - ur) * 60); // Pretvorba delovnih ur v minute
+
+            return (ur, minute);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Napaka pri izračunu časa potovanja: " + e.Message);
+            return (-1, -1); // V primeru napake vrnemo neveljavne vrednosti
+        }
+    }
+    
 }
