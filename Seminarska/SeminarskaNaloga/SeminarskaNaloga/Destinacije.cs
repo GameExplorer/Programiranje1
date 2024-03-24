@@ -1,5 +1,4 @@
-﻿using System.Threading.Channels;
-
+﻿
 namespace Destinacije;
 
 public class Destinacije
@@ -19,6 +18,7 @@ public class Destinacije
         else Console.WriteLine("Ime Države mora vsebovati vsaj 2 znaka!");
     }
     
+    //Metoda za vnos destinacij
     public Destinacije[] VnosDestinacij(Destinacije[] tabDestinacij)
     {
         for (int i = 0; i < tabDestinacij.Length; i++)
@@ -34,16 +34,31 @@ public class Destinacije
         return tabDestinacij;
     }
 
+    //Metoda, ki zapiše destinacije v datoteko
     public void ZapisDestinacij(Destinacije[] tabDestinacij, string imeDatoteke)
     {
-        StreamWriter pisi = File.AppendText(imeDatoteke);
-
-        for (int i = 0; i < tabDestinacij.Length; i++)
+        try
         {
-            pisi.WriteLine(tabDestinacij[i].Destinacija + ";" + tabDestinacij[i].Drzava);
-        }
+            StreamWriter pisi = File.AppendText(imeDatoteke);
+            // Preveri, ali je datoteka prazna
+            if (new FileInfo(imeDatoteke).Length > 0)
+            {
+                // Če datoteka ni prazna, dodaj novo vrstico
+                pisi.WriteLine();
+            }
 
-        pisi.Close();
+            //sprehod po vseh podatkih in zapis v datoteko
+            for (int i = 0; i < tabDestinacij.Length; i++)
+            {
+                pisi.WriteLine(tabDestinacij[i].Destinacija + ";" + tabDestinacij[i].Drzava);
+            }
+
+            pisi.Close();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Napaka pri zapisovanju: " + e.Message);
+        }
     }
 
     public static List<string> NajboljPriljubljeneDestinacije(string imeDatoteke)
@@ -54,19 +69,21 @@ public class Destinacije
         //Slovar za shranjevanje vsote potnikov za vsako lokacijo prihoda
         Dictionary<string, int> destinacije = new Dictionary<string, int>();
         
-        //Štetje skupnega števila potnikov za vsako lokacijo prihoda
+        //Štetje skupnega števila potnikov za vsako lokacijo (prihod)
         foreach (string vrstica in podatki)
         {
             string[] deli = vrstica.Split(";");
             string lokacijaPrihoda = deli[1];
             int stPotnikov = Int32.Parse(deli[3]);
 
+            //Preverimo ali vnos obstaja v slovarju, če obstaja ga prišteje k tej lokaciji
             if (destinacije.ContainsKey(lokacijaPrihoda))
             {
                 destinacije[lokacijaPrihoda] += stPotnikov;
             }
             else
             {
+                //sicer ustvari nov vnos z vrednostjo stPotnikov
                 destinacije[lokacijaPrihoda] = stPotnikov;
             }
         }
