@@ -25,6 +25,12 @@ public class Destinacije
         {
             Console.Write("Vnesi ime destinacije: ");
             string vnosDestinacije = Console.ReadLine();
+            if (vnosDestinacije.Length < 2)
+            {
+                Console.WriteLine("Ime destinacije mora vsebovati vsaj 2 znaka!");
+                Console.Write("Vnesi ime destinacije: ");
+                vnosDestinacije = Console.ReadLine();
+            }
             
             Console.Write("Vnesi državo destinacije: ");
             string vnosDrzave = Console.ReadLine();
@@ -44,7 +50,7 @@ public class Destinacije
             if (new FileInfo(imeDatoteke).Length > 0)
             {
                 // Če datoteka ni prazna, dodaj novo vrstico
-                pisi.WriteLine();
+                pisi.Write("");
             }
 
             //sprehod po vseh podatkih in zapis v datoteko
@@ -52,7 +58,6 @@ public class Destinacije
             {
                 pisi.WriteLine(tabDestinacij[i].Destinacija + ";" + tabDestinacij[i].Drzava);
             }
-
             pisi.Close();
         }
         catch (Exception e)

@@ -81,14 +81,23 @@ class Program
                     break;
                 case '2':
                     Console.Clear();
+
+                    try
+                    {
+                        Console.Write("Vnesi število destinacij, ki jih želiš dodati: ");
+                        int steviloDestinacij = Int32.Parse(Console.ReadLine());
+                        Destinacije[] destinacije = new Destinacije[steviloDestinacij];
                     
-                    Console.Write("Vnesi število destinacij, ki jih želiš dodati: ");
-                    int steviloDestinacij = Int32.Parse(Console.ReadLine());
-                    Destinacije[] destinacije = new Destinacije[steviloDestinacij];
+                        destinacije = destinacija.VnosDestinacij(destinacije);
+                        destinacija.ZapisDestinacij(destinacije, destinacijeDatoteka);
+                        Console.WriteLine("Destinacije dodane!");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Napaka pri dodajanju destinacij" + e.Message);
+                        throw;
+                    }
                     
-                    destinacije = destinacija.VnosDestinacij(destinacije);
-                    destinacija.ZapisDestinacij(destinacije, destinacijeDatoteka);
-                    Console.WriteLine("Destinacije dodane!");
                     Console.Write("\nPritisni tipko za nadaljevanje...");
                     Console.ReadKey();
                     Console.Clear();
