@@ -46,17 +46,12 @@ public class Destinacije
         try
         {
             StreamWriter pisi = File.AppendText(imeDatoteke);
-            // Preveri, ali je datoteka prazna
-            if (new FileInfo(imeDatoteke).Length > 0)
-            {
-                // Če datoteka ni prazna, dodaj novo vrstico
-                pisi.Write("");
-            }
 
+            pisi.WriteLine();
             //sprehod po vseh podatkih in zapis v datoteko
             for (int i = 0; i < tabDestinacij.Length; i++)
             {
-                pisi.WriteLine(tabDestinacij[i].Destinacija + ";" + tabDestinacij[i].Drzava);
+                pisi.Write(tabDestinacij[i].Destinacija + ";" + tabDestinacij[i].Drzava);
             }
             pisi.Close();
         }

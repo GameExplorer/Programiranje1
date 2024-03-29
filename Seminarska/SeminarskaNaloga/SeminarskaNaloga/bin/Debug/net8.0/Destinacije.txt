@@ -1,4 +1,4 @@
-Pariz;Francija
+﻿Pariz;Francija
 Ljubljana;Slovenija
 Oslo;Norveška
 Madrid;Španija
